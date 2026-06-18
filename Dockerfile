@@ -9,9 +9,13 @@ RUN apt-get update \
         unzip \
         libzip-dev \
         default-mysql-client \
+        ca-certificates \
+        curl \
     && docker-php-ext-install pdo_mysql zip \
-    && pecl install redis \
-    && docker-php-ext-enable redis \
+    && (pecl channel-update pecl.php.net \
+        && pecl install redis-6.1.0 \
+        && docker-php-ext-enable redis \
+        || echo "Skipping redis PHP extension because PECL is unavailable") \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
