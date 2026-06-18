@@ -78,7 +78,7 @@ Admin Panel و User Panel از بخش‌های اصلی پلتفرم هستند 
 در صورت نیاز، برای هر ماژول باید یک فایل مستقل در مسیر زیر ایجاد شود:
 
 ```text
-codex-doc/systems/
+project-wiki/systems/
 ```
 
 هر فایل سیستمی باید هدف سیستم، مسئولیت‌ها، مسیر data model، workflowهای مهم، integration points، نکات عملیاتی و بخش Changelog را پوشش دهد.
