@@ -1,0 +1,81 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fsanat_app
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    networks:
+      - fsanat
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: fsanat_nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - app
+    networks:
+      - fsanat
+
+  mysql:
+    image: mysql:8.0
+    container_name: fsanat_mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: fsanat
+      MYSQL_USER: fsanat
+      MYSQL_PASSWORD: fsanat_password
+      MYSQL_ROOT_PASSWORD: root_password
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot_password"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - fsanat
+
+  redis:
+    image: redis:7-alpine
+    container_name: fsanat_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - fsanat
+
+  node:
+    image: node:22-alpine
+    container_name: fsanat_node
+    working_dir: /var/www/html
+    profiles:
+      - frontend
+    volumes:
+      - ./:/var/www/html
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0"
+    ports:
+      - "5173:5173"
+    networks:
+      - fsanat
+
+volumes:
+  mysql_data:
+  redis_data:
+
+networks:
+  fsanat:
+    driver: bridge
