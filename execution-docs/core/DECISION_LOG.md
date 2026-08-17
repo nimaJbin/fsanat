@@ -2,7 +2,7 @@
 
 Document ID: CORE-DECISION-LOG
 Status: Accepted
-Version: 0.2
+Version: 0.3
 Source of Truth: execution-docs
 Related Wiki Sources: project-wiki/core/DECISION_LOG.md
 Dependencies: PROJECT_RULES.md
@@ -16,6 +16,7 @@ Format:
 |---|---|---|---|---|
 | 2026-06-18 | Split docs into project-wiki and execution-docs | Draft | Establishes two-layer documentation model | User request |
 | 2026-06-18 | Use Laravel 12 with a custom Blade-based admin panel | Accepted | Fixes Laravel 12, PHP 8.3+, MySQL 8, Redis 7, Vite, Blade, Docker, Tabler and rejects Filament/admin packages/SPA for v1 | User request |
+| 2026-08-18 | Preserve standard Laravel roots and organize application code by responsibility under `app/` | Accepted | Rejects a redundant `src/` wrapper; establishes Actions, Queries, Policies and constrained Services | User approval |
 
 Decision: The project will use Laravel 12 as the core backend framework. Filament and paid admin panel packages are explicitly rejected. The admin panel will be built manually using Laravel Blade, Bootstrap 5 and the open-source Tabler admin template.
 

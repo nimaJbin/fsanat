@@ -2,7 +2,7 @@
 
 Document ID: ARCH-SYSTEM-ARCHITECTURE
 Status: Accepted
-Version: 0.2
+Version: 0.3
 Source of Truth: execution-docs
 Related Wiki Sources: project-wiki/architecture/ARCHITECTURE.md
 Dependencies: ../core/PROJECT_VISION.md
@@ -15,5 +15,7 @@ Current direction: the platform is a Laravel 12 modular commerce application usi
 Admin architecture: the admin panel is a Custom Laravel Blade Admin Panel using Tabler Bootstrap 5. Filament, Nova, Backpack, paid admin packages, React, Vue, Inertia and SPA architecture are rejected for version 1.
 
 Architecture rule: controllers stay thin; validation uses Form Requests; authorization uses Policies and Gates; business logic belongs in Services, Actions or Domain layer. Blade files must not contain business logic.
+
+Source layout: preserve Laravel's standard root structure; `app/` is the PHP source root and must not be wrapped in `src/` or `backend/`. Place single use cases in `app/Actions/<Domain>`, complex reusable reads in `app/Queries/<Domain>`, policies in `app/Policies`, and use `app/Services` only for cohesive reusable capabilities. Do not introduce `app/Modules` without an accepted ADR and demonstrated ownership or scale needs.
 
 Open migration work: review the preserved architecture text after encoding validation and migrate stable decisions into module and tech-stack documents.

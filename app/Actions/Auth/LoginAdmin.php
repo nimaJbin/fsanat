@@ -1,15 +1,14 @@
 <?php
 
-namespace App\Services\Admin;
+namespace App\Actions\Auth;
 
 use App\Http\Requests\Admin\AdminLoginRequest;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 
-class AdminAuthenticationService
+class LoginAdmin
 {
-    public function login(AdminLoginRequest $request): void
+    public function __invoke(AdminLoginRequest $request): void
     {
         if (! Auth::attempt($request->validated())) {
             throw ValidationException::withMessages([
@@ -18,13 +17,5 @@ class AdminAuthenticationService
         }
 
         $request->session()->regenerate();
-    }
-
-    public function logout(Request $request): void
-    {
-        Auth::logout();
-
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
     }
 }

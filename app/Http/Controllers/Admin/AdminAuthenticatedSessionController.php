@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Actions\Auth\LoginAdmin;
+use App\Actions\Auth\LogoutAdmin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\AdminLoginRequest;
-use App\Services\Admin\AdminAuthenticationService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -16,16 +17,16 @@ class AdminAuthenticatedSessionController extends Controller
         return view('admin.login');
     }
 
-    public function store(AdminLoginRequest $request, AdminAuthenticationService $authentication): RedirectResponse
+    public function store(AdminLoginRequest $request, LoginAdmin $loginAdmin): RedirectResponse
     {
-        $authentication->login($request);
+        $loginAdmin($request);
 
         return redirect()->intended(route('admin.dashboard', absolute: false));
     }
 
-    public function destroy(Request $request, AdminAuthenticationService $authentication): RedirectResponse
+    public function destroy(Request $request, LogoutAdmin $logoutAdmin): RedirectResponse
     {
-        $authentication->logout($request);
+        $logoutAdmin($request);
 
         return redirect()->route('admin.login');
     }

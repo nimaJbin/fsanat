@@ -47,7 +47,8 @@ Files added:
 - `app/Http/Controllers/Admin/AdminAuthenticatedSessionController.php`
 - `app/Http/Controllers/Admin/DashboardController.php`
 - `app/Http/Requests/Admin/AdminLoginRequest.php`
-- `app/Services/Admin/AdminAuthenticationService.php`
+- `app/Actions/Auth/LoginAdmin.php`
+- `app/Actions/Auth/LogoutAdmin.php`
 - `resources/views/layouts/app.blade.php`
 - `resources/views/layouts/admin.blade.php`
 - `resources/views/public/home.blade.php`

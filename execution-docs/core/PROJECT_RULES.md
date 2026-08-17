@@ -2,7 +2,7 @@
 
 Document ID: CORE-PROJECT-RULES
 Status: Accepted
-Version: 0.2
+Version: 0.3
 Source of Truth: execution-docs
 Related Wiki Sources: project-wiki/core/PROJECT_RULES.md
 Dependencies: DOCUMENT_RULES.md
@@ -21,6 +21,8 @@ Rules:
 - Filament, Nova, Backpack, paid admin packages, React, Vue, Inertia and first-version SPA architecture are rejected.
 - Admin controllers must be thin; validation must use Form Requests; authorization must use Policies and Gates.
 - Business logic must live in Services, Actions or Domain layer, never in Blade files.
+- Preserve Laravel's standard root layout: `app/` is the PHP source root; do not add `src/`, `backend/`, or `app/Modules` without an accepted ADR.
+- Use domain-grouped Actions for single use cases, Queries for complex reads, and Services only for cohesive reusable capabilities; never use Services as a catch-all.
 - Admin CRUD pages must follow shared layout, naming, route and permission conventions.
 
 Open migration work: review old project rules and promote only rules that are active, enforceable and relevant to current development.
