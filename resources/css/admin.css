@@ -1,0 +1,49 @@
+@import '@tabler/core/dist/css/tabler.rtl.css';
+@import '@tabler/icons-webfont/dist/tabler-icons.css';
+@import './shared.css';
+
+:root {
+    --tblr-font-sans-serif: var(--fs-font-sans);
+    --tblr-primary: var(--fs-color-primary);
+    --tblr-primary-rgb: 22, 50, 79;
+    --tblr-body-bg: var(--fs-color-background);
+    --tblr-body-color: var(--fs-color-text);
+    --tblr-border-color: var(--fs-color-border);
+    --tblr-border-radius: var(--fs-radius-control);
+    --tblr-border-radius-lg: var(--fs-radius-card);
+}
+
+.admin-auth-page {
+    display: grid;
+    min-block-size: 100vh;
+    place-items: center;
+    padding: var(--fs-space-8) var(--fs-space-4);
+}
+
+.admin-auth-card {
+    inline-size: min(100%, 26rem);
+    border-color: var(--fs-color-border);
+    border-radius: var(--fs-radius-card);
+    box-shadow: var(--fs-shadow-raised);
+}
+
+.admin-auth-brand {
+    margin-block-end: var(--fs-space-6);
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.btn-accent {
+    --tblr-btn-color: var(--fs-color-text);
+    --tblr-btn-bg: var(--fs-color-accent);
+    --tblr-btn-border-color: var(--fs-color-accent);
+    --tblr-btn-hover-color: var(--fs-color-surface);
+    --tblr-btn-hover-bg: var(--fs-color-accent-hover);
+    --tblr-btn-hover-border-color: var(--fs-color-accent-hover);
+}
+
+.form-control,
+.form-select,
+.btn {
+    min-block-size: var(--fs-control-height-dense);
+}

@@ -1,0 +1,31 @@
+@import 'bootstrap/dist/css/bootstrap.rtl.css';
+@import '@tabler/icons-webfont/dist/tabler-icons.css';
+@import './shared.css';
+
+:root {
+    --bs-font-sans-serif: var(--fs-font-sans);
+    --bs-primary: var(--fs-color-primary);
+    --bs-primary-rgb: 22, 50, 79;
+    --bs-body-bg: var(--fs-color-background);
+    --bs-body-color: var(--fs-color-text);
+    --bs-border-color: var(--fs-color-border);
+    --bs-border-radius: var(--fs-radius-control);
+    --bs-border-radius-lg: var(--fs-radius-card);
+}
+
+.storefront-placeholder {
+    display: grid;
+    min-block-size: 100vh;
+    place-items: center;
+    padding: var(--fs-space-8) var(--fs-space-4);
+}
+
+.storefront-placeholder__panel {
+    inline-size: min(100%, 34rem);
+    padding: var(--fs-space-8);
+    border: 1px solid var(--fs-color-border);
+    border-radius: var(--fs-radius-card);
+    background: var(--fs-color-surface);
+    box-shadow: var(--fs-shadow-raised);
+    text-align: center;
+}

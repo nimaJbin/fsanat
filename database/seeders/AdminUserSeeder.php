@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Enums\UserRole;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -13,12 +14,20 @@ class AdminUserSeeder extends Seeder
      */
     public function run(): void
     {
+        $password = config('admin.owner.password');
+
+        if (! $password && app()->isProduction()) {
+            throw new \RuntimeException('ADMIN_OWNER_PASSWORD is required in production.');
+        }
+
         User::updateOrCreate(
-            ['username' => 'admin'],
+            ['username' => config('admin.owner.username')],
             [
-                'name' => 'Administrator',
-                'email' => 'admin@fsanat.local',
-                'password' => Hash::make('admin123456'),
+                'name' => config('admin.owner.name'),
+                'email' => config('admin.owner.email'),
+                'password' => Hash::make($password ?: 'admin123456'),
+                'role' => UserRole::Owner,
+                'is_active' => true,
             ],
         );
     }

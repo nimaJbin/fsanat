@@ -26,6 +26,7 @@ Read order for every AI agent:
 14. development/[target catalog].md
 15. qa/ACCEPTANCE_CRITERIA.md
 16. execution/TASK_BREAKDOWN.md
+17. execution/PHASE_1_PLAN.md and execution/PHASE_1_STATUS.md when Phase 1 work is in scope
 
 Navigation rule: read only the minimum path needed for the task, then follow the target document's Dependencies and Next Documents. If a required detail is missing, record the gap in the target execution document and link the relevant project-wiki source instead of copying long wiki text.
 

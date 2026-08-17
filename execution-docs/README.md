@@ -26,3 +26,8 @@ Primary groups:
 - adr: architecture decision records.
 
 All documents must keep metadata current and include Dependencies and Next Documents.
+
+Active implementation tracking starts at
+`execution/PHASE_1_PLAN.md` and `execution/PHASE_1_STATUS.md`. Read the plan for
+the complete approved scope and the status file for the exact current objective,
+evidence, remaining work and next action.

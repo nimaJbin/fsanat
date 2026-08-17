@@ -1,0 +1,110 @@
+@import 'vazirmatn/Vazirmatn-Variable-font-face.css';
+
+:root {
+    color-scheme: light;
+    --fs-color-primary: #16324f;
+    --fs-color-primary-hover: #10263d;
+    --fs-color-accent: #f59e0b;
+    --fs-color-accent-hover: #d97706;
+    --fs-color-background: #f6f7f9;
+    --fs-color-surface: #ffffff;
+    --fs-color-text: #17202a;
+    --fs-color-text-muted: #667085;
+    --fs-color-border: #d9dee7;
+    --fs-color-success: #16845b;
+    --fs-color-warning: #d97706;
+    --fs-color-error: #d92d20;
+    --fs-color-info: #2563eb;
+    --fs-font-sans: 'Vazirmatn', Tahoma, Arial, sans-serif;
+    --fs-space-1: 0.25rem;
+    --fs-space-2: 0.5rem;
+    --fs-space-3: 0.75rem;
+    --fs-space-4: 1rem;
+    --fs-space-6: 1.5rem;
+    --fs-space-8: 2rem;
+    --fs-space-12: 3rem;
+    --fs-space-16: 4rem;
+    --fs-radius-control: 0.5rem;
+    --fs-radius-card: 0.75rem;
+    --fs-control-height: 2.75rem;
+    --fs-control-height-dense: 2.25rem;
+    --fs-shadow-raised: 0 0.25rem 1rem rgb(16 38 61 / 8%);
+    --fs-focus-ring: 0 0 0 0.1875rem rgb(37 99 235 / 24%);
+    --fs-motion-fast: 160ms;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    direction: rtl;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-block-size: 100vh;
+    background: var(--fs-color-background);
+    color: var(--fs-color-text);
+    font-family: var(--fs-font-sans);
+    font-size: 1rem;
+    line-height: 1.7;
+    text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+:focus-visible {
+    border-radius: var(--fs-radius-control);
+    outline: 0.125rem solid var(--fs-color-info);
+    outline-offset: 0.125rem;
+}
+
+.skip-link {
+    position: fixed;
+    z-index: 2000;
+    inset-block-start: var(--fs-space-2);
+    inset-inline-start: var(--fs-space-2);
+    padding: var(--fs-space-2) var(--fs-space-4);
+    border-radius: var(--fs-radius-control);
+    background: var(--fs-color-primary);
+    color: var(--fs-color-surface);
+    text-decoration: none;
+    transform: translateY(-150%);
+    transition: transform var(--fs-motion-fast) ease;
+}
+
+.skip-link:focus {
+    color: var(--fs-color-surface);
+    transform: translateY(0);
+}
+
+.fs-wordmark {
+    color: var(--fs-color-primary);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

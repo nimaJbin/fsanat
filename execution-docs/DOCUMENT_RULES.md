@@ -17,3 +17,13 @@ Each execution document must include the standard metadata header: Document ID, 
 Target document length is 1000-1500 characters. Maximum allowed without warning is 2500 characters. If more space is needed, stop and add a note explaining why approval is required before expansion.
 
 Every future AI agent must start from execution-docs/README.md and DOCUMENT_GRAPH.md. Agents must not modify application code while performing documentation migration tasks.
+
+Phase planning and live implementation tracking documents are explicitly exempt
+from the 2500-character limit when the user has requested complete, durable
+tracking. This exemption currently applies to
+`execution/PHASE_1_PLAN.md` and `execution/PHASE_1_STATUS.md`. These documents
+must remain cohesive single files: the plan records the complete approved scope,
+while the status file records current position, completed objective IDs,
+verification evidence, blockers and the next objective. Do not shorten, split or
+archive their useful history merely to satisfy the normal execution-document
+length target.
