@@ -1,8 +1,8 @@
 # Page Catalog
 
 Document ID: UI-PAGE-CATALOG
-Status: Draft
-Version: 0.2
+Status: Phase 1 Baseline
+Version: 1.0
 Source of Truth: execution-docs
 Related Wiki Sources: project-wiki/ui-ux/README.md
 Dependencies: ../business/USER_JOURNEY_MAP.md, DESIGN_SYSTEM.md, DESIGN_TOKENS.md, COMPONENT_STANDARDS.md
@@ -14,10 +14,14 @@ Initial pages:
 
 | Page | Actor | System | Status |
 |---|---|---|---|
+| Public homepage | Visitor | Storefront preview | Phase 1 verified |
+| Admin login | Staff | Auth | Phase 1 verified |
+| Admin dashboard | Staff | Admin preview | Phase 1 verified |
+| Change password | Staff | Auth | Phase 1 verified |
+| 403 / 404 | Any | Error handling | Phase 1 verified |
 | Product listing | Customer | Product, Category | Draft |
 | Product detail | Customer | Product, Inventory | Draft |
 | Checkout | Customer | Order, Payment | Draft |
-| Admin dashboard | Admin | Custom Laravel Blade Admin Panel, Tabler | Accepted direction |
 | Order management | Admin | Order, Payment, Shipping, Tabler | Draft |
 
 Rule: each page must link to user journey, system module, API needs and acceptance criteria before implementation.
@@ -27,4 +31,4 @@ and shared component standards before it can be marked complete.
 
 Admin UI rule: admin pages use Laravel Blade and Tabler Bootstrap 5 with minimal vanilla JavaScript. Filament, Nova, Backpack, paid admin packages, React, Vue, Inertia and first-version SPA architecture are rejected.
 
-Open migration work: review UI/UX wiki notes and add only confirmed pages.
+Phase 1 preview pages do not claim live commerce data; future pages remain Draft until their backend contracts exist.

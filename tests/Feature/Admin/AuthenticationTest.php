@@ -6,6 +6,7 @@ use App\Enums\UserRole;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\RateLimiter;
 use Tests\TestCase;
 
 class AuthenticationTest extends TestCase
@@ -68,6 +69,53 @@ class AuthenticationTest extends TestCase
             'username' => 'customer-user',
             'password' => 'secure-password',
         ])->assertSessionHasErrors('username');
+
+        $this->assertGuest();
+    }
+
+    public function test_inactive_staff_credentials_are_rejected_by_admin_login(): void
+    {
+        User::factory()->create([
+            'username' => 'inactive-staff',
+            'password' => 'secure-password',
+            'role' => UserRole::Admin,
+            'is_active' => false,
+        ]);
+
+        $this->post('/admin/login', ['username' => 'inactive-staff', 'password' => 'secure-password'])
+            ->assertSessionHasErrors('username');
+
+        $this->assertGuest();
+    }
+
+    public function test_repeated_failed_logins_are_throttled(): void
+    {
+        RateLimiter::clear('admin-login:unknown|127.0.0.1');
+
+        foreach (range(1, 5) as $attempt) {
+            $this->post('/admin/login', ['username' => 'unknown', 'password' => 'wrong-password']);
+        }
+
+        $response = $this->post('/admin/login', ['username' => 'unknown', 'password' => 'wrong-password'])
+            ->assertSessionHasErrors('username');
+
+        $message = $response->getSession()->get('errors')->first('username');
+
+        $this->assertStringContainsString('تعداد تلاش‌ها بیش از حد مجاز است', $message);
+    }
+
+    public function test_authenticated_customer_is_redirected_away_from_admin_login(): void
+    {
+        $customer = User::factory()->create(['role' => UserRole::Customer]);
+
+        $this->actingAs($customer)->get('/admin/login')->assertRedirect('/');
+    }
+
+    public function test_logout_invalidates_the_staff_session(): void
+    {
+        $staff = User::factory()->create(['role' => UserRole::Operator]);
+
+        $this->actingAs($staff)->post('/admin/logout')->assertRedirect('/admin/login');
 
         $this->assertGuest();
     }

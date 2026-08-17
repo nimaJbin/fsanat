@@ -22,7 +22,7 @@ class AdminShellTest extends TestCase
             ->assertSee('فروش و عملیات')
             ->assertSee('مالی و سود')
             ->assertSee('به‌زودی')
-            ->assertSee('داده نمایشی');
+            ->assertSee('داشبورد در حالت پیش‌نمایش است');
     }
 
     public function test_operator_does_not_receive_owner_only_navigation(): void

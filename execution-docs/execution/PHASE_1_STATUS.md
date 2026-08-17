@@ -1,8 +1,8 @@
 # Phase 1 — Live Implementation Status
 
 Document ID: EXEC-PHASE-1-STATUS
-Status: In Progress
-Version: 1.0
+Status: Final Verification
+Version: 1.1
 Source of Truth: execution-docs
 Related Wiki Sources: project-wiki/core/ADMIN_PANEL_STRUCTURE.md, project-wiki/ui-ux/README.md
 Dependencies: PHASE_1_PLAN.md
@@ -12,25 +12,25 @@ Length Exception: Approved by the user on 2026-08-18. This live tracker is exemp
 ## Current Position
 
 - Current phase: **Phase 1**
-- Current subphase: **1.6 — Public Storefront Homepage**
-- Current objective: **P1.6.1 — Storefront shell**
-- Overall state: **In progress**
+- Current subphase: **1.7 — Quality, Verification and Handoff**
+- Current objective: **P1.7.9 — Git handoff**
+- Overall state: **Final Git handoff in progress**
 - Started: **2026-08-18**
 - Last updated: **2026-08-18**
-- Next action: build the responsive public storefront shell and homepage sections with explicit preview catalog content and no fabricated business claims.
+- Next action: commit the verified Phase 1 implementation, push it, confirm local/remote equality, then close P1.7.9 and Phase 1.
 
 ## Progress Summary
 
 | Subphase | Scope | Verified | Implemented | Remaining | State |
 |---|---:|---:|---:|---:|---|
 | 1.1 Frontend infrastructure | 7 | 7 | 0 | 0 | Verified |
-| 1.2 Admin auth/security | 9 | 0 | 9 | 0 | Implemented; PHP verification pending |
-| 1.3 Admin shell | 10 | 0 | 10 | 0 | Implemented; runtime and visual verification pending |
-| 1.4 Shared components | 9 | 0 | 9 | 0 | Implemented; runtime and visual verification pending |
-| 1.5 Admin dashboard | 10 | 0 | 10 | 0 | Implemented; runtime and visual verification pending |
-| 1.6 Storefront homepage | 12 | 0 | 0 | 12 | Pending |
-| 1.7 Quality and handoff | 10 | 0 | 0 | 10 | Pending |
-| **Total** | **67** | **7** | **38** | **22** | **10.4% verified; 67.2% implemented or verified** |
+| 1.2 Admin auth/security | 9 | 9 | 0 | 0 | Verified |
+| 1.3 Admin shell | 10 | 10 | 0 | 0 | Verified |
+| 1.4 Shared components | 9 | 9 | 0 | 0 | Verified |
+| 1.5 Admin dashboard | 10 | 10 | 0 | 0 | Verified |
+| 1.6 Storefront homepage | 12 | 12 | 0 | 0 | Verified |
+| 1.7 Quality and handoff | 10 | 9 | 0 | 1 | Git handoff in progress |
+| **Total** | **67** | **66** | **0** | **1** | **98.5% verified; final push pending** |
 
 Progress percentages use Verified objectives only. Implemented-but-unverified work remains visible and does not inflate completion.
 
@@ -52,91 +52,91 @@ Progress percentages use Verified objectives only. Implemented-but-unverified wo
 
 | ID | Objective | Status | Evidence/result |
 |---|---|---|---|
-| P1.2.1 | Staff attributes | Implemented | Migration adds indexed `role` and `is_active`; User casts both and exposes `isStaff()`; migration/test run pending PHP runtime |
-| P1.2.2 | Role vocabulary | Implemented | Typed `UserRole` enum defines customer plus approved owner/admin/operator staff roles |
-| P1.2.3 | Admin authorization boundary | Implemented | `EnsureActiveStaff` middleware registered as `staff` and applied with `auth` to all protected admin routes |
-| P1.2.4 | Safe login | Implemented | Login action loads by username, checks active staff role and password hash, uses a generic Persian failure, logs in and regenerates session |
-| P1.2.5 | Login throttling | Implemented | Five failures per normalized username/IP key trigger a Persian retry response; success clears the limiter |
-| P1.2.6 | Context-aware redirects | Implemented | Already-authenticated staff redirect to dashboard; customers redirect to public home rather than entering an admin loop |
-| P1.2.7 | Environment owner seeding | Implemented | `config/admin.php` and `.env.example` define owner fields; production refuses an absent password; local fallback remains documented development behavior |
-| P1.2.8 | Password change | Implemented | Protected current-password-confirmed form, Form Request, Action, controller and routes added; UI will move into the full shell in Phase 1.3 |
-| P1.2.9 | Security tests | Implemented | Feature coverage added for guest, customer, inactive staff, all staff roles, login rejection/acceptance and password change; execution pending PHP/Docker |
+| P1.2.1 | Staff attributes | Verified | SQLite migration/seed passed; indexed role/active attributes and casts covered by feature execution |
+| P1.2.2 | Role vocabulary | Verified | Typed customer/owner/admin/operator enum exercised across authorization tests |
+| P1.2.3 | Admin authorization boundary | Verified | Guest, customer, inactive staff and staff-role allowed/denied paths pass |
+| P1.2.4 | Safe login | Verified | Generic failure, staff gate, password check and session regeneration pass feature tests |
+| P1.2.5 | Login throttling | Verified | Five failures followed by a throttled response pass |
+| P1.2.6 | Context-aware redirects | Verified | Staff and customer redirect behavior pass |
+| P1.2.7 | Environment owner seeding | Verified | Local seed passed; production missing-password refusal remains enforced |
+| P1.2.8 | Password change | Verified | Current-password validation, update and protected route pass |
+| P1.2.9 | Security tests | Verified | Final suite: 25 tests and 90 assertions passed |
 
 ### Phase 1.3
 
 | ID | Objective | Status | Evidence/result |
 |---|---|---|---|
-| P1.3.1 | Guest admin layout | Implemented | Dedicated branded guest layout now owns login and error surfaces; visual browser verification pending |
-| P1.3.2 | Authenticated layout | Implemented | Reusable admin layout provides sidebar, mobile navigation, topbar, page header, flash region and content container |
-| P1.3.3 | Navigation architecture | Implemented | Central config covers dashboard, users, products, taxonomy, inventory, orders, approvals, freeze, bulk operations, imports, finance, wallet, tickets, reports, settings and activity |
-| P1.3.4 | Availability states | Implemented | Missing future routes render as non-interactive disabled items with an explicit «به‌زودی» label and no fake URL |
-| P1.3.5 | Permission-aware navigation | Implemented | `GetAdminNavigation` filters central configuration by typed role before the view receives it; owner-only and management-only areas are covered by tests |
-| P1.3.6 | Responsive sidebar | Implemented | Desktop sidebar collapses with persistent browser preference; Bootstrap RTL offcanvas provides the mobile drawer; hands-on viewport/keyboard review pending |
-| P1.3.7 | Topbar | Implemented | Responsive menu controls and accessible account dropdown expose role, password change and POST logout |
-| P1.3.8 | Breadcrumb and titles | Implemented | Authenticated layout defines reusable breadcrumb, page title, description and action regions; dashboard and password pages migrated |
-| P1.3.9 | Feedback channel | Implemented | Central flash partial supports success, warning, error and info semantics with dismiss controls |
-| P1.3.10 | Error pages | Implemented | Persian 403 and 404 pages provide context-safe return links; response/view tests added |
+| P1.3.1 | Guest admin layout | Verified | Login rendered and inspected in the live browser |
+| P1.3.2 | Authenticated layout | Verified | Live authenticated dashboard rendered with all shell regions |
+| P1.3.3 | Navigation architecture | Verified | Central config and rendered navigation covered by role-aware tests |
+| P1.3.4 | Availability states | Verified | Future modules render disabled with «به‌زودی» and no fake target |
+| P1.3.5 | Permission-aware navigation | Verified | Owner/operator navigation differences pass feature tests |
+| P1.3.6 | Responsive sidebar | Verified | Desktop collapse and 375px offcanvas tested live; no horizontal overflow |
+| P1.3.7 | Topbar | Verified | Account menu, role, password link and POST logout verified |
+| P1.3.8 | Breadcrumb and titles | Verified | Regions render correctly on dashboard and password surfaces |
+| P1.3.9 | Feedback channel | Verified | Component render suite covers flash semantics and controls |
+| P1.3.10 | Error pages | Verified | Persian 403/404 response tests pass |
 
 ### Phase 1.4
 
 | ID | Objective | Status | Evidence/result |
 |---|---|---|---|
-| P1.4.1 | Action components | Implemented | `x-ui.button` provides primary, accent, secondary, quiet and danger hierarchy plus link, icon, disabled and loading contracts |
-| P1.4.2 | Form components | Implemented | Shared input, select and checkbox components provide persistent labels, old input, help, required and Laravel validation/ARIA wiring |
-| P1.4.3 | Feedback components | Implemented | Alert and badge components cover semantic variants; central Flash rendering now uses `x-ui.alert` |
-| P1.4.4 | Content components | Implemented | Shared card plus authenticated layout page-header/breadcrumb regions establish the content contract; dashboard uses the card component |
-| P1.4.5 | Data components | Implemented | Shared table provides label, responsive containment, empty state and footer pagination region; filter bar provides responsive search grouping |
-| P1.4.6 | State components | Implemented | One state component covers loading, empty, error and success semantics, icons, message and recovery action |
-| P1.4.7 | Overlay components | Implemented | Shared modal, dropdown and drawer wrap Bootstrap focus/Escape behavior and labelled headers/actions |
-| P1.4.8 | Metric component | Implemented | Metric card supports label, value, context, icon and non-color-only semantic variants |
-| P1.4.9 | Component documentation | Implemented | Complete prop/slot, state, accessibility and usage catalog appended to the exempt single Phase 1 plan file |
+| P1.4.1 | Action components | Verified | Button variants and states compile in the component render suite |
+| P1.4.2 | Form components | Verified | Input/select/checkbox label and ARIA contracts pass render tests |
+| P1.4.3 | Feedback components | Verified | Alert/badge variants pass render tests |
+| P1.4.4 | Content components | Verified | Cards and layout regions render in tests and live dashboard |
+| P1.4.5 | Data components | Verified | Table/filter contracts and responsive containment verified |
+| P1.4.6 | State components | Verified | Loading/empty/error/success branches pass component and page tests |
+| P1.4.7 | Overlay components | Verified | Modal/dropdown/drawer compile; live drawer/dropdown interactions pass |
+| P1.4.8 | Metric component | Verified | Metric variants render in tests and live dashboard |
+| P1.4.9 | Component documentation | Verified | Complete prop/slot/state/accessibility catalog exists in Phase 1 plan |
 
 ### Phase 1.5
 
 | ID | Objective | Status | Evidence/result |
 |---|---|---|---|
-| P1.5.1 | Dashboard query contract | Implemented | `GetDashboardOverview` owns the complete replaceable dashboard view-data contract; controller only passes its result to Blade |
-| P1.5.2 | Preview-data honesty | Implemented | Persistent warning explicitly states that every number is design preview data; sample order/product identifiers are visibly named as samples |
-| P1.5.3 | Core metrics | Implemented | Shared metric cards show preview orders requiring attention, active products, inventory warnings and open tickets with text context |
-| P1.5.4 | Attention queue | Implemented | Prioritized order, inventory and payment review items include status and honest future-destination explanation |
-| P1.5.5 | Recent orders | Implemented | Responsive shared table displays clearly fictional sample rows without links to nonexistent order pages |
-| P1.5.6 | Inventory alerts | Implemented | Sample low-stock list includes product, SKU and remaining amount plus a success empty state |
-| P1.5.7 | Sales chart | Implemented | Token-driven CSS bars provide a restrained preview chart and an expandable complete textual equivalent |
-| P1.5.8 | Import and freeze status | Implemented | Dedicated cards state that Import is not started and Dynamic Freeze is unavailable rather than implying live operation |
-| P1.5.9 | Dashboard states | Implemented | Loading/error page branches and attention/orders/inventory empty/success branches use the shared state component |
-| P1.5.10 | Dashboard tests | Implemented | Feature assertion verifies preview warning, non-production wording, core sections, textual chart and system status labels; execution pending PHP |
+| P1.5.1 | Dashboard query contract | Verified | Query contract passes dashboard render tests |
+| P1.5.2 | Preview-data honesty | Verified | Warning and sample wording asserted in tests and inspected live |
+| P1.5.3 | Core metrics | Verified | Four operational preview metrics render correctly |
+| P1.5.4 | Attention queue | Verified | Queue and honest future-destination labels render |
+| P1.5.5 | Recent orders | Verified | Responsive sample table renders without fake links |
+| P1.5.6 | Inventory alerts | Verified | Low-stock and success-empty states covered |
+| P1.5.7 | Sales chart | Verified | Visual bars and full textual equivalent render |
+| P1.5.8 | Import and freeze status | Verified | Both unavailable-system statuses asserted |
+| P1.5.9 | Dashboard states | Verified | Loading/error/empty/success branches compile and pass tests |
+| P1.5.10 | Dashboard tests | Verified | Dashboard feature tests pass in final 25-test suite |
 
 ### Phase 1.6
 
 | ID | Objective | Status | Evidence/result |
 |---|---|---|---|
-| P1.6.1 | Storefront shell | Pending | — |
-| P1.6.2 | Mobile navigation | Pending | — |
-| P1.6.3 | Hero | Pending | — |
-| P1.6.4 | Category previews | Pending | — |
-| P1.6.5 | Product previews | Pending | — |
-| P1.6.6 | Featured/new sections | Pending | — |
-| P1.6.7 | Brand previews | Pending | — |
-| P1.6.8 | Trust section | Pending | — |
-| P1.6.9 | Footer | Pending | — |
-| P1.6.10 | Metadata | Pending | — |
-| P1.6.11 | Performance | Pending | — |
-| P1.6.12 | Homepage tests | Pending | — |
+| P1.6.1 | Storefront shell | Verified | Semantic announcement/header/search/nav/main/footer shell rendered live |
+| P1.6.2 | Mobile navigation | Verified | RTL mobile drawer opens at 375px; no horizontal overflow |
+| P1.6.3 | Hero | Verified | One H1, clear value proposition and non-fabricated CTA content |
+| P1.6.4 | Category previews | Verified | Reusable category cards render from isolated preview query |
+| P1.6.5 | Product previews | Verified | Reusable cards cover image fallback, price/stock and CTA policies |
+| P1.6.6 | Featured/new sections | Verified | Both structured preview collections render |
+| P1.6.7 | Brand previews | Verified | Neutral brand surface avoids partnership claims |
+| P1.6.8 | Trust section | Verified | Neutral service principles contain no fabricated proof |
+| P1.6.9 | Footer | Verified | Navigation and explicit contact/legal placeholders render |
+| P1.6.10 | Metadata | Verified | Persian title/description/canonical/OG and one-H1 hierarchy verified |
+| P1.6.11 | Performance | Verified | Local fonts/assets, CSS fallbacks and minimal JS; production build passed |
+| P1.6.12 | Homepage tests | Verified | Structure, SEO, RTL, H1 and honesty assertions pass |
 
 ### Phase 1.7
 
 | ID | Objective | Status | Evidence/result |
 |---|---|---|---|
-| P1.7.1 | PHP quality | Pending | PHP/Docker unavailable in current host environment |
-| P1.7.2 | Asset quality | Pending | Node/npm available; build will be run after asset implementation |
-| P1.7.3 | Route review | Pending | — |
-| P1.7.4 | Security review | Pending | — |
-| P1.7.5 | Responsive review | Pending | — |
-| P1.7.6 | Accessibility review | Pending | — |
-| P1.7.7 | State review | Pending | — |
-| P1.7.8 | Documentation sync | Pending | — |
-| P1.7.9 | Git handoff | Pending | Existing user-owned changes must remain untouched |
-| P1.7.10 | Runtime limitations | Pending | Current known limitation recorded below |
+| P1.7.1 | PHP quality | Verified | PHP 8.4.24: 25 tests/90 assertions; Pint 49 files; all project PHP syntax valid |
+| P1.7.2 | Asset quality | Verified | Vite production build passed, 120 modules; npm audit found 0 vulnerabilities |
+| P1.7.3 | Route review | Verified | Seven routes reviewed with expected auth/staff/guest boundaries |
+| P1.7.4 | Security review | Verified | Role gate, inactive staff, generic login, throttle, session and logout tests pass |
+| P1.7.5 | Responsive review | Verified | Homepage/admin reviewed desktop and 375px mobile with no overflow |
+| P1.7.6 | Accessibility review | Verified | RTL/lang, landmarks, headings, names, labels, focus and AA token contrast pass |
+| P1.7.7 | State review | Verified | Fourteen components compile; live drawer/sidebar/dropdown plus page states reviewed |
+| P1.7.8 | Documentation sync | Verified | Acceptance, scenarios and UI catalogs synchronized with this tracker |
+| P1.7.9 | Git handoff | In Progress | Awaiting explicit commit, push and local/remote equality check |
+| P1.7.10 | Runtime limitations | Verified | Host limitation and portable PHP/SQLite verification method documented |
 
 ## Decision Record Applied to This Phase
 
@@ -149,10 +149,10 @@ On 2026-08-18 the user approved all recommended defaults: brand name فروشگ�
 | Git | Available | Repository on `master`, remote read confirmed earlier |
 | Node.js | Available | v24.18.0 |
 | npm | Available | 11.16.0 |
-| PHP | Unavailable on host PATH | Laravel tests cannot currently run locally |
-| Composer | Unavailable on host PATH | Composer validation cannot currently run locally |
+| PHP | Portable runtime used | Official PHP 8.4.24 NTS x64; final suite passed |
+| Composer | Dependencies already present | Autoload/runtime verification completed through existing vendor tree |
 | Docker | Unavailable on host PATH | Container runtime verification cannot currently run |
-| GitHub CLI | Unavailable | Push authorization is not yet proven; HTTPS remote read works |
+| GitHub CLI | Unavailable | Git HTTPS remote is configured; final push is the remaining handoff check |
 
 ## Pre-existing User-Owned Working Tree Changes
 
@@ -234,9 +234,29 @@ These were present before Phase 1 implementation and must not be overwritten, re
 - PHP test execution and live responsive/visual review remain unavailable, so all ten objectives are Implemented rather than Verified.
 - Current position advanced to P1.6.1.
 
+### 2026-08-18 — Phase 1.6 implemented and verified
+
+- Added a dedicated storefront layout, responsive public header/navigation/footer and isolated `GetHomePagePreview` query contract.
+- Added hero, category, featured/new product, brand, trust and CTA sections using honest preview content and reusable cards.
+- Added Persian SEO metadata, canonical/Open Graph foundation, one-H1 hierarchy and explicit contact/legal placeholders.
+- Added homepage feature tests for structure, RTL, metadata and preview honesty.
+- Inspected desktop and 375px mobile rendering in a live browser; drawer works and both viewports have no horizontal overflow.
+- Phase 1.6 closed with 12 of 12 objectives Verified.
+
+### 2026-08-18 — Phase 1.7 verification loop
+
+- Used an official portable PHP 8.4.24 NTS x64 runtime because PHP and Docker are absent from host PATH.
+- Migrated and seeded a temporary SQLite database; no repository or production database was changed.
+- Final Laravel result: 25 tests, 90 assertions, all passing. Pint passed 49 files and project PHP syntax lint passed.
+- Direct Vite production build passed with 120 modules; npm audit reported 0 vulnerabilities.
+- Reviewed seven routes and authentication, active-staff, role, throttling, session and logout boundaries.
+- Live browser QA covered login, dashboard and homepage on desktop/mobile, interactive navigation states, semantic structure and AA token contrast.
+- Synchronized the Phase tracker, acceptance criteria, scenarios and page/dashboard catalogs.
+- Only P1.7.9 remains open until commits are pushed and local/remote equality is confirmed.
+
 ## Current Risks and Blockers
 
-- **Verification limitation, not yet a development blocker:** PHP, Composer and Docker are unavailable on the current host PATH. PHP tests and container smoke tests must remain unverified until Docker Desktop or a compatible PHP 8.3+ runtime is available.
+- **Host setup limitation, mitigated for Phase 1:** PHP, Composer and Docker remain unavailable on host PATH. Phase 1 was verified with a temporary official PHP 8.4.24 runtime and SQLite; future routine development should install a supported PHP/Composer or Docker environment.
 - **Windows path limitation:** `npm run ...` scripts fail because the workspace path contains `&` (`R&D`). Direct Node invocation of Vite succeeds. Moving/renaming the workspace to a path without shell metacharacters will restore normal npm scripts; this does not block implementation.
 - **Knowledge graph tooling:** repository rules request `graphify update .` after code changes, but the `graphify` command is unavailable on PATH. The update was attempted and failed before changing graph data.
 - **Brand asset gap:** no approved logo file exists. The accepted text wordmark is used, so work can continue.
@@ -244,4 +264,4 @@ These were present before Phase 1 implementation and must not be overwritten, re
 
 ## Next Objective
 
-Implement **P1.6.1 — Storefront shell** through the complete responsive homepage objectives, keeping all catalog and contact placeholders explicit and replaceable.
+Complete **P1.7.9 — Git handoff**: commit only Phase 1 files, exclude Graphify/user-owned changes, push `master`, and prove `HEAD` equals `origin/master`.

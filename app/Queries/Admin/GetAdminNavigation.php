@@ -8,8 +8,11 @@ use Illuminate\Support\Facades\Route;
 
 class GetAdminNavigation
 {
-    public function __construct(private readonly Request $request)
+    private readonly Request $request;
+
+    public function __construct(Request $request)
     {
+        $this->request = $request;
     }
 
     /** @return array<int, array{label: string, items: array<int, array<string, mixed>>}> */
