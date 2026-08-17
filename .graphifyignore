@@ -1,0 +1,5 @@
+.codex/
+graphify-out/
+vendor/
+storage/
+node_modules/
