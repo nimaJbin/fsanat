@@ -68,4 +68,19 @@ class AdminShellTest extends TestCase
             ->assertSee('id="field-current_password"', false)
             ->assertSee('id="field-password_confirmation"', false);
     }
+
+    public function test_dashboard_marks_all_preview_information_honestly(): void
+    {
+        $owner = User::factory()->create(['role' => UserRole::Owner]);
+
+        $this->actingAs($owner)
+            ->get('/admin/dashboard')
+            ->assertOk()
+            ->assertSee('داشبورد در حالت پیش‌نمایش است')
+            ->assertSee('داده واقعی فروشگاه محسوب نمی‌شوند')
+            ->assertSee('سفارش‌های اخیر')
+            ->assertSee('مقادیر متنی نمودار')
+            ->assertSee('ورود اطلاعات')
+            ->assertSee('توقف پویا');
+    }
 }

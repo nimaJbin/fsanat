@@ -12,12 +12,12 @@ Length Exception: Approved by the user on 2026-08-18. This live tracker is exemp
 ## Current Position
 
 - Current phase: **Phase 1**
-- Current subphase: **1.5 — Admin Dashboard**
-- Current objective: **P1.5.1 — Dashboard query contract**
+- Current subphase: **1.6 — Public Storefront Homepage**
+- Current objective: **P1.6.1 — Storefront shell**
 - Overall state: **In progress**
 - Started: **2026-08-18**
 - Last updated: **2026-08-18**
-- Next action: create the replaceable dashboard Query/view-data contract and compose the operational preview dashboard entirely from shared components.
+- Next action: build the responsive public storefront shell and homepage sections with explicit preview catalog content and no fabricated business claims.
 
 ## Progress Summary
 
@@ -27,10 +27,10 @@ Length Exception: Approved by the user on 2026-08-18. This live tracker is exemp
 | 1.2 Admin auth/security | 9 | 0 | 9 | 0 | Implemented; PHP verification pending |
 | 1.3 Admin shell | 10 | 0 | 10 | 0 | Implemented; runtime and visual verification pending |
 | 1.4 Shared components | 9 | 0 | 9 | 0 | Implemented; runtime and visual verification pending |
-| 1.5 Admin dashboard | 10 | 0 | 0 | 10 | Pending |
+| 1.5 Admin dashboard | 10 | 0 | 10 | 0 | Implemented; runtime and visual verification pending |
 | 1.6 Storefront homepage | 12 | 0 | 0 | 12 | Pending |
 | 1.7 Quality and handoff | 10 | 0 | 0 | 10 | Pending |
-| **Total** | **67** | **7** | **28** | **32** | **10.4% verified; 52.2% implemented or verified** |
+| **Total** | **67** | **7** | **38** | **22** | **10.4% verified; 67.2% implemented or verified** |
 
 Progress percentages use Verified objectives only. Implemented-but-unverified work remains visible and does not inflate completion.
 
@@ -95,16 +95,16 @@ Progress percentages use Verified objectives only. Implemented-but-unverified wo
 
 | ID | Objective | Status | Evidence/result |
 |---|---|---|---|
-| P1.5.1 | Dashboard query contract | Pending | — |
-| P1.5.2 | Preview-data honesty | Pending | — |
-| P1.5.3 | Core metrics | Pending | — |
-| P1.5.4 | Attention queue | Pending | — |
-| P1.5.5 | Recent orders | Pending | — |
-| P1.5.6 | Inventory alerts | Pending | — |
-| P1.5.7 | Sales chart | Pending | — |
-| P1.5.8 | Import and freeze status | Pending | — |
-| P1.5.9 | Dashboard states | Pending | — |
-| P1.5.10 | Dashboard tests | Pending | — |
+| P1.5.1 | Dashboard query contract | Implemented | `GetDashboardOverview` owns the complete replaceable dashboard view-data contract; controller only passes its result to Blade |
+| P1.5.2 | Preview-data honesty | Implemented | Persistent warning explicitly states that every number is design preview data; sample order/product identifiers are visibly named as samples |
+| P1.5.3 | Core metrics | Implemented | Shared metric cards show preview orders requiring attention, active products, inventory warnings and open tickets with text context |
+| P1.5.4 | Attention queue | Implemented | Prioritized order, inventory and payment review items include status and honest future-destination explanation |
+| P1.5.5 | Recent orders | Implemented | Responsive shared table displays clearly fictional sample rows without links to nonexistent order pages |
+| P1.5.6 | Inventory alerts | Implemented | Sample low-stock list includes product, SKU and remaining amount plus a success empty state |
+| P1.5.7 | Sales chart | Implemented | Token-driven CSS bars provide a restrained preview chart and an expandable complete textual equivalent |
+| P1.5.8 | Import and freeze status | Implemented | Dedicated cards state that Import is not started and Dynamic Freeze is unavailable rather than implying live operation |
+| P1.5.9 | Dashboard states | Implemented | Loading/error page branches and attention/orders/inventory empty/success branches use the shared state component |
+| P1.5.10 | Dashboard tests | Implemented | Feature assertion verifies preview warning, non-production wording, core sections, textual chart and system status labels; execution pending PHP |
 
 ### Phase 1.6
 
@@ -222,6 +222,18 @@ These were present before Phase 1 implementation and must not be overwritten, re
 - PHP rendering tests and hands-on visual/state inspection remain unavailable, so all nine objectives are Implemented rather than Verified.
 - Current position advanced to P1.5.1.
 
+### 2026-08-18 — Phase 1.5 implemented, runtime and visual verification pending
+
+- Added `GetDashboardOverview` so preview fixtures can later be replaced by module-backed data without restructuring the Blade page.
+- Added four operational metric cards, prioritized attention queue, recent-order table and low-inventory list.
+- Added a restrained seven-day sales chart with a complete expandable textual equivalent.
+- Added Import and Dynamic Freeze status surfaces that honestly describe unavailable functionality.
+- Added loading, error, empty and success rendering branches using the shared state component.
+- Added Feature coverage for preview-data honesty and all critical dashboard regions.
+- Direct Vite build passed with 120 transformed modules; `npm audit` found 0 vulnerabilities; `git diff --check` passed.
+- PHP test execution and live responsive/visual review remain unavailable, so all ten objectives are Implemented rather than Verified.
+- Current position advanced to P1.6.1.
+
 ## Current Risks and Blockers
 
 - **Verification limitation, not yet a development blocker:** PHP, Composer and Docker are unavailable on the current host PATH. PHP tests and container smoke tests must remain unverified until Docker Desktop or a compatible PHP 8.3+ runtime is available.
@@ -232,4 +244,4 @@ These were present before Phase 1 implementation and must not be overwritten, re
 
 ## Next Objective
 
-Implement **P1.5.1 — Dashboard query contract** through the operational preview dashboard objectives, keeping preview values visibly separate from future production data.
+Implement **P1.6.1 — Storefront shell** through the complete responsive homepage objectives, keeping all catalog and contact placeholders explicit and replaceable.
