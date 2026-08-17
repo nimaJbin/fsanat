@@ -13,4 +13,14 @@ enum UserRole: string
     {
         return $this !== self::Customer;
     }
+
+    public function label(): string
+    {
+        return match ($this) {
+            self::Customer => 'مشتری',
+            self::Owner => 'مالک',
+            self::Admin => 'مدیر',
+            self::Operator => 'اپراتور',
+        };
+    }
 }

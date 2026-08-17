@@ -12,12 +12,12 @@ Length Exception: Approved by the user on 2026-08-18. This live tracker is exemp
 ## Current Position
 
 - Current phase: **Phase 1**
-- Current subphase: **1.3 — Admin Shell**
-- Current objective: **P1.3.1 — Guest admin layout**
+- Current subphase: **1.6 — Public Storefront Homepage**
+- Current objective: **P1.6.1 — Storefront shell**
 - Overall state: **In progress**
 - Started: **2026-08-18**
 - Last updated: **2026-08-18**
-- Next action: build the reusable authenticated admin shell, navigation and responsive behavior on top of the verified frontend foundation.
+- Next action: build the responsive public storefront shell and homepage sections with explicit preview catalog content and no fabricated business claims.
 
 ## Progress Summary
 
@@ -25,12 +25,12 @@ Length Exception: Approved by the user on 2026-08-18. This live tracker is exemp
 |---|---:|---:|---:|---:|---|
 | 1.1 Frontend infrastructure | 7 | 7 | 0 | 0 | Verified |
 | 1.2 Admin auth/security | 9 | 0 | 9 | 0 | Implemented; PHP verification pending |
-| 1.3 Admin shell | 10 | 0 | 0 | 10 | Pending |
-| 1.4 Shared components | 9 | 0 | 0 | 9 | Pending |
-| 1.5 Admin dashboard | 10 | 0 | 0 | 10 | Pending |
+| 1.3 Admin shell | 10 | 0 | 10 | 0 | Implemented; runtime and visual verification pending |
+| 1.4 Shared components | 9 | 0 | 9 | 0 | Implemented; runtime and visual verification pending |
+| 1.5 Admin dashboard | 10 | 0 | 10 | 0 | Implemented; runtime and visual verification pending |
 | 1.6 Storefront homepage | 12 | 0 | 0 | 12 | Pending |
 | 1.7 Quality and handoff | 10 | 0 | 0 | 10 | Pending |
-| **Total** | **67** | **7** | **9** | **51** | **10.4% verified; 23.9% implemented or verified** |
+| **Total** | **67** | **7** | **38** | **22** | **10.4% verified; 67.2% implemented or verified** |
 
 Progress percentages use Verified objectives only. Implemented-but-unverified work remains visible and does not inflate completion.
 
@@ -66,45 +66,45 @@ Progress percentages use Verified objectives only. Implemented-but-unverified wo
 
 | ID | Objective | Status | Evidence/result |
 |---|---|---|---|
-| P1.3.1 | Guest admin layout | Pending | — |
-| P1.3.2 | Authenticated layout | Pending | — |
-| P1.3.3 | Navigation architecture | Pending | — |
-| P1.3.4 | Availability states | Pending | — |
-| P1.3.5 | Permission-aware navigation | Pending | — |
-| P1.3.6 | Responsive sidebar | Pending | — |
-| P1.3.7 | Topbar | Pending | — |
-| P1.3.8 | Breadcrumb and titles | Pending | — |
-| P1.3.9 | Feedback channel | Pending | — |
-| P1.3.10 | Error pages | Pending | — |
+| P1.3.1 | Guest admin layout | Implemented | Dedicated branded guest layout now owns login and error surfaces; visual browser verification pending |
+| P1.3.2 | Authenticated layout | Implemented | Reusable admin layout provides sidebar, mobile navigation, topbar, page header, flash region and content container |
+| P1.3.3 | Navigation architecture | Implemented | Central config covers dashboard, users, products, taxonomy, inventory, orders, approvals, freeze, bulk operations, imports, finance, wallet, tickets, reports, settings and activity |
+| P1.3.4 | Availability states | Implemented | Missing future routes render as non-interactive disabled items with an explicit «به‌زودی» label and no fake URL |
+| P1.3.5 | Permission-aware navigation | Implemented | `GetAdminNavigation` filters central configuration by typed role before the view receives it; owner-only and management-only areas are covered by tests |
+| P1.3.6 | Responsive sidebar | Implemented | Desktop sidebar collapses with persistent browser preference; Bootstrap RTL offcanvas provides the mobile drawer; hands-on viewport/keyboard review pending |
+| P1.3.7 | Topbar | Implemented | Responsive menu controls and accessible account dropdown expose role, password change and POST logout |
+| P1.3.8 | Breadcrumb and titles | Implemented | Authenticated layout defines reusable breadcrumb, page title, description and action regions; dashboard and password pages migrated |
+| P1.3.9 | Feedback channel | Implemented | Central flash partial supports success, warning, error and info semantics with dismiss controls |
+| P1.3.10 | Error pages | Implemented | Persian 403 and 404 pages provide context-safe return links; response/view tests added |
 
 ### Phase 1.4
 
 | ID | Objective | Status | Evidence/result |
 |---|---|---|---|
-| P1.4.1 | Action components | Pending | — |
-| P1.4.2 | Form components | Pending | — |
-| P1.4.3 | Feedback components | Pending | — |
-| P1.4.4 | Content components | Pending | — |
-| P1.4.5 | Data components | Pending | — |
-| P1.4.6 | State components | Pending | — |
-| P1.4.7 | Overlay components | Pending | — |
-| P1.4.8 | Metric component | Pending | — |
-| P1.4.9 | Component documentation | Pending | — |
+| P1.4.1 | Action components | Implemented | `x-ui.button` provides primary, accent, secondary, quiet and danger hierarchy plus link, icon, disabled and loading contracts |
+| P1.4.2 | Form components | Implemented | Shared input, select and checkbox components provide persistent labels, old input, help, required and Laravel validation/ARIA wiring |
+| P1.4.3 | Feedback components | Implemented | Alert and badge components cover semantic variants; central Flash rendering now uses `x-ui.alert` |
+| P1.4.4 | Content components | Implemented | Shared card plus authenticated layout page-header/breadcrumb regions establish the content contract; dashboard uses the card component |
+| P1.4.5 | Data components | Implemented | Shared table provides label, responsive containment, empty state and footer pagination region; filter bar provides responsive search grouping |
+| P1.4.6 | State components | Implemented | One state component covers loading, empty, error and success semantics, icons, message and recovery action |
+| P1.4.7 | Overlay components | Implemented | Shared modal, dropdown and drawer wrap Bootstrap focus/Escape behavior and labelled headers/actions |
+| P1.4.8 | Metric component | Implemented | Metric card supports label, value, context, icon and non-color-only semantic variants |
+| P1.4.9 | Component documentation | Implemented | Complete prop/slot, state, accessibility and usage catalog appended to the exempt single Phase 1 plan file |
 
 ### Phase 1.5
 
 | ID | Objective | Status | Evidence/result |
 |---|---|---|---|
-| P1.5.1 | Dashboard query contract | Pending | — |
-| P1.5.2 | Preview-data honesty | Pending | — |
-| P1.5.3 | Core metrics | Pending | — |
-| P1.5.4 | Attention queue | Pending | — |
-| P1.5.5 | Recent orders | Pending | — |
-| P1.5.6 | Inventory alerts | Pending | — |
-| P1.5.7 | Sales chart | Pending | — |
-| P1.5.8 | Import and freeze status | Pending | — |
-| P1.5.9 | Dashboard states | Pending | — |
-| P1.5.10 | Dashboard tests | Pending | — |
+| P1.5.1 | Dashboard query contract | Implemented | `GetDashboardOverview` owns the complete replaceable dashboard view-data contract; controller only passes its result to Blade |
+| P1.5.2 | Preview-data honesty | Implemented | Persistent warning explicitly states that every number is design preview data; sample order/product identifiers are visibly named as samples |
+| P1.5.3 | Core metrics | Implemented | Shared metric cards show preview orders requiring attention, active products, inventory warnings and open tickets with text context |
+| P1.5.4 | Attention queue | Implemented | Prioritized order, inventory and payment review items include status and honest future-destination explanation |
+| P1.5.5 | Recent orders | Implemented | Responsive shared table displays clearly fictional sample rows without links to nonexistent order pages |
+| P1.5.6 | Inventory alerts | Implemented | Sample low-stock list includes product, SKU and remaining amount plus a success empty state |
+| P1.5.7 | Sales chart | Implemented | Token-driven CSS bars provide a restrained preview chart and an expandable complete textual equivalent |
+| P1.5.8 | Import and freeze status | Implemented | Dedicated cards state that Import is not started and Dynamic Freeze is unavailable rather than implying live operation |
+| P1.5.9 | Dashboard states | Implemented | Loading/error page branches and attention/orders/inventory empty/success branches use the shared state component |
+| P1.5.10 | Dashboard tests | Implemented | Feature assertion verifies preview warning, non-production wording, core sections, textual chart and system status labels; execution pending PHP |
 
 ### Phase 1.6
 
@@ -197,6 +197,43 @@ These were present before Phase 1 implementation and must not be overwritten, re
 - PHP syntax, migrations and Feature tests cannot run because PHP and Docker are unavailable. All nine objectives remain Implemented rather than Verified.
 - Current position advanced to P1.3.1 so UI work can continue without falsely closing security verification.
 
+### 2026-08-18 — Phase 1.3 implemented, runtime and visual verification pending
+
+- Added separate guest and authenticated admin layouts.
+- Added a single central navigation configuration plus a Query that filters modules by typed user role and marks the active route.
+- Implemented the complete documented operational navigation. Future modules are disabled and labelled rather than linked to missing routes.
+- Added a fixed desktop sidebar with persistent collapsed state and a Bootstrap RTL mobile offcanvas.
+- Added a sticky topbar, staff identity/role display, password and secure logout menu, breadcrumb/page-heading contract and central flash region.
+- Migrated dashboard and password-change pages into the authenticated shell.
+- Added Persian 403 and 404 pages with safe return destinations.
+- Added four Feature tests for owner navigation, operator restrictions, forbidden response and missing-page response.
+- Direct Vite build passed with 120 transformed modules; `npm audit` found 0 vulnerabilities; Phase 1 files passed `git diff --check`.
+- Browser responsive/keyboard inspection and PHP Feature execution are unavailable, so all ten objectives remain Implemented rather than Verified.
+- Current position advanced to P1.4.1.
+
+### 2026-08-18 — Phase 1.4 implemented, runtime and visual verification pending
+
+- Added fourteen anonymous Blade components: button, input, select, checkbox, alert, badge, card, table, filter bar, state, metric, modal, dropdown and drawer.
+- Added a framework-neutral component style layer imported by both admin and storefront bundles.
+- Migrated login and password forms to shared inputs/buttons, Flash feedback to shared alerts and dashboard preview content to shared card/badge components.
+- Documented every component prop, named slot, state, accessibility behavior and usage rule inside the single exempt Phase 1 plan.
+- Extended shell tests to assert the shared form ID/label contract on login and password pages.
+- Direct Vite build passed with 120 transformed modules; `npm audit` found 0 vulnerabilities; `git diff --check` passed.
+- PHP rendering tests and hands-on visual/state inspection remain unavailable, so all nine objectives are Implemented rather than Verified.
+- Current position advanced to P1.5.1.
+
+### 2026-08-18 — Phase 1.5 implemented, runtime and visual verification pending
+
+- Added `GetDashboardOverview` so preview fixtures can later be replaced by module-backed data without restructuring the Blade page.
+- Added four operational metric cards, prioritized attention queue, recent-order table and low-inventory list.
+- Added a restrained seven-day sales chart with a complete expandable textual equivalent.
+- Added Import and Dynamic Freeze status surfaces that honestly describe unavailable functionality.
+- Added loading, error, empty and success rendering branches using the shared state component.
+- Added Feature coverage for preview-data honesty and all critical dashboard regions.
+- Direct Vite build passed with 120 transformed modules; `npm audit` found 0 vulnerabilities; `git diff --check` passed.
+- PHP test execution and live responsive/visual review remain unavailable, so all ten objectives are Implemented rather than Verified.
+- Current position advanced to P1.6.1.
+
 ## Current Risks and Blockers
 
 - **Verification limitation, not yet a development blocker:** PHP, Composer and Docker are unavailable on the current host PATH. PHP tests and container smoke tests must remain unverified until Docker Desktop or a compatible PHP 8.3+ runtime is available.
@@ -207,4 +244,4 @@ These were present before Phase 1 implementation and must not be overwritten, re
 
 ## Next Objective
 
-Implement **P1.3.1 — Guest admin layout** through the shared authenticated admin shell and navigation objectives, then record responsive and keyboard evidence.
+Implement **P1.6.1 — Storefront shell** through the complete responsive homepage objectives, keeping all catalog and contact placeholders explicit and replaceable.

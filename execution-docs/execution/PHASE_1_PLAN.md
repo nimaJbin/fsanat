@@ -253,3 +253,100 @@ Phase 1 is complete only when:
 ## 14. Change Control
 
 New requirements may be added only with a new permanent objective ID, rationale, dependencies and acceptance criteria. Existing IDs are never reused for different work. Scope changes update the version and decision log. Implementation progress never edits historical outcomes out of `PHASE_1_STATUS.md`; corrections are appended with date and reason.
+
+## 15. Shared Component API Catalog
+
+This catalog is the canonical Phase 1 API for anonymous Blade components under `resources/views/components/ui`. Pages must reuse these components before introducing page-specific equivalents.
+
+### `x-ui.button`
+
+Purpose: links and buttons with consistent primary, accent, secondary, quiet and destructive hierarchy.
+
+Props: `href?`, `variant=primary|accent|secondary|quiet|danger`, `type=button`, `disabled=false`, `loading=false`, `icon?`. Additional attributes merge onto the root. When loading, the control is disabled, exposes `aria-busy` and includes nonvisual Persian progress text. A disabled link renders as a disabled button rather than an unusable anchor.
+
+### `x-ui.input`
+
+Purpose: labelled text-compatible controls with validation and help relationships.
+
+Props: `name` and `label` required; `type=text`, `value?`, `help?`, `required=false`. IDs default to `field-{name}` and may be overridden. Old input is restored except for passwords. Laravel validation errors automatically add invalid state, Persian error content and `aria-describedby`/`aria-invalid`.
+
+### `x-ui.select`
+
+Purpose: labelled choice control using either an `options` map or caller-provided option slot.
+
+Props: `name`, `label`, `options=[]`, `selected?`, `help?`, `required=false`. Old input wins over selected input. Validation state follows the input contract.
+
+### `x-ui.checkbox`
+
+Purpose: labelled boolean/multiple-value choice with optional help and validation.
+
+Props: `name`, `label`, `checked=false`, `value=1`, `help?`. The complete label is clickable and the native control remains keyboard accessible.
+
+### `x-ui.alert`
+
+Purpose: inline status and flash feedback.
+
+Props: `variant=info|success|warning|error`, `title?`, `dismissible=false`. Errors use `role=alert`; other variants use `role=status`. Dismissible alerts include an accessible close label.
+
+### `x-ui.badge`
+
+Purpose: compact status text that never relies on color alone.
+
+Props: `variant=info|success|warning|error|neutral`, `icon?`. Caller content must contain the status meaning in words.
+
+### `x-ui.card`
+
+Purpose: shared content surface.
+
+Props: `title?`, `description?`; default slot is body. Named `header` slot adds actions and named `footer` slot adds a separated footer. Do not nest cards only for visual decoration.
+
+### `x-ui.table`
+
+Purpose: accessible data surface with responsive containment and an integrated empty state.
+
+Props: `label` required, `empty=false`, `emptyTitle`, `emptyMessage?`. Named `head` slot contains header rows, default slot contains body rows and named `footer` slot contains pagination/summary. On mobile, future domain tables must provide concise cells or a card alternative rather than relying solely on horizontal scrolling.
+
+### `x-ui.filter-bar`
+
+Purpose: consistent search/filter action group. Default slot contains controls. It exposes a search landmark and stacks direct children at narrow widths.
+
+### `x-ui.state`
+
+Purpose: loading, empty, error and success surfaces.
+
+Props: `type=loading|empty|error|success`, `title` required, `message?`, `icon?`. Default slot contains recovery/next action. Loading exposes busy state; error exposes alert semantics; animations respect the global reduced-motion rule.
+
+### `x-ui.metric`
+
+Purpose: dashboard metric with a textual label, value, context and supplementary icon.
+
+Props: `label`, `value`, `context?`, `icon=ti-chart-bar`, `variant=neutral|warning|error|success`. Variant color is supplementary; label/context must convey meaning without color.
+
+### `x-ui.modal`
+
+Purpose: accessible Bootstrap/Tabler dialog and destructive confirmation foundation.
+
+Props: `id`, `title`, `size?`, `confirmLabel?`, `confirmVariant=danger`. Default slot is dialog body; named `footer` overrides generated actions. Bootstrap owns focus trapping, Escape close and focus restoration. Destructive forms belong in the footer and must state the affected record/action clearly.
+
+### `x-ui.dropdown`
+
+Purpose: keyboard-compatible Bootstrap action menu.
+
+Props: `id`, `label`, `icon=ti-dots-vertical`, `align=end`. Default slot contains `.dropdown-item` links/buttons. Critical actions require visible text; icons alone are insufficient.
+
+### `x-ui.drawer`
+
+Purpose: responsive Bootstrap offcanvas for filters, navigation and supporting workflows.
+
+Props: `id`, `title`, `placement=start|end|top|bottom`. Default slot is body; named `footer` adds a separated action area. Bootstrap owns focus trapping, backdrop, Escape and focus restoration.
+
+## 16. Component Usage Rules
+
+- Prefer component props and slots over copying internal classes.
+- Domain pages may compose components but must not add a second visual variant with an existing meaning.
+- Every form control has a persistent visible label.
+- Loading disables duplicate submission; future asynchronous handlers must set the loading prop/state.
+- Destructive actions use the danger button plus a confirmation modal when recovery is difficult.
+- Table pagination is placed in the table footer slot. Search/filter controls are placed in `x-ui.filter-bar`.
+- Empty and error states include a recovery action whenever the user can resolve the condition.
+- New variants require updating this catalog and the accepted Design System before implementation.

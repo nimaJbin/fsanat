@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Queries\Admin\GetAdminNavigation;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +21,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        View::composer('layouts.admin.authenticated', function ($view): void {
+            $user = request()->user();
+
+            $view->with('adminNavigation', $user ? app(GetAdminNavigation::class)($user) : []);
+        });
     }
 }
