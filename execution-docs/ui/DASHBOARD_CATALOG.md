@@ -5,7 +5,7 @@ Status: Draft
 Version: 0.1
 Source of Truth: execution-docs
 Related Wiki Sources: project-wiki/core/ADMIN_PANEL_STRUCTURE.md, project-wiki/ui-ux/README.md
-Dependencies: PAGE_CATALOG.md, ../systems/ADMIN_PANEL_SYSTEM.md
+Dependencies: PAGE_CATALOG.md, DESIGN_SYSTEM.md, DESIGN_TOKENS.md, COMPONENT_STANDARDS.md, ../systems/ADMIN_PANEL_SYSTEM.md
 Next Documents: ../qa/TEST_SCENARIOS.md
 
 Purpose: define operational dashboards and summary surfaces.

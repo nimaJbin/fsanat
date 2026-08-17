@@ -5,7 +5,7 @@ Status: Draft
 Version: 0.1
 Source of Truth: execution-docs
 Related Wiki Sources: project-wiki/ui-ux/README.md, project-wiki/systems
-Dependencies: PAGE_CATALOG.md, ../domain/FIELD_MATRIX.md
+Dependencies: PAGE_CATALOG.md, DESIGN_SYSTEM.md, DESIGN_TOKENS.md, COMPONENT_STANDARDS.md, ../domain/FIELD_MATRIX.md
 Next Documents: ../development/API_CATALOG.md, ../qa/ACCEPTANCE_CRITERIA.md
 
 Purpose: track forms, fields, validation and system ownership.

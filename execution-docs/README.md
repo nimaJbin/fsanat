@@ -19,7 +19,7 @@ Primary groups:
 - business: processes, journeys, roles, permissions.
 - domain: entities, fields, enums, states and relationships.
 - systems: implementation-focused module briefs.
-- ui: pages, forms and dashboards.
+- ui: mandatory design system, tokens, component standards, pages, forms and dashboards.
 - development: APIs, events, queues, automations, integrations.
 - qa: acceptance and scenario guidance.
 - execution: roadmap, milestones, backlog and task breakdown.

@@ -21,10 +21,11 @@ Read order for every AI agent:
 9. business/BUSINESS_PROCESS_MAP.md
 10. domain/ENTITY_CATALOG.md
 11. systems/[target system].md
-12. ui/[target catalog].md
-13. development/[target catalog].md
-14. qa/ACCEPTANCE_CRITERIA.md
-15. execution/TASK_BREAKDOWN.md
+12. ui/DESIGN_SYSTEM.md, ui/DESIGN_TOKENS.md and ui/COMPONENT_STANDARDS.md for every UI task
+13. ui/[target catalog].md
+14. development/[target catalog].md
+15. qa/ACCEPTANCE_CRITERIA.md
+16. execution/TASK_BREAKDOWN.md
 
 Navigation rule: read only the minimum path needed for the task, then follow the target document's Dependencies and Next Documents. If a required detail is missing, record the gap in the target execution document and link the relevant project-wiki source instead of copying long wiki text.
 
