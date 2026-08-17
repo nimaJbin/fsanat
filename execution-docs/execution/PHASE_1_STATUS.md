@@ -12,12 +12,12 @@ Length Exception: Approved by the user on 2026-08-18. This live tracker is exemp
 ## Current Position
 
 - Current phase: **Phase 1**
-- Current subphase: **1.4 — Shared Blade Components**
-- Current objective: **P1.4.1 — Action components**
+- Current subphase: **1.5 — Admin Dashboard**
+- Current objective: **P1.5.1 — Dashboard query contract**
 - Overall state: **In progress**
 - Started: **2026-08-18**
 - Last updated: **2026-08-18**
-- Next action: extract the shared action, form, feedback, content, data, state, overlay and metric components used by all future pages.
+- Next action: create the replaceable dashboard Query/view-data contract and compose the operational preview dashboard entirely from shared components.
 
 ## Progress Summary
 
@@ -26,11 +26,11 @@ Length Exception: Approved by the user on 2026-08-18. This live tracker is exemp
 | 1.1 Frontend infrastructure | 7 | 7 | 0 | 0 | Verified |
 | 1.2 Admin auth/security | 9 | 0 | 9 | 0 | Implemented; PHP verification pending |
 | 1.3 Admin shell | 10 | 0 | 10 | 0 | Implemented; runtime and visual verification pending |
-| 1.4 Shared components | 9 | 0 | 0 | 9 | Pending |
+| 1.4 Shared components | 9 | 0 | 9 | 0 | Implemented; runtime and visual verification pending |
 | 1.5 Admin dashboard | 10 | 0 | 0 | 10 | Pending |
 | 1.6 Storefront homepage | 12 | 0 | 0 | 12 | Pending |
 | 1.7 Quality and handoff | 10 | 0 | 0 | 10 | Pending |
-| **Total** | **67** | **7** | **19** | **41** | **10.4% verified; 38.8% implemented or verified** |
+| **Total** | **67** | **7** | **28** | **32** | **10.4% verified; 52.2% implemented or verified** |
 
 Progress percentages use Verified objectives only. Implemented-but-unverified work remains visible and does not inflate completion.
 
@@ -81,15 +81,15 @@ Progress percentages use Verified objectives only. Implemented-but-unverified wo
 
 | ID | Objective | Status | Evidence/result |
 |---|---|---|---|
-| P1.4.1 | Action components | Pending | — |
-| P1.4.2 | Form components | Pending | — |
-| P1.4.3 | Feedback components | Pending | — |
-| P1.4.4 | Content components | Pending | — |
-| P1.4.5 | Data components | Pending | — |
-| P1.4.6 | State components | Pending | — |
-| P1.4.7 | Overlay components | Pending | — |
-| P1.4.8 | Metric component | Pending | — |
-| P1.4.9 | Component documentation | Pending | — |
+| P1.4.1 | Action components | Implemented | `x-ui.button` provides primary, accent, secondary, quiet and danger hierarchy plus link, icon, disabled and loading contracts |
+| P1.4.2 | Form components | Implemented | Shared input, select and checkbox components provide persistent labels, old input, help, required and Laravel validation/ARIA wiring |
+| P1.4.3 | Feedback components | Implemented | Alert and badge components cover semantic variants; central Flash rendering now uses `x-ui.alert` |
+| P1.4.4 | Content components | Implemented | Shared card plus authenticated layout page-header/breadcrumb regions establish the content contract; dashboard uses the card component |
+| P1.4.5 | Data components | Implemented | Shared table provides label, responsive containment, empty state and footer pagination region; filter bar provides responsive search grouping |
+| P1.4.6 | State components | Implemented | One state component covers loading, empty, error and success semantics, icons, message and recovery action |
+| P1.4.7 | Overlay components | Implemented | Shared modal, dropdown and drawer wrap Bootstrap focus/Escape behavior and labelled headers/actions |
+| P1.4.8 | Metric component | Implemented | Metric card supports label, value, context, icon and non-color-only semantic variants |
+| P1.4.9 | Component documentation | Implemented | Complete prop/slot, state, accessibility and usage catalog appended to the exempt single Phase 1 plan file |
 
 ### Phase 1.5
 
@@ -211,6 +211,17 @@ These were present before Phase 1 implementation and must not be overwritten, re
 - Browser responsive/keyboard inspection and PHP Feature execution are unavailable, so all ten objectives remain Implemented rather than Verified.
 - Current position advanced to P1.4.1.
 
+### 2026-08-18 — Phase 1.4 implemented, runtime and visual verification pending
+
+- Added fourteen anonymous Blade components: button, input, select, checkbox, alert, badge, card, table, filter bar, state, metric, modal, dropdown and drawer.
+- Added a framework-neutral component style layer imported by both admin and storefront bundles.
+- Migrated login and password forms to shared inputs/buttons, Flash feedback to shared alerts and dashboard preview content to shared card/badge components.
+- Documented every component prop, named slot, state, accessibility behavior and usage rule inside the single exempt Phase 1 plan.
+- Extended shell tests to assert the shared form ID/label contract on login and password pages.
+- Direct Vite build passed with 120 transformed modules; `npm audit` found 0 vulnerabilities; `git diff --check` passed.
+- PHP rendering tests and hands-on visual/state inspection remain unavailable, so all nine objectives are Implemented rather than Verified.
+- Current position advanced to P1.5.1.
+
 ## Current Risks and Blockers
 
 - **Verification limitation, not yet a development blocker:** PHP, Composer and Docker are unavailable on the current host PATH. PHP tests and container smoke tests must remain unverified until Docker Desktop or a compatible PHP 8.3+ runtime is available.
@@ -221,4 +232,4 @@ These were present before Phase 1 implementation and must not be overwritten, re
 
 ## Next Objective
 
-Implement **P1.4.1 — Action components** through the complete shared Blade component inventory, migrate existing pages to the components and document their APIs/states.
+Implement **P1.5.1 — Dashboard query contract** through the operational preview dashboard objectives, keeping preview values visibly separate from future production data.

@@ -1,6 +1,7 @@
 @import '@tabler/core/dist/css/tabler.rtl.css';
 @import '@tabler/icons-webfont/dist/tabler-icons.css';
 @import './shared.css';
+@import './components.css';
 
 :root {
     --tblr-font-sans-serif: var(--fs-font-sans);

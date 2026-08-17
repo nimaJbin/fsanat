@@ -1,6 +1,7 @@
 @import 'bootstrap/dist/css/bootstrap.rtl.css';
 @import '@tabler/icons-webfont/dist/tabler-icons.css';
 @import './shared.css';
+@import './components.css';
 
 :root {
     --bs-font-sans-serif: var(--fs-font-sans);

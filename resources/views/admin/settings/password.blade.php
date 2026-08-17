@@ -19,26 +19,13 @@
                     @csrf
                     @method('PUT')
                     <div class="card-body">
-                    <div class="mb-3">
-                        <label class="form-label" for="current_password">رمز عبور فعلی</label>
-                        <input class="form-control @error('current_password') is-invalid @enderror" id="current_password" name="current_password" type="password" autocomplete="current-password" required>
-                        @error('current_password')<div class="invalid-feedback">{{ $message }}</div>@enderror
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label" for="password">رمز عبور جدید</label>
-                        <input class="form-control @error('password') is-invalid @enderror" id="password" name="password" type="password" autocomplete="new-password" required>
-                        @error('password')<div class="invalid-feedback">{{ $message }}</div>@enderror
-                    </div>
-
-                    <div class="mb-4">
-                        <label class="form-label" for="password_confirmation">تکرار رمز عبور جدید</label>
-                        <input class="form-control" id="password_confirmation" name="password_confirmation" type="password" autocomplete="new-password" required>
-                    </div>
+                    <x-ui.input name="current_password" label="رمز عبور فعلی" type="password" required autocomplete="current-password" />
+                    <x-ui.input name="password" label="رمز عبور جدید" type="password" required autocomplete="new-password" help="از یک عبارت طولانی و منحصربه‌فرد استفاده کنید." />
+                    <x-ui.input name="password_confirmation" label="تکرار رمز عبور جدید" type="password" required autocomplete="new-password" />
                     </div>
                     <div class="card-footer d-flex flex-wrap gap-2 justify-content-end">
-                        <a class="btn btn-outline-secondary" href="{{ route('admin.dashboard') }}">انصراف</a>
-                        <button class="btn btn-accent" type="submit">ذخیره رمز جدید</button>
+                        <x-ui.button :href="route('admin.dashboard')" variant="secondary">انصراف</x-ui.button>
+                        <x-ui.button variant="accent" type="submit">ذخیره رمز جدید</x-ui.button>
                     </div>
                 </form>
             </section>

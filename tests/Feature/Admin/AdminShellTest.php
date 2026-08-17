@@ -52,4 +52,20 @@ class AdminShellTest extends TestCase
             ->assertNotFound()
             ->assertSee('این صفحه پیدا نشد');
     }
+
+    public function test_login_and_password_pages_use_the_shared_form_contract(): void
+    {
+        $this->get('/admin/login')
+            ->assertOk()
+            ->assertSee('id="field-username"', false)
+            ->assertSee('id="field-password"', false);
+
+        $owner = User::factory()->create(['role' => UserRole::Owner]);
+
+        $this->actingAs($owner)
+            ->get('/admin/settings/password')
+            ->assertOk()
+            ->assertSee('id="field-current_password"', false)
+            ->assertSee('id="field-password_confirmation"', false);
+    }
 }
