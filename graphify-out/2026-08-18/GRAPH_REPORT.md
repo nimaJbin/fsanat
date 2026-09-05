@@ -1,16 +1,16 @@
 # Graph Report - fsanat  (2026-08-18)
 
 ## Corpus Check
-- 186 files · ~68,190 words
+- 186 files · ~68,161 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 539 nodes · 635 edges · 81 communities (66 shown, 15 thin omitted)
+- 538 nodes · 634 edges · 81 communities (66 shown, 15 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 26 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ab2e09d0`
+- Built from commit: `473ec099`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -49,11 +49,11 @@
 - Deployment Documentation
 - Prompts Documentation
 - Roadmap Documentation
-- Implementation Log
-- Tests\TestCase
+- Phase 1 — Live Implementation Status
+- ComponentRenderTest
 - authenticated.blade.php
-- 15. Shared Component API Catalog
-- .handle
+- App\Http\Controllers\Controller
+- TestCase
 - storefront.blade.php
 
 ## God Nodes (most connected - your core abstractions)
@@ -65,7 +65,7 @@
 6. `معرفی پروژه` - 13 edges
 7. `Document Graph` - 12 edges
 8. `Phase 1 — Live Implementation Status` - 10 edges
-9. `Implementation Log` - 10 edges
+9. `Implementation Log` - 9 edges
 10. `AdminShellTest` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
@@ -102,7 +102,7 @@ Nodes (42): pestphp/pest-plugin, php-http/discovery, autoload, autoload-dev, psr
 
 ### Community 1 - "Illuminate\Http\Request"
 Cohesion: 0.07
-Nodes (25): LoginAdmin, LogoutAdmin, UpdateAdminPassword, App\Http\Controllers\Admin\AdminAuthenticatedSessionController, AdminAuthenticatedSessionController, DashboardController, PasswordController, App\Http\Controllers\Controller (+17 more)
+Nodes (26): LoginAdmin, LogoutAdmin, UpdateAdminPassword, App\Http\Controllers\Admin\AdminAuthenticatedSessionController, AdminAuthenticatedSessionController, PasswordController, Controller, EnsureActiveStaff (+18 more)
 
 ### Community 2 - "Stability Before Expansion"
 Cohesion: 0.14
@@ -133,8 +133,8 @@ Cohesion: 0.16
 Nodes (3): Illuminate\Database\Migrations\Migration, Illuminate\Database\Schema\Blueprint, Illuminate\Support\Facades\Schema
 
 ### Community 9 - "User"
-Cohesion: 0.08
-Nodes (14): App\Enums\UserRole, App\Models\User, User, AdminUserSeeder, DatabaseSeeder, Illuminate\Database\Eloquent\Factories\HasFactory, Illuminate\Database\Seeder, Illuminate\Foundation\Auth\User (+6 more)
+Cohesion: 0.07
+Nodes (16): App\Enums\UserRole, App\Models\User, User, AdminUserSeeder, DatabaseSeeder, Illuminate\Database\Eloquent\Factories\HasFactory, Illuminate\Database\Seeder, Illuminate\Foundation\Auth\User (+8 more)
 
 ### Community 10 - "Component Standards"
 Cohesion: 0.19
@@ -157,8 +157,8 @@ Cohesion: 0.24
 Nodes (4): UserFactory, Illuminate\Database\Eloquent\Factories\Factory, Illuminate\Support\Str, static
 
 ### Community 15 - "Phase 1 — Frontend Foundation, Admin Experience and Storefront Home"
-Cohesion: 0.06
-Nodes (30): 10. Phase 1.6 — Public Storefront Homepage, 11. Phase 1.7 — Quality, Verification and Handoff, 12. Phase-Level Definition of Done, 13. Out of Scope, 14. Change Control, 16. Component Usage Rules, 1. Purpose, 2. Approved Product and Design Decisions (+22 more)
+Cohesion: 0.04
+Nodes (45): 10. Phase 1.6 — Public Storefront Homepage, 11. Phase 1.7 — Quality, Verification and Handoff, 12. Phase-Level Definition of Done, 13. Out of Scope, 14. Change Control, 15. Shared Component API Catalog, 16. Component Usage Rules, 1. Purpose (+37 more)
 
 ### Community 17 - "logging.php"
 Cohesion: 0.40
@@ -176,28 +176,28 @@ Nodes (5): Task Breakdown, Implementation Task Traceability, Acceptance Criteria
 Cohesion: 0.67
 Nodes (3): Milestone Completion Rule, Milestones, Roadmap
 
-### Community 50 - "Implementation Log"
-Cohesion: 0.07
-Nodes (26): 2026-08-18 — Phase 1.1 verified, 2026-08-18 — Phase 1.2 implemented, runtime verification pending, 2026-08-18 — Phase 1.3 implemented, runtime and visual verification pending, 2026-08-18 — Phase 1.4 implemented, runtime and visual verification pending, 2026-08-18 — Phase 1.5 implemented, runtime and visual verification pending, 2026-08-18 — Phase 1.6 implemented and verified, 2026-08-18 — Phase 1.7 verification loop, 2026-08-18 — Phase 1 closed at 100% (+18 more)
+### Community 50 - "Phase 1 — Live Implementation Status"
+Cohesion: 0.08
+Nodes (25): 2026-08-18 — Phase 1.1 verified, 2026-08-18 — Phase 1.2 implemented, runtime verification pending, 2026-08-18 — Phase 1.3 implemented, runtime and visual verification pending, 2026-08-18 — Phase 1.4 implemented, runtime and visual verification pending, 2026-08-18 — Phase 1.5 implemented, runtime and visual verification pending, 2026-08-18 — Phase 1.6 implemented and verified, 2026-08-18 — Phase 1.7 verification loop, 2026-08-18 — Phase tracking initialized (+17 more)
 
-### Community 51 - "Tests\TestCase"
-Cohesion: 0.09
-Nodes (11): AppServiceProvider, Illuminate\Foundation\Testing\TestCase, Illuminate\Support\Facades\Blade, Illuminate\Support\Facades\View, Illuminate\Support\ServiceProvider, Illuminate\Support\ViewErrorBag, ComponentRenderTest, ExampleTest (+3 more)
+### Community 51 - "ComponentRenderTest"
+Cohesion: 0.15
+Nodes (6): AppServiceProvider, Illuminate\Support\Facades\Blade, Illuminate\Support\Facades\View, Illuminate\Support\ServiceProvider, Illuminate\Support\ViewErrorBag, ComponentRenderTest
 
 ### Community 54 - "authenticated.blade.php"
 Cohesion: 0.50
 Nodes (3): admin.partials.flash, admin.partials.sidebar, admin.partials.topbar
 
-### Community 74 - "15. Shared Component API Catalog"
-Cohesion: 0.13
-Nodes (15): 15. Shared Component API Catalog, `x-ui.alert`, `x-ui.badge`, `x-ui.button`, `x-ui.card`, `x-ui.checkbox`, `x-ui.drawer`, `x-ui.dropdown` (+7 more)
-
-### Community 75 - ".handle"
+### Community 74 - "App\Http\Controllers\Controller"
 Cohesion: 0.22
-Nodes (7): EnsureActiveStaff, Closure, Illuminate\Foundation\Application, Illuminate\Foundation\Configuration\Exceptions, Illuminate\Foundation\Configuration\Middleware, Response, Symfony\Component\HttpFoundation\Response
+Nodes (6): DashboardController, App\Http\Controllers\Controller, HomeController, GetDashboardOverview, GetHomePagePreview, Illuminate\Contracts\View\View
+
+### Community 75 - "TestCase"
+Cohesion: 0.50
+Nodes (3): Illuminate\Foundation\Testing\TestCase, ExampleTest, TestCase
 
 ## Knowledge Gaps
-- **177 isolated node(s):** `Current Position`, `Progress Summary`, `Phase 1.1`, `Phase 1.2`, `Phase 1.3` (+172 more)
+- **176 isolated node(s):** `Current Position`, `Progress Summary`, `Phase 1.1`, `Phase 1.2`, `Phase 1.3` (+171 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -206,15 +206,15 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `User` connect `User` to `Illuminate\Http\Request`?**
   _High betweenness centrality (0.019) - this node is a cross-community bridge._
-- **Why does `Phase 1 — Frontend Foundation, Admin Experience and Storefront Home` connect `Phase 1 — Frontend Foundation, Admin Experience and Storefront Home` to `15. Shared Component API Catalog`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
-- **Why does `GetAdminNavigation` connect `Illuminate\Http\Request` to `User`, `Tests\TestCase`?**
+- **Why does `GetAdminNavigation` connect `Illuminate\Http\Request` to `ComponentRenderTest`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `User` (e.g. with `.test_customer_receives_the_persian_forbidden_page()` and `.test_dashboard_marks_all_preview_information_honestly()`) actually correct?**
   _`User` has 14 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `Current Position`, `Progress Summary`, `Phase 1.1` to the rest of the system?**
-  _177 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _176 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `composer.json` be split into smaller, more focused modules?**
   _Cohesion score 0.046511627906976744 - nodes in this community are weakly interconnected._
 - **Should `Illuminate\Http\Request` be split into smaller, more focused modules?**
-  _Cohesion score 0.06745098039215686 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0663265306122449 - nodes in this community are weakly interconnected._
+- **Should `Stability Before Expansion` be split into smaller, more focused modules?**
+  _Cohesion score 0.14492753623188406 - nodes in this community are weakly interconnected._

@@ -180,19 +180,6 @@
       "id": "app_http_controllers_admin_adminauthenticatedsessioncontroller_adminauthenticatedsessioncontroller"
     },
     {
-      "label": "DashboardController",
-      "file_type": "code",
-      "source_file": "app/Http/Controllers/Admin/DashboardController.php",
-      "source_location": "L9",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
-      "norm_label": "dashboardcontroller",
-      "id": "app_http_controllers_admin_dashboardcontroller_dashboardcontroller"
-    },
-    {
       "label": "PasswordController",
       "file_type": "code",
       "source_file": "app/Http/Controllers/Admin/PasswordController.php",
@@ -219,17 +206,17 @@
       "id": "app_http_controllers_controller_controller"
     },
     {
-      "label": "HomeController",
+      "label": "EnsureActiveStaff",
       "file_type": "code",
-      "source_file": "app/Http/Controllers/Public/HomeController.php",
+      "source_file": "app/Http/Middleware/EnsureActiveStaff.php",
       "source_location": "L9",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 1,
       "community_name": "Illuminate\\Http\\Request",
-      "norm_label": "homecontroller",
-      "id": "app_http_controllers_public_homecontroller_homecontroller"
+      "norm_label": "ensureactivestaff",
+      "id": "app_http_middleware_ensureactivestaff_ensureactivestaff"
     },
     {
       "label": "AdminLoginRequest",
@@ -265,36 +252,10 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
+      "id": "app_queries_admin_getadminnavigation_getadminnavigation",
       "community": 1,
       "community_name": "Illuminate\\Http\\Request",
-      "norm_label": "getadminnavigation",
-      "id": "app_queries_admin_getadminnavigation_getadminnavigation"
-    },
-    {
-      "label": "GetDashboardOverview",
-      "file_type": "code",
-      "source_file": "app/Queries/Admin/GetDashboardOverview.php",
-      "source_location": "L5",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
-      "norm_label": "getdashboardoverview",
-      "id": "app_queries_admin_getdashboardoverview_getdashboardoverview"
-    },
-    {
-      "label": "GetHomePagePreview",
-      "file_type": "code",
-      "source_file": "app/Queries/Storefront/GetHomePagePreview.php",
-      "source_location": "L5",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
-      "norm_label": "gethomepagepreview",
-      "id": "app_queries_storefront_gethomepagepreview_gethomepagepreview"
+      "norm_label": "getadminnavigation"
     },
     {
       "label": "UserFactory",
@@ -331,7 +292,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 51,
-      "community_name": "Tests\\TestCase",
+      "community_name": "ComponentRenderTest",
       "norm_label": "appserviceprovider",
       "id": "app_providers_appserviceprovider_appserviceprovider"
     },
@@ -343,10 +304,62 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_componentrendertest_componentrendertest",
       "community": 51,
-      "community_name": "Tests\\TestCase",
-      "norm_label": "componentrendertest",
-      "id": "tests_feature_admin_componentrendertest_componentrendertest"
+      "community_name": "ComponentRenderTest",
+      "norm_label": "componentrendertest"
+    },
+    {
+      "label": "DashboardController",
+      "file_type": "code",
+      "source_file": "app/Http/Controllers/Admin/DashboardController.php",
+      "source_location": "L9",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 74,
+      "community_name": "App\\Http\\Controllers\\Controller",
+      "norm_label": "dashboardcontroller",
+      "id": "app_http_controllers_admin_dashboardcontroller_dashboardcontroller"
+    },
+    {
+      "label": "HomeController",
+      "file_type": "code",
+      "source_file": "app/Http/Controllers/Public/HomeController.php",
+      "source_location": "L9",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "app_http_controllers_public_homecontroller_homecontroller",
+      "community": 74,
+      "community_name": "App\\Http\\Controllers\\Controller",
+      "norm_label": "homecontroller"
+    },
+    {
+      "label": "GetDashboardOverview",
+      "file_type": "code",
+      "source_file": "app/Queries/Admin/GetDashboardOverview.php",
+      "source_location": "L5",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 74,
+      "community_name": "App\\Http\\Controllers\\Controller",
+      "norm_label": "getdashboardoverview",
+      "id": "app_queries_admin_getdashboardoverview_getdashboardoverview"
+    },
+    {
+      "label": "GetHomePagePreview",
+      "file_type": "code",
+      "source_file": "app/Queries/Storefront/GetHomePagePreview.php",
+      "source_location": "L5",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "app_queries_storefront_gethomepagepreview_gethomepagepreview",
+      "community": 74,
+      "community_name": "App\\Http\\Controllers\\Controller",
+      "norm_label": "gethomepagepreview"
     },
     {
       "label": "ExampleTest",
@@ -356,23 +369,10 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 51,
-      "community_name": "Tests\\TestCase",
+      "community": 75,
+      "community_name": "TestCase",
       "norm_label": "exampletest",
       "id": "tests_feature_exampletest_exampletest"
-    },
-    {
-      "label": "HomepageTest",
-      "file_type": "code",
-      "source_file": "tests/Feature/Storefront/HomepageTest.php",
-      "source_location": "L7",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "Tests\\TestCase",
-      "norm_label": "homepagetest",
-      "id": "tests_feature_storefront_homepagetest_homepagetest"
     },
     {
       "label": "TestCase",
@@ -382,23 +382,10 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 51,
-      "community_name": "Tests\\TestCase",
+      "community": 75,
+      "community_name": "TestCase",
       "norm_label": "testcase",
       "id": "tests_testcase_testcase"
-    },
-    {
-      "label": "EnsureActiveStaff",
-      "file_type": "code",
-      "source_file": "app/Http/Middleware/EnsureActiveStaff.php",
-      "source_location": "L9",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 75,
-      "community_name": ".handle",
-      "norm_label": "ensureactivestaff",
-      "id": "app_http_middleware_ensureactivestaff_ensureactivestaff"
     },
     {
       "label": "User",
@@ -447,10 +434,10 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_adminshelltest_adminshelltest",
       "community": 9,
       "community_name": "User",
-      "norm_label": "adminshelltest",
-      "id": "tests_feature_admin_adminshelltest_adminshelltest"
+      "norm_label": "adminshelltest"
     },
     {
       "label": "AuthenticationTest",
@@ -460,10 +447,23 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_authenticationtest_authenticationtest",
       "community": 9,
       "community_name": "User",
-      "norm_label": "authenticationtest",
-      "id": "tests_feature_admin_authenticationtest_authenticationtest"
+      "norm_label": "authenticationtest"
+    },
+    {
+      "label": "HomepageTest",
+      "file_type": "code",
+      "source_file": "tests/Feature/Storefront/HomepageTest.php",
+      "source_location": "L7",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "tests_feature_storefront_homepagetest_homepagetest",
+      "community": 9,
+      "community_name": "User",
+      "norm_label": "homepagetest"
     },
     {
       "label": ".__invoke()",
@@ -538,18 +538,6 @@
       "id": "app_http_controllers_admin_adminauthenticatedsessioncontroller_adminauthenticatedsessioncontroller_store"
     },
     {
-      "label": ".__invoke()",
-      "file_type": "code",
-      "source_file": "app/Http/Controllers/Admin/DashboardController.php",
-      "source_location": "L11",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
-      "norm_label": ".__invoke()",
-      "id": "app_http_controllers_admin_dashboardcontroller_dashboardcontroller_invoke"
-    },
-    {
       "label": ".edit()",
       "file_type": "code",
       "source_file": "app/Http/Controllers/Admin/PasswordController.php",
@@ -574,16 +562,16 @@
       "id": "app_http_controllers_admin_passwordcontroller_passwordcontroller_update"
     },
     {
-      "label": ".__invoke()",
+      "label": ".handle()",
       "file_type": "code",
-      "source_file": "app/Http/Controllers/Public/HomeController.php",
+      "source_file": "app/Http/Middleware/EnsureActiveStaff.php",
       "source_location": "L11",
       "_callable": true,
       "_origin": "ast",
       "community": 1,
       "community_name": "Illuminate\\Http\\Request",
-      "norm_label": ".__invoke()",
-      "id": "app_http_controllers_public_homecontroller_homecontroller_invoke"
+      "norm_label": ".handle()",
+      "id": "app_http_middleware_ensureactivestaff_ensureactivestaff_handle"
     },
     {
       "label": ".rules()",
@@ -616,34 +604,22 @@
       "source_location": "L13",
       "_callable": true,
       "_origin": "ast",
+      "id": "app_queries_admin_getadminnavigation_getadminnavigation_construct",
       "community": 1,
       "community_name": "Illuminate\\Http\\Request",
-      "norm_label": ".__construct()",
-      "id": "app_queries_admin_getadminnavigation_getadminnavigation_construct"
+      "norm_label": ".__construct()"
     },
     {
       "label": ".__invoke()",
       "file_type": "code",
-      "source_file": "app/Queries/Admin/GetDashboardOverview.php",
-      "source_location": "L8",
+      "source_file": "app/Queries/Admin/GetAdminNavigation.php",
+      "source_location": "L19",
       "_callable": true,
       "_origin": "ast",
+      "id": "app_queries_admin_getadminnavigation_getadminnavigation_invoke",
       "community": 1,
       "community_name": "Illuminate\\Http\\Request",
-      "norm_label": ".__invoke()",
-      "id": "app_queries_admin_getdashboardoverview_getdashboardoverview_invoke"
-    },
-    {
-      "label": ".__invoke()",
-      "file_type": "code",
-      "source_file": "app/Queries/Storefront/GetHomePagePreview.php",
-      "source_location": "L8",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
-      "norm_label": ".__invoke()",
-      "id": "app_queries_storefront_gethomepagepreview_gethomepagepreview_invoke"
+      "norm_label": ".__invoke()"
     },
     {
       "label": ".definition()",
@@ -689,7 +665,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 51,
-      "community_name": "Tests\\TestCase",
+      "community_name": "ComponentRenderTest",
       "norm_label": ".boot()",
       "id": "app_providers_appserviceprovider_appserviceprovider_boot"
     },
@@ -701,7 +677,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 51,
-      "community_name": "Tests\\TestCase",
+      "community_name": "ComponentRenderTest",
       "norm_label": ".register()",
       "id": "app_providers_appserviceprovider_appserviceprovider_register"
     },
@@ -712,10 +688,10 @@
       "source_location": "L12",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_componentrendertest_componentrendertest_setup",
       "community": 51,
-      "community_name": "Tests\\TestCase",
-      "norm_label": ".setup()",
-      "id": "tests_feature_admin_componentrendertest_componentrendertest_setup"
+      "community_name": "ComponentRenderTest",
+      "norm_label": ".setup()"
     },
     {
       "label": ".test_action_feedback_content_and_metric_components_render()",
@@ -724,10 +700,10 @@
       "source_location": "L19",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_componentrendertest_componentrendertest_test_action_feedback_content_and_metric_components_render",
       "community": 51,
-      "community_name": "Tests\\TestCase",
-      "norm_label": ".test_action_feedback_content_and_metric_components_render()",
-      "id": "tests_feature_admin_componentrendertest_componentrendertest_test_action_feedback_content_and_metric_components_render"
+      "community_name": "ComponentRenderTest",
+      "norm_label": ".test_action_feedback_content_and_metric_components_render()"
     },
     {
       "label": ".test_data_state_and_overlay_components_render()",
@@ -736,10 +712,10 @@
       "source_location": "L49",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_componentrendertest_componentrendertest_test_data_state_and_overlay_components_render",
       "community": 51,
-      "community_name": "Tests\\TestCase",
-      "norm_label": ".test_data_state_and_overlay_components_render()",
-      "id": "tests_feature_admin_componentrendertest_componentrendertest_test_data_state_and_overlay_components_render"
+      "community_name": "ComponentRenderTest",
+      "norm_label": ".test_data_state_and_overlay_components_render()"
     },
     {
       "label": ".test_form_components_render_label_help_and_validation_contracts()",
@@ -748,10 +724,58 @@
       "source_location": "L35",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_componentrendertest_componentrendertest_test_form_components_render_label_help_and_validation_contracts",
       "community": 51,
-      "community_name": "Tests\\TestCase",
-      "norm_label": ".test_form_components_render_label_help_and_validation_contracts()",
-      "id": "tests_feature_admin_componentrendertest_componentrendertest_test_form_components_render_label_help_and_validation_contracts"
+      "community_name": "ComponentRenderTest",
+      "norm_label": ".test_form_components_render_label_help_and_validation_contracts()"
+    },
+    {
+      "label": ".__invoke()",
+      "file_type": "code",
+      "source_file": "app/Http/Controllers/Admin/DashboardController.php",
+      "source_location": "L11",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 74,
+      "community_name": "App\\Http\\Controllers\\Controller",
+      "norm_label": ".__invoke()",
+      "id": "app_http_controllers_admin_dashboardcontroller_dashboardcontroller_invoke"
+    },
+    {
+      "label": ".__invoke()",
+      "file_type": "code",
+      "source_file": "app/Http/Controllers/Public/HomeController.php",
+      "source_location": "L11",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "app_http_controllers_public_homecontroller_homecontroller_invoke",
+      "community": 74,
+      "community_name": "App\\Http\\Controllers\\Controller",
+      "norm_label": ".__invoke()"
+    },
+    {
+      "label": ".__invoke()",
+      "file_type": "code",
+      "source_file": "app/Queries/Admin/GetDashboardOverview.php",
+      "source_location": "L8",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 74,
+      "community_name": "App\\Http\\Controllers\\Controller",
+      "norm_label": ".__invoke()",
+      "id": "app_queries_admin_getdashboardoverview_getdashboardoverview_invoke"
+    },
+    {
+      "label": ".__invoke()",
+      "file_type": "code",
+      "source_file": "app/Queries/Storefront/GetHomePagePreview.php",
+      "source_location": "L8",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "app_queries_storefront_gethomepagepreview_gethomepagepreview_invoke",
+      "community": 74,
+      "community_name": "App\\Http\\Controllers\\Controller",
+      "norm_label": ".__invoke()"
     },
     {
       "label": ".test_the_application_returns_a_successful_response()",
@@ -760,58 +784,10 @@
       "source_location": "L13",
       "_callable": true,
       "_origin": "ast",
-      "community": 51,
-      "community_name": "Tests\\TestCase",
+      "community": 75,
+      "community_name": "TestCase",
       "norm_label": ".test_the_application_returns_a_successful_response()",
       "id": "tests_feature_exampletest_exampletest_test_the_application_returns_a_successful_response"
-    },
-    {
-      "label": ".test_homepage_does_not_present_placeholder_commerce_data_as_real()",
-      "file_type": "code",
-      "source_file": "tests/Feature/Storefront/HomepageTest.php",
-      "source_location": "L35",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "Tests\\TestCase",
-      "norm_label": ".test_homepage_does_not_present_placeholder_commerce_data_as_real()",
-      "id": "tests_feature_storefront_homepagetest_homepagetest_test_homepage_does_not_present_placeholder_commerce_data_as_real"
-    },
-    {
-      "label": ".test_homepage_has_base_seo_metadata_and_one_primary_heading()",
-      "file_type": "code",
-      "source_file": "tests/Feature/Storefront/HomepageTest.php",
-      "source_location": "L23",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "Tests\\TestCase",
-      "norm_label": ".test_homepage_has_base_seo_metadata_and_one_primary_heading()",
-      "id": "tests_feature_storefront_homepagetest_homepagetest_test_homepage_has_base_seo_metadata_and_one_primary_heading"
-    },
-    {
-      "label": ".test_homepage_renders_the_complete_rtl_preview_structure()",
-      "file_type": "code",
-      "source_file": "tests/Feature/Storefront/HomepageTest.php",
-      "source_location": "L9",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "Tests\\TestCase",
-      "norm_label": ".test_homepage_renders_the_complete_rtl_preview_structure()",
-      "id": "tests_feature_storefront_homepagetest_homepagetest_test_homepage_renders_the_complete_rtl_preview_structure"
-    },
-    {
-      "label": ".handle()",
-      "file_type": "code",
-      "source_file": "app/Http/Middleware/EnsureActiveStaff.php",
-      "source_location": "L11",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 75,
-      "community_name": ".handle",
-      "norm_label": ".handle()",
-      "id": "app_http_middleware_ensureactivestaff_ensureactivestaff_handle"
     },
     {
       "label": "down()",
@@ -982,18 +958,6 @@
       "id": "app_models_user_user_isstaff"
     },
     {
-      "label": ".__invoke()",
-      "file_type": "code",
-      "source_file": "app/Queries/Admin/GetAdminNavigation.php",
-      "source_location": "L19",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "User",
-      "norm_label": ".__invoke()",
-      "id": "app_queries_admin_getadminnavigation_getadminnavigation_invoke"
-    },
-    {
       "label": ".run()",
       "file_type": "code",
       "source_file": "database/seeders/AdminUserSeeder.php",
@@ -1024,10 +988,10 @@
       "source_location": "L39",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_adminshelltest_adminshelltest_test_customer_receives_the_persian_forbidden_page",
       "community": 9,
       "community_name": "User",
-      "norm_label": ".test_customer_receives_the_persian_forbidden_page()",
-      "id": "tests_feature_admin_adminshelltest_adminshelltest_test_customer_receives_the_persian_forbidden_page"
+      "norm_label": ".test_customer_receives_the_persian_forbidden_page()"
     },
     {
       "label": ".test_dashboard_marks_all_preview_information_honestly()",
@@ -1036,10 +1000,10 @@
       "source_location": "L72",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_adminshelltest_adminshelltest_test_dashboard_marks_all_preview_information_honestly",
       "community": 9,
       "community_name": "User",
-      "norm_label": ".test_dashboard_marks_all_preview_information_honestly()",
-      "id": "tests_feature_admin_adminshelltest_adminshelltest_test_dashboard_marks_all_preview_information_honestly"
+      "norm_label": ".test_dashboard_marks_all_preview_information_honestly()"
     },
     {
       "label": ".test_login_and_password_pages_use_the_shared_form_contract()",
@@ -1048,10 +1012,10 @@
       "source_location": "L56",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_adminshelltest_adminshelltest_test_login_and_password_pages_use_the_shared_form_contract",
       "community": 9,
       "community_name": "User",
-      "norm_label": ".test_login_and_password_pages_use_the_shared_form_contract()",
-      "id": "tests_feature_admin_adminshelltest_adminshelltest_test_login_and_password_pages_use_the_shared_form_contract"
+      "norm_label": ".test_login_and_password_pages_use_the_shared_form_contract()"
     },
     {
       "label": ".test_operator_does_not_receive_owner_only_navigation()",
@@ -1060,10 +1024,10 @@
       "source_location": "L28",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_adminshelltest_adminshelltest_test_operator_does_not_receive_owner_only_navigation",
       "community": 9,
       "community_name": "User",
-      "norm_label": ".test_operator_does_not_receive_owner_only_navigation()",
-      "id": "tests_feature_admin_adminshelltest_adminshelltest_test_operator_does_not_receive_owner_only_navigation"
+      "norm_label": ".test_operator_does_not_receive_owner_only_navigation()"
     },
     {
       "label": ".test_owner_sees_the_operational_admin_shell()",
@@ -1072,10 +1036,10 @@
       "source_location": "L14",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_adminshelltest_adminshelltest_test_owner_sees_the_operational_admin_shell",
       "community": 9,
       "community_name": "User",
-      "norm_label": ".test_owner_sees_the_operational_admin_shell()",
-      "id": "tests_feature_admin_adminshelltest_adminshelltest_test_owner_sees_the_operational_admin_shell"
+      "norm_label": ".test_owner_sees_the_operational_admin_shell()"
     },
     {
       "label": ".test_unknown_page_uses_the_persian_not_found_page()",
@@ -1084,10 +1048,10 @@
       "source_location": "L49",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_adminshelltest_adminshelltest_test_unknown_page_uses_the_persian_not_found_page",
       "community": 9,
       "community_name": "User",
-      "norm_label": ".test_unknown_page_uses_the_persian_not_found_page()",
-      "id": "tests_feature_admin_adminshelltest_adminshelltest_test_unknown_page_uses_the_persian_not_found_page"
+      "norm_label": ".test_unknown_page_uses_the_persian_not_found_page()"
     },
     {
       "label": ".test_active_staff_can_login_with_username_and_password()",
@@ -1096,10 +1060,10 @@
       "source_location": "L44",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_active_staff_can_login_with_username_and_password",
       "community": 9,
       "community_name": "User",
-      "norm_label": ".test_active_staff_can_login_with_username_and_password()",
-      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_active_staff_can_login_with_username_and_password"
+      "norm_label": ".test_active_staff_can_login_with_username_and_password()"
     },
     {
       "label": ".test_authenticated_customer_is_redirected_away_from_admin_login()",
@@ -1108,10 +1072,10 @@
       "source_location": "L107",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_authenticated_customer_is_redirected_away_from_admin_login",
       "community": 9,
       "community_name": "User",
-      "norm_label": ".test_authenticated_customer_is_redirected_away_from_admin_login()",
-      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_authenticated_customer_is_redirected_away_from_admin_login"
+      "norm_label": ".test_authenticated_customer_is_redirected_away_from_admin_login()"
     },
     {
       "label": ".test_customer_cannot_access_admin_dashboard()",
@@ -1120,10 +1084,10 @@
       "source_location": "L21",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_customer_cannot_access_admin_dashboard",
       "community": 9,
       "community_name": "User",
-      "norm_label": ".test_customer_cannot_access_admin_dashboard()",
-      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_customer_cannot_access_admin_dashboard"
+      "norm_label": ".test_customer_cannot_access_admin_dashboard()"
     },
     {
       "label": ".test_customer_credentials_are_rejected_by_admin_login()",
@@ -1132,10 +1096,10 @@
       "source_location": "L60",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_customer_credentials_are_rejected_by_admin_login",
       "community": 9,
       "community_name": "User",
-      "norm_label": ".test_customer_credentials_are_rejected_by_admin_login()",
-      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_customer_credentials_are_rejected_by_admin_login"
+      "norm_label": ".test_customer_credentials_are_rejected_by_admin_login()"
     },
     {
       "label": ".test_each_active_staff_role_can_access_admin_dashboard()",
@@ -1144,10 +1108,10 @@
       "source_location": "L35",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_each_active_staff_role_can_access_admin_dashboard",
       "community": 9,
       "community_name": "User",
-      "norm_label": ".test_each_active_staff_role_can_access_admin_dashboard()",
-      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_each_active_staff_role_can_access_admin_dashboard"
+      "norm_label": ".test_each_active_staff_role_can_access_admin_dashboard()"
     },
     {
       "label": ".test_guest_is_redirected_from_admin_dashboard()",
@@ -1156,10 +1120,10 @@
       "source_location": "L16",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_guest_is_redirected_from_admin_dashboard",
       "community": 9,
       "community_name": "User",
-      "norm_label": ".test_guest_is_redirected_from_admin_dashboard()",
-      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_guest_is_redirected_from_admin_dashboard"
+      "norm_label": ".test_guest_is_redirected_from_admin_dashboard()"
     },
     {
       "label": ".test_inactive_staff_cannot_access_admin_dashboard()",
@@ -1168,10 +1132,10 @@
       "source_location": "L28",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_inactive_staff_cannot_access_admin_dashboard",
       "community": 9,
       "community_name": "User",
-      "norm_label": ".test_inactive_staff_cannot_access_admin_dashboard()",
-      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_inactive_staff_cannot_access_admin_dashboard"
+      "norm_label": ".test_inactive_staff_cannot_access_admin_dashboard()"
     },
     {
       "label": ".test_inactive_staff_credentials_are_rejected_by_admin_login()",
@@ -1180,10 +1144,10 @@
       "source_location": "L76",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_inactive_staff_credentials_are_rejected_by_admin_login",
       "community": 9,
       "community_name": "User",
-      "norm_label": ".test_inactive_staff_credentials_are_rejected_by_admin_login()",
-      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_inactive_staff_credentials_are_rejected_by_admin_login"
+      "norm_label": ".test_inactive_staff_credentials_are_rejected_by_admin_login()"
     },
     {
       "label": ".test_logout_invalidates_the_staff_session()",
@@ -1192,10 +1156,10 @@
       "source_location": "L114",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_logout_invalidates_the_staff_session",
       "community": 9,
       "community_name": "User",
-      "norm_label": ".test_logout_invalidates_the_staff_session()",
-      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_logout_invalidates_the_staff_session"
+      "norm_label": ".test_logout_invalidates_the_staff_session()"
     },
     {
       "label": ".test_repeated_failed_logins_are_throttled()",
@@ -1204,10 +1168,10 @@
       "source_location": "L91",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_repeated_failed_logins_are_throttled",
       "community": 9,
       "community_name": "User",
-      "norm_label": ".test_repeated_failed_logins_are_throttled()",
-      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_repeated_failed_logins_are_throttled"
+      "norm_label": ".test_repeated_failed_logins_are_throttled()"
     },
     {
       "label": ".test_staff_can_change_password_after_confirming_current_password()",
@@ -1216,10 +1180,46 @@
       "source_location": "L123",
       "_callable": true,
       "_origin": "ast",
+      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_staff_can_change_password_after_confirming_current_password",
       "community": 9,
       "community_name": "User",
-      "norm_label": ".test_staff_can_change_password_after_confirming_current_password()",
-      "id": "tests_feature_admin_authenticationtest_authenticationtest_test_staff_can_change_password_after_confirming_current_password"
+      "norm_label": ".test_staff_can_change_password_after_confirming_current_password()"
+    },
+    {
+      "label": ".test_homepage_does_not_present_placeholder_commerce_data_as_real()",
+      "file_type": "code",
+      "source_file": "tests/Feature/Storefront/HomepageTest.php",
+      "source_location": "L35",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "tests_feature_storefront_homepagetest_homepagetest_test_homepage_does_not_present_placeholder_commerce_data_as_real",
+      "community": 9,
+      "community_name": "User",
+      "norm_label": ".test_homepage_does_not_present_placeholder_commerce_data_as_real()"
+    },
+    {
+      "label": ".test_homepage_has_base_seo_metadata_and_one_primary_heading()",
+      "file_type": "code",
+      "source_file": "tests/Feature/Storefront/HomepageTest.php",
+      "source_location": "L23",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "tests_feature_storefront_homepagetest_homepagetest_test_homepage_has_base_seo_metadata_and_one_primary_heading",
+      "community": 9,
+      "community_name": "User",
+      "norm_label": ".test_homepage_has_base_seo_metadata_and_one_primary_heading()"
+    },
+    {
+      "label": ".test_homepage_renders_the_complete_rtl_preview_structure()",
+      "file_type": "code",
+      "source_file": "tests/Feature/Storefront/HomepageTest.php",
+      "source_location": "L9",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "tests_feature_storefront_homepagetest_homepagetest_test_homepage_renders_the_complete_rtl_preview_structure",
+      "community": 9,
+      "community_name": "User",
+      "norm_label": ".test_homepage_renders_the_complete_rtl_preview_structure()"
     },
     {
       "label": "composer.json",
@@ -1739,17 +1739,6 @@
       "id": "app_http_controllers_admin_adminauthenticatedsessioncontroller"
     },
     {
-      "label": "DashboardController.php",
-      "file_type": "code",
-      "source_file": "app/Http/Controllers/Admin/DashboardController.php",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
-      "norm_label": "dashboardcontroller.php",
-      "id": "app_http_controllers_admin_dashboardcontroller"
-    },
-    {
       "label": "PasswordController.php",
       "file_type": "code",
       "source_file": "app/Http/Controllers/Admin/PasswordController.php",
@@ -1761,26 +1750,15 @@
       "id": "app_http_controllers_admin_passwordcontroller"
     },
     {
-      "label": "App\\Http\\Controllers\\Controller",
+      "label": "EnsureActiveStaff.php",
       "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
-      "norm_label": "app\\http\\controllers\\controller",
-      "id": "app_http_controllers_controller"
-    },
-    {
-      "label": "HomeController.php",
-      "file_type": "code",
-      "source_file": "app/Http/Controllers/Public/HomeController.php",
+      "source_file": "app/Http/Middleware/EnsureActiveStaff.php",
       "source_location": "L1",
       "_origin": "ast",
       "community": 1,
       "community_name": "Illuminate\\Http\\Request",
-      "norm_label": "homecontroller.php",
-      "id": "app_http_controllers_public_homecontroller"
+      "norm_label": "ensureactivestaff.php",
+      "id": "app_http_middleware_ensureactivestaff"
     },
     {
       "label": "App\\Http\\Requests\\Admin\\AdminLoginRequest",
@@ -1810,43 +1788,65 @@
       "source_file": "app/Queries/Admin/GetAdminNavigation.php",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "app_queries_admin_getadminnavigation",
       "community": 1,
       "community_name": "Illuminate\\Http\\Request",
-      "norm_label": "getadminnavigation.php",
-      "id": "app_queries_admin_getadminnavigation"
+      "norm_label": "getadminnavigation.php"
     },
     {
-      "label": "GetDashboardOverview.php",
+      "label": "bootstrap/app.php",
       "file_type": "code",
-      "source_file": "app/Queries/Admin/GetDashboardOverview.php",
+      "source_file": "bootstrap/app.php",
       "source_location": "L1",
       "_origin": "ast",
       "community": 1,
       "community_name": "Illuminate\\Http\\Request",
-      "norm_label": "getdashboardoverview.php",
-      "id": "app_queries_admin_getdashboardoverview"
+      "norm_label": "bootstrap/app.php",
+      "id": "bootstrap_app"
     },
     {
-      "label": "GetHomePagePreview.php",
-      "file_type": "code",
-      "source_file": "app/Queries/Storefront/GetHomePagePreview.php",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
-      "norm_label": "gethomepagepreview.php",
-      "id": "app_queries_storefront_gethomepagepreview"
-    },
-    {
-      "label": "Illuminate\\Contracts\\View\\View",
+      "label": "Closure",
       "file_type": "code",
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
       "community": 1,
       "community_name": "Illuminate\\Http\\Request",
-      "norm_label": "illuminate\\contracts\\view\\view",
-      "id": "illuminate_contracts_view_view"
+      "norm_label": "closure",
+      "id": "closure"
+    },
+    {
+      "label": "Illuminate\\Foundation\\Application",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
+      "norm_label": "illuminate\\foundation\\application",
+      "id": "illuminate_foundation_application"
+    },
+    {
+      "label": "Illuminate\\Foundation\\Configuration\\Exceptions",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
+      "norm_label": "illuminate\\foundation\\configuration\\exceptions",
+      "id": "illuminate_foundation_configuration_exceptions"
+    },
+    {
+      "label": "Illuminate\\Foundation\\Configuration\\Middleware",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
+      "norm_label": "illuminate\\foundation\\configuration\\middleware",
+      "id": "illuminate_foundation_configuration_middleware"
     },
     {
       "label": "Illuminate\\Foundation\\Http\\FormRequest",
@@ -1876,10 +1876,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
+      "id": "illuminate_http_request",
       "community": 1,
       "community_name": "Illuminate\\Http\\Request",
-      "norm_label": "illuminate\\http\\request",
-      "id": "illuminate_http_request"
+      "norm_label": "illuminate\\http\\request"
     },
     {
       "label": "Illuminate\\Support\\Facades\\Auth",
@@ -1898,10 +1898,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
+      "id": "illuminate_support_facades_route",
       "community": 1,
       "community_name": "Illuminate\\Http\\Request",
-      "norm_label": "illuminate\\support\\facades\\route",
-      "id": "illuminate_support_facades_route"
+      "norm_label": "illuminate\\support\\facades\\route"
     },
     {
       "label": "Illuminate\\Validation\\Rules\\Password",
@@ -1937,6 +1937,28 @@
       "id": "illuminate_view_view"
     },
     {
+      "label": "index.php",
+      "file_type": "code",
+      "source_file": "public/index.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
+      "norm_label": "index.php",
+      "id": "public_index"
+    },
+    {
+      "label": "Response",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
+      "norm_label": "response",
+      "id": "response"
+    },
+    {
       "label": "web.php",
       "file_type": "code",
       "source_file": "routes/web.php",
@@ -1946,6 +1968,17 @@
       "community_name": "Illuminate\\Http\\Request",
       "norm_label": "web.php",
       "id": "routes_web"
+    },
+    {
+      "label": "Symfony\\Component\\HttpFoundation\\Response",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
+      "norm_label": "symfony\\component\\httpfoundation\\response",
+      "id": "symfony_component_httpfoundation_response"
     },
     {
       "label": "cache.php",
@@ -2089,6 +2122,17 @@
       "community_name": "Phase 1 \u2014 Frontend Foundation, Admin Experience and Storefront Home",
       "norm_label": "14. change control",
       "id": "execution_docs_execution_phase_1_plan_14_change_control"
+    },
+    {
+      "label": "15. Shared Component API Catalog",
+      "file_type": "document",
+      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
+      "source_location": "L257",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "Phase 1 \u2014 Frontend Foundation, Admin Experience and Storefront Home",
+      "norm_label": "15. shared component api catalog",
+      "id": "execution_docs_execution_phase_1_plan_15_shared_component_api_catalog"
     },
     {
       "label": "16. Component Usage Rules",
@@ -2366,6 +2410,160 @@
       "id": "execution_docs_execution_phase_1_plan_phase_1_frontend_foundation_admin_experience_and_storefront_home"
     },
     {
+      "label": "`x-ui.alert`",
+      "file_type": "document",
+      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
+      "source_location": "L285",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "Phase 1 \u2014 Frontend Foundation, Admin Experience and Storefront Home",
+      "norm_label": "`x-ui.alert`",
+      "id": "execution_docs_execution_phase_1_plan_x_ui_alert"
+    },
+    {
+      "label": "`x-ui.badge`",
+      "file_type": "document",
+      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
+      "source_location": "L291",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "Phase 1 \u2014 Frontend Foundation, Admin Experience and Storefront Home",
+      "norm_label": "`x-ui.badge`",
+      "id": "execution_docs_execution_phase_1_plan_x_ui_badge"
+    },
+    {
+      "label": "`x-ui.button`",
+      "file_type": "document",
+      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
+      "source_location": "L261",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "Phase 1 \u2014 Frontend Foundation, Admin Experience and Storefront Home",
+      "norm_label": "`x-ui.button`",
+      "id": "execution_docs_execution_phase_1_plan_x_ui_button"
+    },
+    {
+      "label": "`x-ui.card`",
+      "file_type": "document",
+      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
+      "source_location": "L297",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "Phase 1 \u2014 Frontend Foundation, Admin Experience and Storefront Home",
+      "norm_label": "`x-ui.card`",
+      "id": "execution_docs_execution_phase_1_plan_x_ui_card"
+    },
+    {
+      "label": "`x-ui.checkbox`",
+      "file_type": "document",
+      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
+      "source_location": "L279",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "Phase 1 \u2014 Frontend Foundation, Admin Experience and Storefront Home",
+      "norm_label": "`x-ui.checkbox`",
+      "id": "execution_docs_execution_phase_1_plan_x_ui_checkbox"
+    },
+    {
+      "label": "`x-ui.drawer`",
+      "file_type": "document",
+      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
+      "source_location": "L337",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "Phase 1 \u2014 Frontend Foundation, Admin Experience and Storefront Home",
+      "norm_label": "`x-ui.drawer`",
+      "id": "execution_docs_execution_phase_1_plan_x_ui_drawer"
+    },
+    {
+      "label": "`x-ui.dropdown`",
+      "file_type": "document",
+      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
+      "source_location": "L331",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "Phase 1 \u2014 Frontend Foundation, Admin Experience and Storefront Home",
+      "norm_label": "`x-ui.dropdown`",
+      "id": "execution_docs_execution_phase_1_plan_x_ui_dropdown"
+    },
+    {
+      "label": "`x-ui.filter-bar`",
+      "file_type": "document",
+      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
+      "source_location": "L309",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "Phase 1 \u2014 Frontend Foundation, Admin Experience and Storefront Home",
+      "norm_label": "`x-ui.filter-bar`",
+      "id": "execution_docs_execution_phase_1_plan_x_ui_filter_bar"
+    },
+    {
+      "label": "`x-ui.input`",
+      "file_type": "document",
+      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
+      "source_location": "L267",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "Phase 1 \u2014 Frontend Foundation, Admin Experience and Storefront Home",
+      "norm_label": "`x-ui.input`",
+      "id": "execution_docs_execution_phase_1_plan_x_ui_input"
+    },
+    {
+      "label": "`x-ui.metric`",
+      "file_type": "document",
+      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
+      "source_location": "L319",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "Phase 1 \u2014 Frontend Foundation, Admin Experience and Storefront Home",
+      "norm_label": "`x-ui.metric`",
+      "id": "execution_docs_execution_phase_1_plan_x_ui_metric"
+    },
+    {
+      "label": "`x-ui.modal`",
+      "file_type": "document",
+      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
+      "source_location": "L325",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "Phase 1 \u2014 Frontend Foundation, Admin Experience and Storefront Home",
+      "norm_label": "`x-ui.modal`",
+      "id": "execution_docs_execution_phase_1_plan_x_ui_modal"
+    },
+    {
+      "label": "`x-ui.select`",
+      "file_type": "document",
+      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
+      "source_location": "L273",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "Phase 1 \u2014 Frontend Foundation, Admin Experience and Storefront Home",
+      "norm_label": "`x-ui.select`",
+      "id": "execution_docs_execution_phase_1_plan_x_ui_select"
+    },
+    {
+      "label": "`x-ui.state`",
+      "file_type": "document",
+      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
+      "source_location": "L313",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "Phase 1 \u2014 Frontend Foundation, Admin Experience and Storefront Home",
+      "norm_label": "`x-ui.state`",
+      "id": "execution_docs_execution_phase_1_plan_x_ui_state"
+    },
+    {
+      "label": "`x-ui.table`",
+      "file_type": "document",
+      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
+      "source_location": "L303",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "Phase 1 \u2014 Frontend Foundation, Admin Experience and Storefront Home",
+      "norm_label": "`x-ui.table`",
+      "id": "execution_docs_execution_phase_1_plan_x_ui_table"
+    },
+    {
       "label": "alert.blade.php",
       "file_type": "code",
       "source_file": "resources/views/components/ui/alert.blade.php",
@@ -2610,10 +2808,10 @@
       "source_file": "config/app.php",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "config_app",
       "community": 32,
       "community_name": "config/app.php",
-      "norm_label": "config/app.php",
-      "id": "config_app"
+      "norm_label": "config/app.php"
     },
     {
       "label": "auth.php",
@@ -2709,10 +2907,10 @@
       "source_file": "resources/views/layouts/app.blade.php",
       "source_location": null,
       "_origin": "ast",
+      "id": "resources_views_layouts_app_blade",
       "community": 46,
       "community_name": "app.blade.php",
-      "norm_label": "app.blade.php",
-      "id": "resources_views_layouts_app_blade"
+      "norm_label": "app.blade.php"
     },
     {
       "label": "home.blade.php",
@@ -2720,10 +2918,10 @@
       "source_file": "resources/views/public/home.blade.php",
       "source_location": null,
       "_origin": "ast",
+      "id": "resources_views_public_home_blade",
       "community": 47,
       "community_name": "home.blade.php",
-      "norm_label": "home.blade.php",
-      "id": "resources_views_public_home_blade"
+      "norm_label": "home.blade.php"
     },
     {
       "label": "welcome.blade.php",
@@ -3019,7 +3217,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "phase_1_status.md"
     },
     {
@@ -3030,7 +3228,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_2026_08_18_phase_1_1_verified",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "2026-08-18 \u2014 phase 1.1 verified"
     },
     {
@@ -3041,7 +3239,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_2026_08_18_phase_1_2_implemented_runtime_verification_pending",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "2026-08-18 \u2014 phase 1.2 implemented, runtime verification pending"
     },
     {
@@ -3052,7 +3250,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_2026_08_18_phase_1_3_implemented_runtime_and_visual_verification_pending",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "2026-08-18 \u2014 phase 1.3 implemented, runtime and visual verification pending"
     },
     {
@@ -3063,7 +3261,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_2026_08_18_phase_1_4_implemented_runtime_and_visual_verification_pending",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "2026-08-18 \u2014 phase 1.4 implemented, runtime and visual verification pending"
     },
     {
@@ -3074,7 +3272,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_2026_08_18_phase_1_5_implemented_runtime_and_visual_verification_pending",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "2026-08-18 \u2014 phase 1.5 implemented, runtime and visual verification pending"
     },
     {
@@ -3085,7 +3283,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_2026_08_18_phase_1_6_implemented_and_verified",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "2026-08-18 \u2014 phase 1.6 implemented and verified"
     },
     {
@@ -3096,19 +3294,8 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_2026_08_18_phase_1_7_verification_loop",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "2026-08-18 \u2014 phase 1.7 verification loop"
-    },
-    {
-      "label": "2026-08-18 \u2014 Phase 1 closed at 100%",
-      "file_type": "document",
-      "source_file": "execution-docs/execution/PHASE_1_STATUS.md",
-      "source_location": "L257",
-      "_origin": "ast",
-      "id": "execution_docs_execution_phase_1_status_2026_08_18_phase_1_closed_at_100",
-      "community": 50,
-      "community_name": "Implementation Log",
-      "norm_label": "2026-08-18 \u2014 phase 1 closed at 100%"
     },
     {
       "label": "2026-08-18 \u2014 Phase tracking initialized",
@@ -3118,7 +3305,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_2026_08_18_phase_tracking_initialized",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "2026-08-18 \u2014 phase tracking initialized"
     },
     {
@@ -3129,18 +3316,18 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_current_position",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "current position"
     },
     {
       "label": "Current Risks and Blockers",
       "file_type": "document",
       "source_file": "execution-docs/execution/PHASE_1_STATUS.md",
-      "source_location": "L264",
+      "source_location": "L257",
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_current_risks_and_blockers",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "current risks and blockers"
     },
     {
@@ -3151,7 +3338,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_decision_record_applied_to_this_phase",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "decision record applied to this phase"
     },
     {
@@ -3162,18 +3349,18 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_implementation_log",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "implementation log"
     },
     {
       "label": "Next Objective",
       "file_type": "document",
       "source_file": "execution-docs/execution/PHASE_1_STATUS.md",
-      "source_location": "L272",
+      "source_location": "L265",
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_next_objective",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "next objective"
     },
     {
@@ -3184,7 +3371,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_objective_ledger",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "objective ledger"
     },
     {
@@ -3195,7 +3382,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_phase_1_1",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "phase 1.1"
     },
     {
@@ -3206,7 +3393,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_phase_1_2",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "phase 1.2"
     },
     {
@@ -3217,7 +3404,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_phase_1_3",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "phase 1.3"
     },
     {
@@ -3228,7 +3415,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_phase_1_4",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "phase 1.4"
     },
     {
@@ -3239,7 +3426,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_phase_1_5",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "phase 1.5"
     },
     {
@@ -3250,7 +3437,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_phase_1_6",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "phase 1.6"
     },
     {
@@ -3261,7 +3448,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_phase_1_7",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "phase 1.7"
     },
     {
@@ -3272,7 +3459,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_phase_1_live_implementation_status",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "phase 1 \u2014 live implementation status"
     },
     {
@@ -3283,7 +3470,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_pre_existing_user_owned_working_tree_changes",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "pre-existing user-owned working tree changes"
     },
     {
@@ -3294,7 +3481,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_progress_summary",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "progress summary"
     },
     {
@@ -3305,7 +3492,7 @@
       "_origin": "ast",
       "id": "execution_docs_execution_phase_1_status_verification_environment",
       "community": 50,
-      "community_name": "Implementation Log",
+      "community_name": "Phase 1 \u2014 Live Implementation Status",
       "norm_label": "verification environment"
     },
     {
@@ -3315,20 +3502,9 @@
       "source_location": "L1",
       "_origin": "ast",
       "community": 51,
-      "community_name": "Tests\\TestCase",
+      "community_name": "ComponentRenderTest",
       "norm_label": "appserviceprovider.php",
       "id": "app_providers_appserviceprovider"
-    },
-    {
-      "label": "Illuminate\\Foundation\\Testing\\TestCase",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "Tests\\TestCase",
-      "norm_label": "illuminate\\foundation\\testing\\testcase",
-      "id": "illuminate_foundation_testing_testcase"
     },
     {
       "label": "Illuminate\\Support\\Facades\\Blade",
@@ -3336,10 +3512,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
+      "id": "illuminate_support_facades_blade",
       "community": 51,
-      "community_name": "Tests\\TestCase",
-      "norm_label": "illuminate\\support\\facades\\blade",
-      "id": "illuminate_support_facades_blade"
+      "community_name": "ComponentRenderTest",
+      "norm_label": "illuminate\\support\\facades\\blade"
     },
     {
       "label": "Illuminate\\Support\\Facades\\View",
@@ -3347,10 +3523,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
+      "id": "illuminate_support_facades_view",
       "community": 51,
-      "community_name": "Tests\\TestCase",
-      "norm_label": "illuminate\\support\\facades\\view",
-      "id": "illuminate_support_facades_view"
+      "community_name": "ComponentRenderTest",
+      "norm_label": "illuminate\\support\\facades\\view"
     },
     {
       "label": "Illuminate\\Support\\ServiceProvider",
@@ -3359,7 +3535,7 @@
       "source_location": "",
       "_origin": "ast",
       "community": 51,
-      "community_name": "Tests\\TestCase",
+      "community_name": "ComponentRenderTest",
       "norm_label": "illuminate\\support\\serviceprovider",
       "id": "illuminate_support_serviceprovider"
     },
@@ -3369,10 +3545,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
+      "id": "illuminate_support_viewerrorbag",
       "community": 51,
-      "community_name": "Tests\\TestCase",
-      "norm_label": "illuminate\\support\\viewerrorbag",
-      "id": "illuminate_support_viewerrorbag"
+      "community_name": "ComponentRenderTest",
+      "norm_label": "illuminate\\support\\viewerrorbag"
     },
     {
       "label": "ComponentRenderTest.php",
@@ -3380,43 +3556,10 @@
       "source_file": "tests/Feature/Admin/ComponentRenderTest.php",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "tests_feature_admin_componentrendertest",
       "community": 51,
-      "community_name": "Tests\\TestCase",
-      "norm_label": "componentrendertest.php",
-      "id": "tests_feature_admin_componentrendertest"
-    },
-    {
-      "label": "Feature/ExampleTest.php",
-      "file_type": "code",
-      "source_file": "tests/Feature/ExampleTest.php",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "Tests\\TestCase",
-      "norm_label": "feature/exampletest.php",
-      "id": "tests_feature_exampletest"
-    },
-    {
-      "label": "HomepageTest.php",
-      "file_type": "code",
-      "source_file": "tests/Feature/Storefront/HomepageTest.php",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "Tests\\TestCase",
-      "norm_label": "homepagetest.php",
-      "id": "tests_feature_storefront_homepagetest"
-    },
-    {
-      "label": "Tests\\TestCase",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "Tests\\TestCase",
-      "norm_label": "tests\\testcase",
-      "id": "tests_testcase"
+      "community_name": "ComponentRenderTest",
+      "norm_label": "componentrendertest.php"
     },
     {
       "label": "admin.php",
@@ -3859,268 +4002,92 @@
       "id": "resources_views_components_ui_table_blade"
     },
     {
-      "label": "15. Shared Component API Catalog",
-      "file_type": "document",
-      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
-      "source_location": "L257",
-      "_origin": "ast",
-      "community": 74,
-      "community_name": "15. Shared Component API Catalog",
-      "norm_label": "15. shared component api catalog",
-      "id": "execution_docs_execution_phase_1_plan_15_shared_component_api_catalog"
-    },
-    {
-      "label": "`x-ui.alert`",
-      "file_type": "document",
-      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
-      "source_location": "L285",
-      "_origin": "ast",
-      "community": 74,
-      "community_name": "15. Shared Component API Catalog",
-      "norm_label": "`x-ui.alert`",
-      "id": "execution_docs_execution_phase_1_plan_x_ui_alert"
-    },
-    {
-      "label": "`x-ui.badge`",
-      "file_type": "document",
-      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
-      "source_location": "L291",
-      "_origin": "ast",
-      "community": 74,
-      "community_name": "15. Shared Component API Catalog",
-      "norm_label": "`x-ui.badge`",
-      "id": "execution_docs_execution_phase_1_plan_x_ui_badge"
-    },
-    {
-      "label": "`x-ui.button`",
-      "file_type": "document",
-      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
-      "source_location": "L261",
-      "_origin": "ast",
-      "community": 74,
-      "community_name": "15. Shared Component API Catalog",
-      "norm_label": "`x-ui.button`",
-      "id": "execution_docs_execution_phase_1_plan_x_ui_button"
-    },
-    {
-      "label": "`x-ui.card`",
-      "file_type": "document",
-      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
-      "source_location": "L297",
-      "_origin": "ast",
-      "community": 74,
-      "community_name": "15. Shared Component API Catalog",
-      "norm_label": "`x-ui.card`",
-      "id": "execution_docs_execution_phase_1_plan_x_ui_card"
-    },
-    {
-      "label": "`x-ui.checkbox`",
-      "file_type": "document",
-      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
-      "source_location": "L279",
-      "_origin": "ast",
-      "community": 74,
-      "community_name": "15. Shared Component API Catalog",
-      "norm_label": "`x-ui.checkbox`",
-      "id": "execution_docs_execution_phase_1_plan_x_ui_checkbox"
-    },
-    {
-      "label": "`x-ui.drawer`",
-      "file_type": "document",
-      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
-      "source_location": "L337",
-      "_origin": "ast",
-      "community": 74,
-      "community_name": "15. Shared Component API Catalog",
-      "norm_label": "`x-ui.drawer`",
-      "id": "execution_docs_execution_phase_1_plan_x_ui_drawer"
-    },
-    {
-      "label": "`x-ui.dropdown`",
-      "file_type": "document",
-      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
-      "source_location": "L331",
-      "_origin": "ast",
-      "community": 74,
-      "community_name": "15. Shared Component API Catalog",
-      "norm_label": "`x-ui.dropdown`",
-      "id": "execution_docs_execution_phase_1_plan_x_ui_dropdown"
-    },
-    {
-      "label": "`x-ui.filter-bar`",
-      "file_type": "document",
-      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
-      "source_location": "L309",
-      "_origin": "ast",
-      "community": 74,
-      "community_name": "15. Shared Component API Catalog",
-      "norm_label": "`x-ui.filter-bar`",
-      "id": "execution_docs_execution_phase_1_plan_x_ui_filter_bar"
-    },
-    {
-      "label": "`x-ui.input`",
-      "file_type": "document",
-      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
-      "source_location": "L267",
-      "_origin": "ast",
-      "community": 74,
-      "community_name": "15. Shared Component API Catalog",
-      "norm_label": "`x-ui.input`",
-      "id": "execution_docs_execution_phase_1_plan_x_ui_input"
-    },
-    {
-      "label": "`x-ui.metric`",
-      "file_type": "document",
-      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
-      "source_location": "L319",
-      "_origin": "ast",
-      "community": 74,
-      "community_name": "15. Shared Component API Catalog",
-      "norm_label": "`x-ui.metric`",
-      "id": "execution_docs_execution_phase_1_plan_x_ui_metric"
-    },
-    {
-      "label": "`x-ui.modal`",
-      "file_type": "document",
-      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
-      "source_location": "L325",
-      "_origin": "ast",
-      "community": 74,
-      "community_name": "15. Shared Component API Catalog",
-      "norm_label": "`x-ui.modal`",
-      "id": "execution_docs_execution_phase_1_plan_x_ui_modal"
-    },
-    {
-      "label": "`x-ui.select`",
-      "file_type": "document",
-      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
-      "source_location": "L273",
-      "_origin": "ast",
-      "community": 74,
-      "community_name": "15. Shared Component API Catalog",
-      "norm_label": "`x-ui.select`",
-      "id": "execution_docs_execution_phase_1_plan_x_ui_select"
-    },
-    {
-      "label": "`x-ui.state`",
-      "file_type": "document",
-      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
-      "source_location": "L313",
-      "_origin": "ast",
-      "community": 74,
-      "community_name": "15. Shared Component API Catalog",
-      "norm_label": "`x-ui.state`",
-      "id": "execution_docs_execution_phase_1_plan_x_ui_state"
-    },
-    {
-      "label": "`x-ui.table`",
-      "file_type": "document",
-      "source_file": "execution-docs/execution/PHASE_1_PLAN.md",
-      "source_location": "L303",
-      "_origin": "ast",
-      "community": 74,
-      "community_name": "15. Shared Component API Catalog",
-      "norm_label": "`x-ui.table`",
-      "id": "execution_docs_execution_phase_1_plan_x_ui_table"
-    },
-    {
-      "label": "EnsureActiveStaff.php",
+      "label": "DashboardController.php",
       "file_type": "code",
-      "source_file": "app/Http/Middleware/EnsureActiveStaff.php",
+      "source_file": "app/Http/Controllers/Admin/DashboardController.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 74,
+      "community_name": "App\\Http\\Controllers\\Controller",
+      "norm_label": "dashboardcontroller.php",
+      "id": "app_http_controllers_admin_dashboardcontroller"
+    },
+    {
+      "label": "App\\Http\\Controllers\\Controller",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "app_http_controllers_controller",
+      "community": 74,
+      "community_name": "App\\Http\\Controllers\\Controller",
+      "norm_label": "app\\http\\controllers\\controller"
+    },
+    {
+      "label": "HomeController.php",
+      "file_type": "code",
+      "source_file": "app/Http/Controllers/Public/HomeController.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "app_http_controllers_public_homecontroller",
+      "community": 74,
+      "community_name": "App\\Http\\Controllers\\Controller",
+      "norm_label": "homecontroller.php"
+    },
+    {
+      "label": "GetDashboardOverview.php",
+      "file_type": "code",
+      "source_file": "app/Queries/Admin/GetDashboardOverview.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 74,
+      "community_name": "App\\Http\\Controllers\\Controller",
+      "norm_label": "getdashboardoverview.php",
+      "id": "app_queries_admin_getdashboardoverview"
+    },
+    {
+      "label": "GetHomePagePreview.php",
+      "file_type": "code",
+      "source_file": "app/Queries/Storefront/GetHomePagePreview.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "app_queries_storefront_gethomepagepreview",
+      "community": 74,
+      "community_name": "App\\Http\\Controllers\\Controller",
+      "norm_label": "gethomepagepreview.php"
+    },
+    {
+      "label": "Illuminate\\Contracts\\View\\View",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "illuminate_contracts_view_view",
+      "community": 74,
+      "community_name": "App\\Http\\Controllers\\Controller",
+      "norm_label": "illuminate\\contracts\\view\\view"
+    },
+    {
+      "label": "Illuminate\\Foundation\\Testing\\TestCase",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 75,
+      "community_name": "TestCase",
+      "norm_label": "illuminate\\foundation\\testing\\testcase",
+      "id": "illuminate_foundation_testing_testcase"
+    },
+    {
+      "label": "Feature/ExampleTest.php",
+      "file_type": "code",
+      "source_file": "tests/Feature/ExampleTest.php",
       "source_location": "L1",
       "_origin": "ast",
       "community": 75,
-      "community_name": ".handle",
-      "norm_label": "ensureactivestaff.php",
-      "id": "app_http_middleware_ensureactivestaff"
-    },
-    {
-      "label": "bootstrap/app.php",
-      "file_type": "code",
-      "source_file": "bootstrap/app.php",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 75,
-      "community_name": ".handle",
-      "norm_label": "bootstrap/app.php",
-      "id": "bootstrap_app"
-    },
-    {
-      "label": "Closure",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "community": 75,
-      "community_name": ".handle",
-      "norm_label": "closure",
-      "id": "closure"
-    },
-    {
-      "label": "Illuminate\\Foundation\\Application",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "community": 75,
-      "community_name": ".handle",
-      "norm_label": "illuminate\\foundation\\application",
-      "id": "illuminate_foundation_application"
-    },
-    {
-      "label": "Illuminate\\Foundation\\Configuration\\Exceptions",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "community": 75,
-      "community_name": ".handle",
-      "norm_label": "illuminate\\foundation\\configuration\\exceptions",
-      "id": "illuminate_foundation_configuration_exceptions"
-    },
-    {
-      "label": "Illuminate\\Foundation\\Configuration\\Middleware",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "community": 75,
-      "community_name": ".handle",
-      "norm_label": "illuminate\\foundation\\configuration\\middleware",
-      "id": "illuminate_foundation_configuration_middleware"
-    },
-    {
-      "label": "index.php",
-      "file_type": "code",
-      "source_file": "public/index.php",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 75,
-      "community_name": ".handle",
-      "norm_label": "index.php",
-      "id": "public_index"
-    },
-    {
-      "label": "Response",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "community": 75,
-      "community_name": ".handle",
-      "norm_label": "response",
-      "id": "response"
-    },
-    {
-      "label": "Symfony\\Component\\HttpFoundation\\Response",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "community": 75,
-      "community_name": ".handle",
-      "norm_label": "symfony\\component\\httpfoundation\\response",
-      "id": "symfony_component_httpfoundation_response"
+      "community_name": "TestCase",
+      "norm_label": "feature/exampletest.php",
+      "id": "tests_feature_exampletest"
     },
     {
       "label": "public.partials.footer",
@@ -4128,10 +4095,10 @@
       "source_file": "resources/views/layouts/storefront.blade.php",
       "source_location": null,
       "_origin": "ast",
+      "id": "public_partials_footer",
       "community": 76,
       "community_name": "storefront.blade.php",
-      "norm_label": "public.partials.footer",
-      "id": "public_partials_footer"
+      "norm_label": "public.partials.footer"
     },
     {
       "label": "public.partials.header",
@@ -4139,10 +4106,10 @@
       "source_file": "resources/views/layouts/storefront.blade.php",
       "source_location": null,
       "_origin": "ast",
+      "id": "public_partials_header",
       "community": 76,
       "community_name": "storefront.blade.php",
-      "norm_label": "public.partials.header",
-      "id": "public_partials_header"
+      "norm_label": "public.partials.header"
     },
     {
       "label": "storefront.blade.php",
@@ -4150,10 +4117,10 @@
       "source_file": "resources/views/layouts/storefront.blade.php",
       "source_location": null,
       "_origin": "ast",
+      "id": "resources_views_layouts_storefront_blade",
       "community": 76,
       "community_name": "storefront.blade.php",
-      "norm_label": "storefront.blade.php",
-      "id": "resources_views_layouts_storefront_blade"
+      "norm_label": "storefront.blade.php"
     },
     {
       "label": "category-card.blade.php",
@@ -4161,10 +4128,10 @@
       "source_file": "resources/views/components/storefront/category-card.blade.php",
       "source_location": null,
       "_origin": "ast",
+      "id": "resources_views_components_storefront_category_card_blade",
       "community": 77,
       "community_name": "category-card.blade.php",
-      "norm_label": "category-card.blade.php",
-      "id": "resources_views_components_storefront_category_card_blade"
+      "norm_label": "category-card.blade.php"
     },
     {
       "label": "product-card.blade.php",
@@ -4172,10 +4139,10 @@
       "source_file": "resources/views/components/storefront/product-card.blade.php",
       "source_location": null,
       "_origin": "ast",
+      "id": "resources_views_components_storefront_product_card_blade",
       "community": 78,
       "community_name": "product-card.blade.php",
-      "norm_label": "product-card.blade.php",
-      "id": "resources_views_components_storefront_product_card_blade"
+      "norm_label": "product-card.blade.php"
     },
     {
       "label": "footer.blade.php",
@@ -4183,10 +4150,10 @@
       "source_file": "resources/views/public/partials/footer.blade.php",
       "source_location": null,
       "_origin": "ast",
+      "id": "resources_views_public_partials_footer_blade",
       "community": 79,
       "community_name": "footer.blade.php",
-      "norm_label": "footer.blade.php",
-      "id": "resources_views_public_partials_footer_blade"
+      "norm_label": "footer.blade.php"
     },
     {
       "label": "0001_01_01_000000_create_users_table.php",
@@ -4282,10 +4249,10 @@
       "source_file": "resources/views/public/partials/header.blade.php",
       "source_location": null,
       "_origin": "ast",
+      "id": "resources_views_public_partials_header_blade",
       "community": 80,
       "community_name": "header.blade.php",
-      "norm_label": "header.blade.php",
-      "id": "resources_views_public_partials_header_blade"
+      "norm_label": "header.blade.php"
     },
     {
       "label": "App\\Enums\\UserRole",
@@ -4293,10 +4260,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
+      "id": "app_enums_userrole",
       "community": 9,
       "community_name": "User",
-      "norm_label": "app\\enums\\userrole",
-      "id": "app_enums_userrole"
+      "norm_label": "app\\enums\\userrole"
     },
     {
       "label": "App\\Models\\User",
@@ -4304,10 +4271,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
+      "id": "app_models_user",
       "community": 9,
       "community_name": "User",
-      "norm_label": "app\\models\\user",
-      "id": "app_models_user"
+      "norm_label": "app\\models\\user"
     },
     {
       "label": "admin-navigation.php",
@@ -4381,10 +4348,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
+      "id": "illuminate_foundation_testing_refreshdatabase",
       "community": 9,
       "community_name": "User",
-      "norm_label": "illuminate\\foundation\\testing\\refreshdatabase",
-      "id": "illuminate_foundation_testing_refreshdatabase"
+      "norm_label": "illuminate\\foundation\\testing\\refreshdatabase"
     },
     {
       "label": "Illuminate\\Notifications\\Notifiable",
@@ -4403,10 +4370,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
+      "id": "illuminate_support_facades_hash",
       "community": 9,
       "community_name": "User",
-      "norm_label": "illuminate\\support\\facades\\hash",
-      "id": "illuminate_support_facades_hash"
+      "norm_label": "illuminate\\support\\facades\\hash"
     },
     {
       "label": "Illuminate\\Support\\Facades\\RateLimiter",
@@ -4414,10 +4381,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
+      "id": "illuminate_support_facades_ratelimiter",
       "community": 9,
       "community_name": "User",
-      "norm_label": "illuminate\\support\\facades\\ratelimiter",
-      "id": "illuminate_support_facades_ratelimiter"
+      "norm_label": "illuminate\\support\\facades\\ratelimiter"
     },
     {
       "label": "AdminShellTest.php",
@@ -4425,10 +4392,10 @@
       "source_file": "tests/Feature/Admin/AdminShellTest.php",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "tests_feature_admin_adminshelltest",
       "community": 9,
       "community_name": "User",
-      "norm_label": "adminshelltest.php",
-      "id": "tests_feature_admin_adminshelltest"
+      "norm_label": "adminshelltest.php"
     },
     {
       "label": "AuthenticationTest.php",
@@ -4436,10 +4403,32 @@
       "source_file": "tests/Feature/Admin/AuthenticationTest.php",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "tests_feature_admin_authenticationtest",
       "community": 9,
       "community_name": "User",
-      "norm_label": "authenticationtest.php",
-      "id": "tests_feature_admin_authenticationtest"
+      "norm_label": "authenticationtest.php"
+    },
+    {
+      "label": "HomepageTest.php",
+      "file_type": "code",
+      "source_file": "tests/Feature/Storefront/HomepageTest.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_feature_storefront_homepagetest",
+      "community": 9,
+      "community_name": "User",
+      "norm_label": "homepagetest.php"
+    },
+    {
+      "label": "Tests\\TestCase",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "tests_testcase",
+      "community": 9,
+      "community_name": "User",
+      "norm_label": "tests\\testcase"
     },
     {
       "label": "Identity and Access Boundaries",
@@ -6855,9 +6844,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "app_queries_admin_getadminnavigation_getadminnavigation",
-      "target": "illuminate_http_request"
+      "target": "illuminate_http_request",
+      "confidence_score": 1.0
     },
     {
       "relation": "extends",
@@ -7287,9 +7276,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "app_http_controllers_public_homecontroller",
-      "target": "app_http_controllers_controller"
+      "target": "app_http_controllers_controller",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -7299,9 +7288,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "app_http_controllers_public_homecontroller",
-      "target": "app_queries_storefront_gethomepagepreview_gethomepagepreview"
+      "target": "app_queries_storefront_gethomepagepreview_gethomepagepreview",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -7311,9 +7300,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "app_http_controllers_public_homecontroller",
-      "target": "illuminate_contracts_view_view"
+      "target": "illuminate_contracts_view_view",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -7479,9 +7468,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "app_queries_admin_getadminnavigation",
-      "target": "app_models_user"
+      "target": "app_models_user",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -7491,9 +7480,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "app_queries_admin_getadminnavigation",
-      "target": "illuminate_http_request"
+      "target": "illuminate_http_request",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -7503,9 +7492,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "app_queries_admin_getadminnavigation",
-      "target": "illuminate_support_facades_route"
+      "target": "illuminate_support_facades_route",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8163,9 +8152,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_adminshelltest",
-      "target": "app_enums_userrole"
+      "target": "app_enums_userrole",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8175,9 +8164,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_adminshelltest",
-      "target": "app_models_user"
+      "target": "app_models_user",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8187,9 +8176,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_adminshelltest",
-      "target": "illuminate_foundation_testing_refreshdatabase"
+      "target": "illuminate_foundation_testing_refreshdatabase",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8199,9 +8188,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_adminshelltest",
-      "target": "tests_testcase"
+      "target": "tests_testcase",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8211,9 +8200,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest",
-      "target": "tests_testcase"
+      "target": "tests_testcase",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8223,9 +8212,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest",
-      "target": "app_enums_userrole"
+      "target": "app_enums_userrole",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8235,9 +8224,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest",
-      "target": "app_models_user"
+      "target": "app_models_user",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8247,9 +8236,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest",
-      "target": "illuminate_foundation_testing_refreshdatabase"
+      "target": "illuminate_foundation_testing_refreshdatabase",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8259,9 +8248,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest",
-      "target": "illuminate_support_facades_hash"
+      "target": "illuminate_support_facades_hash",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8271,9 +8260,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest",
-      "target": "illuminate_support_facades_ratelimiter"
+      "target": "illuminate_support_facades_ratelimiter",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8283,9 +8272,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_componentrendertest",
-      "target": "illuminate_support_facades_blade"
+      "target": "illuminate_support_facades_blade",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8295,9 +8284,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_componentrendertest",
-      "target": "illuminate_support_facades_view"
+      "target": "illuminate_support_facades_view",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8307,9 +8296,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_componentrendertest",
-      "target": "illuminate_support_viewerrorbag"
+      "target": "illuminate_support_viewerrorbag",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8319,9 +8308,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_componentrendertest",
-      "target": "tests_testcase"
+      "target": "tests_testcase",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8343,9 +8332,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_storefront_homepagetest",
-      "target": "tests_testcase"
+      "target": "tests_testcase",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8535,9 +8524,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "app_http_controllers_public_homecontroller_homecontroller_invoke",
-      "target": "app_queries_storefront_gethomepagepreview_gethomepagepreview"
+      "target": "app_queries_storefront_gethomepagepreview_gethomepagepreview",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -8571,9 +8560,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "app_queries_admin_getadminnavigation_getadminnavigation_construct",
-      "target": "illuminate_http_request"
+      "target": "illuminate_http_request",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -8583,9 +8572,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "app_queries_admin_getadminnavigation_getadminnavigation_invoke",
-      "target": "app_models_user"
+      "target": "app_models_user",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -8667,9 +8656,9 @@
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "app_http_controllers_public_homecontroller_homecontroller_invoke",
-      "target": "illuminate_contracts_view_view"
+      "target": "illuminate_contracts_view_view",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -8801,9 +8790,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "app_http_controllers_public_homecontroller",
-      "target": "app_http_controllers_public_homecontroller_homecontroller"
+      "target": "app_http_controllers_public_homecontroller_homecontroller",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -8856,9 +8845,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "app_queries_admin_getadminnavigation",
-      "target": "app_queries_admin_getadminnavigation_getadminnavigation"
+      "target": "app_queries_admin_getadminnavigation_getadminnavigation",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -8878,9 +8867,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "app_queries_storefront_gethomepagepreview",
-      "target": "app_queries_storefront_gethomepagepreview_gethomepagepreview"
+      "target": "app_queries_storefront_gethomepagepreview_gethomepagepreview",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -10140,17 +10129,6 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "execution-docs/execution/PHASE_1_STATUS.md",
-      "source_location": "L257",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "execution_docs_execution_phase_1_status_implementation_log",
-      "target": "execution_docs_execution_phase_1_status_2026_08_18_phase_1_closed_at_100",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "execution-docs/execution/PHASE_1_STATUS.md",
       "source_location": "L109",
       "weight": 1.0,
       "_origin": "ast",
@@ -10294,7 +10272,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "execution-docs/execution/PHASE_1_STATUS.md",
-      "source_location": "L264",
+      "source_location": "L257",
       "weight": 1.0,
       "_origin": "ast",
       "source": "execution_docs_execution_phase_1_status_phase_1_live_implementation_status",
@@ -10305,7 +10283,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "execution-docs/execution/PHASE_1_STATUS.md",
-      "source_location": "L272",
+      "source_location": "L265",
       "weight": 1.0,
       "_origin": "ast",
       "source": "execution_docs_execution_phase_1_status_phase_1_live_implementation_status",
@@ -10517,9 +10495,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_adminshelltest",
-      "target": "tests_feature_admin_adminshelltest_adminshelltest"
+      "target": "tests_feature_admin_adminshelltest_adminshelltest",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -10528,9 +10506,9 @@
       "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest",
-      "target": "tests_feature_admin_authenticationtest_authenticationtest"
+      "target": "tests_feature_admin_authenticationtest_authenticationtest",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -10539,9 +10517,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_componentrendertest",
-      "target": "tests_feature_admin_componentrendertest_componentrendertest"
+      "target": "tests_feature_admin_componentrendertest_componentrendertest",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -10561,9 +10539,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_storefront_homepagetest",
-      "target": "tests_feature_storefront_homepagetest_homepagetest"
+      "target": "tests_feature_storefront_homepagetest_homepagetest",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -10671,9 +10649,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "app_http_controllers_public_homecontroller_homecontroller",
-      "target": "app_http_controllers_controller"
+      "target": "app_http_controllers_controller",
+      "confidence_score": 1.0
     },
     {
       "relation": "inherits",
@@ -10759,9 +10737,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_adminshelltest_adminshelltest",
-      "target": "tests_testcase"
+      "target": "tests_testcase",
+      "confidence_score": 1.0
     },
     {
       "relation": "inherits",
@@ -10770,9 +10748,9 @@
       "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest_authenticationtest",
-      "target": "tests_testcase"
+      "target": "tests_testcase",
+      "confidence_score": 1.0
     },
     {
       "relation": "inherits",
@@ -10781,9 +10759,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_componentrendertest_componentrendertest",
-      "target": "tests_testcase"
+      "target": "tests_testcase",
+      "confidence_score": 1.0
     },
     {
       "relation": "inherits",
@@ -10803,9 +10781,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_storefront_homepagetest_homepagetest",
-      "target": "tests_testcase"
+      "target": "tests_testcase",
+      "confidence_score": 1.0
     },
     {
       "relation": "inherits",
@@ -10935,9 +10913,9 @@
       "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "app_http_controllers_public_homecontroller_homecontroller",
-      "target": "app_http_controllers_public_homecontroller_homecontroller_invoke"
+      "target": "app_http_controllers_public_homecontroller_homecontroller_invoke",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11023,9 +11001,9 @@
       "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "app_queries_admin_getadminnavigation_getadminnavigation",
-      "target": "app_queries_admin_getadminnavigation_getadminnavigation_construct"
+      "target": "app_queries_admin_getadminnavigation_getadminnavigation_construct",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11034,9 +11012,9 @@
       "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "app_queries_admin_getadminnavigation_getadminnavigation",
-      "target": "app_queries_admin_getadminnavigation_getadminnavigation_invoke"
+      "target": "app_queries_admin_getadminnavigation_getadminnavigation_invoke",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11056,9 +11034,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "app_queries_storefront_gethomepagepreview_gethomepagepreview",
-      "target": "app_queries_storefront_gethomepagepreview_gethomepagepreview_invoke"
+      "target": "app_queries_storefront_gethomepagepreview_gethomepagepreview_invoke",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11111,9 +11089,9 @@
       "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_adminshelltest_adminshelltest",
-      "target": "tests_feature_admin_adminshelltest_adminshelltest_test_owner_sees_the_operational_admin_shell"
+      "target": "tests_feature_admin_adminshelltest_adminshelltest_test_owner_sees_the_operational_admin_shell",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11122,9 +11100,9 @@
       "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_adminshelltest_adminshelltest",
-      "target": "tests_feature_admin_adminshelltest_adminshelltest_test_operator_does_not_receive_owner_only_navigation"
+      "target": "tests_feature_admin_adminshelltest_adminshelltest_test_operator_does_not_receive_owner_only_navigation",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11133,9 +11111,9 @@
       "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_adminshelltest_adminshelltest",
-      "target": "tests_feature_admin_adminshelltest_adminshelltest_test_customer_receives_the_persian_forbidden_page"
+      "target": "tests_feature_admin_adminshelltest_adminshelltest_test_customer_receives_the_persian_forbidden_page",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11144,9 +11122,9 @@
       "source_location": "L49",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_adminshelltest_adminshelltest",
-      "target": "tests_feature_admin_adminshelltest_adminshelltest_test_unknown_page_uses_the_persian_not_found_page"
+      "target": "tests_feature_admin_adminshelltest_adminshelltest_test_unknown_page_uses_the_persian_not_found_page",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11155,9 +11133,9 @@
       "source_location": "L56",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_adminshelltest_adminshelltest",
-      "target": "tests_feature_admin_adminshelltest_adminshelltest_test_login_and_password_pages_use_the_shared_form_contract"
+      "target": "tests_feature_admin_adminshelltest_adminshelltest_test_login_and_password_pages_use_the_shared_form_contract",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11166,9 +11144,9 @@
       "source_location": "L72",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_adminshelltest_adminshelltest",
-      "target": "tests_feature_admin_adminshelltest_adminshelltest_test_dashboard_marks_all_preview_information_honestly"
+      "target": "tests_feature_admin_adminshelltest_adminshelltest_test_dashboard_marks_all_preview_information_honestly",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11177,9 +11155,9 @@
       "source_location": "L107",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest_authenticationtest",
-      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_authenticated_customer_is_redirected_away_from_admin_login"
+      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_authenticated_customer_is_redirected_away_from_admin_login",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11188,9 +11166,9 @@
       "source_location": "L114",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest_authenticationtest",
-      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_logout_invalidates_the_staff_session"
+      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_logout_invalidates_the_staff_session",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11199,9 +11177,9 @@
       "source_location": "L123",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest_authenticationtest",
-      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_staff_can_change_password_after_confirming_current_password"
+      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_staff_can_change_password_after_confirming_current_password",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11210,9 +11188,9 @@
       "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest_authenticationtest",
-      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_guest_is_redirected_from_admin_dashboard"
+      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_guest_is_redirected_from_admin_dashboard",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11221,9 +11199,9 @@
       "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest_authenticationtest",
-      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_customer_cannot_access_admin_dashboard"
+      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_customer_cannot_access_admin_dashboard",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11232,9 +11210,9 @@
       "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest_authenticationtest",
-      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_inactive_staff_cannot_access_admin_dashboard"
+      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_inactive_staff_cannot_access_admin_dashboard",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11243,9 +11221,9 @@
       "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest_authenticationtest",
-      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_each_active_staff_role_can_access_admin_dashboard"
+      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_each_active_staff_role_can_access_admin_dashboard",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11254,9 +11232,9 @@
       "source_location": "L44",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest_authenticationtest",
-      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_active_staff_can_login_with_username_and_password"
+      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_active_staff_can_login_with_username_and_password",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11265,9 +11243,9 @@
       "source_location": "L60",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest_authenticationtest",
-      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_customer_credentials_are_rejected_by_admin_login"
+      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_customer_credentials_are_rejected_by_admin_login",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11276,9 +11254,9 @@
       "source_location": "L76",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest_authenticationtest",
-      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_inactive_staff_credentials_are_rejected_by_admin_login"
+      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_inactive_staff_credentials_are_rejected_by_admin_login",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11287,9 +11265,9 @@
       "source_location": "L91",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest_authenticationtest",
-      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_repeated_failed_logins_are_throttled"
+      "target": "tests_feature_admin_authenticationtest_authenticationtest_test_repeated_failed_logins_are_throttled",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11298,9 +11276,9 @@
       "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_componentrendertest_componentrendertest",
-      "target": "tests_feature_admin_componentrendertest_componentrendertest_setup"
+      "target": "tests_feature_admin_componentrendertest_componentrendertest_setup",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11309,9 +11287,9 @@
       "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_componentrendertest_componentrendertest",
-      "target": "tests_feature_admin_componentrendertest_componentrendertest_test_action_feedback_content_and_metric_components_render"
+      "target": "tests_feature_admin_componentrendertest_componentrendertest_test_action_feedback_content_and_metric_components_render",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11320,9 +11298,9 @@
       "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_componentrendertest_componentrendertest",
-      "target": "tests_feature_admin_componentrendertest_componentrendertest_test_form_components_render_label_help_and_validation_contracts"
+      "target": "tests_feature_admin_componentrendertest_componentrendertest_test_form_components_render_label_help_and_validation_contracts",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11331,9 +11309,9 @@
       "source_location": "L49",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_componentrendertest_componentrendertest",
-      "target": "tests_feature_admin_componentrendertest_componentrendertest_test_data_state_and_overlay_components_render"
+      "target": "tests_feature_admin_componentrendertest_componentrendertest_test_data_state_and_overlay_components_render",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11353,9 +11331,9 @@
       "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_storefront_homepagetest_homepagetest",
-      "target": "tests_feature_storefront_homepagetest_homepagetest_test_homepage_has_base_seo_metadata_and_one_primary_heading"
+      "target": "tests_feature_storefront_homepagetest_homepagetest_test_homepage_has_base_seo_metadata_and_one_primary_heading",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11364,9 +11342,9 @@
       "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_storefront_homepagetest_homepagetest",
-      "target": "tests_feature_storefront_homepagetest_homepagetest_test_homepage_does_not_present_placeholder_commerce_data_as_real"
+      "target": "tests_feature_storefront_homepagetest_homepagetest_test_homepage_does_not_present_placeholder_commerce_data_as_real",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11375,9 +11353,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_storefront_homepagetest_homepagetest",
-      "target": "tests_feature_storefront_homepagetest_homepagetest_test_homepage_renders_the_complete_rtl_preview_structure"
+      "target": "tests_feature_storefront_homepagetest_homepagetest_test_homepage_renders_the_complete_rtl_preview_structure",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -11419,9 +11397,9 @@
       "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_adminshelltest_adminshelltest",
-      "target": "illuminate_foundation_testing_refreshdatabase"
+      "target": "illuminate_foundation_testing_refreshdatabase",
+      "confidence_score": 1.0
     },
     {
       "relation": "mixes_in",
@@ -11430,9 +11408,9 @@
       "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "tests_feature_admin_authenticationtest_authenticationtest",
-      "target": "illuminate_foundation_testing_refreshdatabase"
+      "target": "illuminate_foundation_testing_refreshdatabase",
+      "confidence_score": 1.0
     },
     {
       "relation": "references_constant",
@@ -14102,5 +14080,5 @@
       "source_file": "project-wiki/systems/PROFIT_CALCULATION_SYSTEM.md"
     }
   ],
-  "built_at_commit": "ab2e09d0c4e5c4438880969af17ad95b183381c3"
+  "built_at_commit": "473ec099d524530952006dd538bb4c590f2c02f4"
 }
