@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `6c081dca`
+- Built from commit: `40a66668`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -98,12 +98,12 @@
 2. `Admin Panel Structure` - 28 edges
 3. `Migration Report` - 24 edges
 4. `Product System` - 24 edges
-5. `Database Vision` - 23 edges
-6. `Order Workflow` - 23 edges
-7. `Reporting System` - 23 edges
+5. `Order Workflow` - 23 edges
+6. `Reporting System` - 23 edges
+7. `Database Vision` - 23 edges
 8. `Order System` - 22 edges
-9. `Import Pipeline System` - 22 edges
-10. `Ticketing System` - 22 edges
+9. `Ticketing System` - 22 edges
+10. `Import Pipeline System` - 22 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Agent Instructions` --references--> `ADR Index`  [EXTRACTED]
@@ -114,8 +114,8 @@
   AGENTS.md → execution-docs/README.md
 - `Agent Instructions` --references--> `README`  [EXTRACTED]
   AGENTS.md → README.md
-- `Document Graph` --references--> `README`  [EXTRACTED]
-  execution-docs/DOCUMENT_GRAPH.md → README.md
+- `Migration Report` --references--> `README`  [EXTRACTED]
+  execution-docs/MIGRATION_REPORT.md → README.md
 
 ## Import Cycles
 - None detected.
@@ -171,7 +171,7 @@ Nodes (3): Illuminate\Database\Migrations\Migration, Illuminate\Database\Schema\
 
 ### Community 9 - "User"
 Cohesion: 0.05
-Nodes (22): User, AdminUserSeeder, DatabaseSeeder, Illuminate\Database\Eloquent\Factories\HasFactory, Illuminate\Database\Seeder, Illuminate\Foundation\Auth\User, Illuminate\Foundation\Testing\RefreshDatabase, Illuminate\Foundation\Testing\TestCase (+14 more)
+Nodes (23): User, AdminUserSeeder, DatabaseSeeder, Illuminate\Database\Eloquent\Factories\HasFactory, Illuminate\Database\Seeder, Illuminate\Foundation\Auth\User, Illuminate\Foundation\Testing\RefreshDatabase, Illuminate\Foundation\Testing\TestCase (+15 more)
 
 ### Community 10 - "Admin Panel System"
 Cohesion: 0.07
@@ -382,22 +382,22 @@ Cohesion: 0.67
 Nodes (3): Stock Lifecycle, Order Lifecycle, Valid Payment State
 
 ## Knowledge Gaps
-- **706 isolated node(s):** `$schema`, `name`, `type`, `description`, `laravel` (+701 more)
+- **706 isolated node(s):** `Product delivery constraints`, `Required reading`, `Enforcement`, `Application structure`, `graphify` (+701 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `Extensible Product Model` connect `Ticketing System` to `Product System`?**
+  _High betweenness centrality (0.021) - this node is a cross-community bridge._
 - **Why does `معرفی پروژه` connect `معرفی پروژه` to `Project Vision`, `project-wiki/architecture/ARCHITECTURE.md`, `Admin Panel Structure`, `Decision Log`, `project-wiki/core/PROJECT_RULES.md`, `Database Vision`, `System Glossary`, `Product Scope`, `Tech Stack Decisions`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **Why does `Decision Log` connect `Decision Log` to `معرفی پروژه`, `Project Vision`, `Business Rules`, `Database Vision`, `4. Initial Project Decisions`, `System Glossary`, `Product Scope`?**
   _High betweenness centrality (0.016) - this node is a cross-community bridge._
-- **Why does `Stability Before Expansion` connect `Ticketing System` to `Roadmap`?**
-  _High betweenness centrality (0.012) - this node is a cross-community bridge._
+- **Why does `Product System` connect `Product System` to `Ticketing System`?**
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `User` (e.g. with `.test_customer_receives_the_persian_forbidden_page()` and `.test_dashboard_marks_all_preview_information_honestly()`) actually correct?**
   _`User` has 14 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `$schema`, `name`, `type` to the rest of the system?**
+- **What connects `Product delivery constraints`, `Required reading`, `Enforcement` to the rest of the system?**
   _706 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Illuminate\Http\Request` be split into smaller, more focused modules?**
   _Cohesion score 0.05480769230769231 - nodes in this community are weakly interconnected._
