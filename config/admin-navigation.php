@@ -25,8 +25,9 @@ return [
     [
         'label' => 'کاتالوگ',
         'items' => [
-            ['label' => 'محصولات', 'icon' => 'ti-package', 'route' => null, 'roles' => $allStaff],
-            ['label' => 'دسته‌بندی و طبقه‌بندی', 'icon' => 'ti-category-2', 'route' => null, 'roles' => $management],
+            ['label' => 'محصولات', 'icon' => 'ti-package', 'route' => 'admin.products.index', 'active' => 'admin.products.*', 'roles' => $allStaff],
+            ['label' => 'دسته‌بندی‌ها', 'icon' => 'ti-category-2', 'route' => 'admin.categories.index', 'active' => 'admin.categories.*', 'roles' => $management],
+            ['label' => 'برندها', 'icon' => 'ti-tag', 'route' => 'admin.brands.index', 'active' => 'admin.brands.*', 'roles' => $management],
             ['label' => 'عملیات گروهی', 'icon' => 'ti-stack-2', 'route' => null, 'roles' => $management],
             ['label' => 'ورود اطلاعات', 'icon' => 'ti-file-import', 'route' => null, 'roles' => $management],
         ],

@@ -1,8 +1,8 @@
 # Inventory System
 
 Document ID: SYS-INVENTORY
-Status: Draft
-Version: 0.1
+Status: MVP Partial
+Version: 0.2
 Source of Truth: execution-docs
 Related Wiki Sources: project-wiki/systems/INVENTORY_SYSTEM.md
 Dependencies: PRODUCT_SYSTEM.md, ORDER_SYSTEM.md
@@ -17,9 +17,9 @@ Admin, owner.
 ## 4. User Stories
 Admin updates stock; order flow checks availability.
 ## 5. Business Rules
-Reservation, deduction and adjustment rules need migration.
+Product create/update records on-hand quantity changes as append-only movements. Reservation and order deduction remain deferred to checkout.
 ## 6. Data Model
-Inventory item linked to product.
+One inventory row per product with on-hand, reserved, reorder point, base cost and optimistic version; movements retain actor, delta, resulting quantity and reason.
 ## 7. Workflow
 Receive, adjust, reserve, deduct and reconcile stock.
 ## 8. UI Requirements

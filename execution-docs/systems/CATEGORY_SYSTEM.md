@@ -1,8 +1,8 @@
 # Category System
 
 Document ID: SYS-CATEGORY
-Status: Draft
-Version: 0.1
+Status: MVP Implemented
+Version: 1.0
 Source of Truth: execution-docs
 Related Wiki Sources: project-wiki/systems/CATEGORY_AND_TAXONOMY_SYSTEM.md
 Dependencies: PRODUCT_SYSTEM.md, ../domain/RELATIONSHIP_MATRIX.md
@@ -17,9 +17,9 @@ Admin, customer.
 ## 4. User Stories
 Admin manages hierarchy; customer browses categories.
 ## 5. Business Rules
-Hierarchy and visibility rules require wiki migration.
+Hierarchy is optional, self/descendant cycles are rejected, and categories with children or products cannot be deleted.
 ## 6. Data Model
-Category entity and product relationship pending review.
+Adjacency-list hierarchy plus many-to-many product assignment with one primary category.
 ## 7. Workflow
 Create, reorder, publish, hide or archive category.
 ## 8. UI Requirements

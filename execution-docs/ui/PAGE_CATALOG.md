@@ -2,7 +2,7 @@
 
 Document ID: UI-PAGE-CATALOG
 Status: Phase 1 Baseline
-Version: 1.0
+Version: 1.1
 Source of Truth: execution-docs
 Related Wiki Sources: project-wiki/ui-ux/README.md
 Dependencies: ../business/USER_JOURNEY_MAP.md, DESIGN_SYSTEM.md, DESIGN_TOKENS.md, COMPONENT_STANDARDS.md
@@ -18,6 +18,9 @@ Initial pages:
 | Admin login | Staff | Auth | Phase 1 verified |
 | Admin dashboard | Staff | Admin preview | Phase 1 verified |
 | Change password | Staff | Auth | Phase 1 verified |
+| Brand management | Owner, Admin | Catalog | MVP implemented |
+| Category management | Owner, Admin | Catalog | MVP implemented |
+| Product management | Staff | Product, Inventory | MVP implemented |
 | 403 / 404 | Any | Error handling | Phase 1 verified |
 | Product listing | Customer | Product, Category | Draft |
 | Product detail | Customer | Product, Inventory | Draft |
@@ -31,4 +34,4 @@ and shared component standards before it can be marked complete.
 
 Admin UI rule: admin pages use Laravel Blade and Tabler Bootstrap 5 with minimal vanilla JavaScript. Filament, Nova, Backpack, paid admin packages, React, Vue, Inertia and first-version SPA architecture are rejected.
 
-Phase 1 preview pages do not claim live commerce data; future pages remain Draft until their backend contracts exist.
+The homepage catalog sections now read active categories, products, inventory and brands from the database and render honest empty states.

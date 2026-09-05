@@ -9,4 +9,15 @@ enum ProductStatus: string
     case Inactive = 'inactive';
     case Frozen = 'frozen';
     case Unavailable = 'unavailable';
+
+    public function label(): string
+    {
+        return match ($this) {
+            self::Draft => 'پیش‌نویس',
+            self::Active => 'فعال',
+            self::Inactive => 'غیرفعال',
+            self::Frozen => 'متوقف',
+            self::Unavailable => 'ناموجود',
+        };
+    }
 }

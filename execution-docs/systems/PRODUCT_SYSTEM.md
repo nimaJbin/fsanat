@@ -1,8 +1,8 @@
 # Product System
 
 Document ID: SYS-PRODUCT
-Status: Draft
-Version: 0.1
+Status: MVP Implemented
+Version: 1.0
 Source of Truth: execution-docs
 Related Wiki Sources: project-wiki/systems/PRODUCT_SYSTEM.md
 Dependencies: ../domain/ENTITY_CATALOG.md, ../architecture/MODULE_MAP.md
@@ -15,13 +15,13 @@ Maintain accurate product information for commerce operations.
 ## 3. Actors
 Admin, owner, customer.
 ## 4. User Stories
-Admin creates and updates products; customer views products.
+Staff creates, edits, deactivates and safely deletes unused products; visitors see active products on the homepage.
 ## 5. Business Rules
-Sale eligibility and visibility rules require migration.
+Only active products appear publicly. Each product requires a primary category, SKU, integer Rial price and inventory row. Products with order history cannot be deleted.
 ## 6. Data Model
 Product fields are tracked in FIELD_MATRIX.md.
 ## 7. Workflow
-Create, review, publish, update and retire product.
+Create as draft or active, update catalog/inventory data, deactivate or delete when unused.
 ## 8. UI Requirements
 Admin product forms and storefront display entries.
 ## 9. API Requirements

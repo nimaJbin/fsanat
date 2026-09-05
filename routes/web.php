@@ -1,8 +1,11 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminAuthenticatedSessionController;
+use App\Http\Controllers\Admin\BrandController;
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PasswordController;
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Public\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,6 +19,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     Route::middleware(['auth', 'staff'])->group(function () {
         Route::get('dashboard', DashboardController::class)->name('dashboard');
+        Route::resource('brands', BrandController::class)->except('show');
+        Route::resource('categories', CategoryController::class)->except('show');
+        Route::resource('products', ProductController::class)->except('show');
         Route::get('settings/password', [PasswordController::class, 'edit'])->name('password.edit');
         Route::put('settings/password', [PasswordController::class, 'update'])->name('password.update');
         Route::post('logout', [AdminAuthenticatedSessionController::class, 'destroy'])->name('logout');

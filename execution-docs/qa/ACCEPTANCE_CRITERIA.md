@@ -20,6 +20,9 @@ Purpose: define the verified Phase 1 acceptance baseline.
 | Dashboard | Staff opens overview | Preview mode is active | Metrics and states render with explicit non-production wording | Phase 1 P1.5 |
 | Homepage | Visitor opens `/` | Desktop or mobile viewport is used | Semantic RTL homepage renders with honest preview content and metadata | Phase 1 P1.6 |
 | Quality gate | Phase 1 change set | Verification suite runs | Tests, formatting, syntax, build, audit and visual checks pass | Phase 1 P1.7 |
+| Catalog management | Authorized staff | Brand/category/product forms are submitted | Valid records and product relationships are persisted; invalid input is rejected | Catalog MVP |
+| Catalog permissions | Operator | Brand or category management is requested | Access is denied while product management remains available | Catalog MVP |
+| Live homepage catalog | Visitor | Homepage is opened | Only active database-backed products/categories/brands and real stock state appear | Catalog MVP |
 
 Rules:
 
