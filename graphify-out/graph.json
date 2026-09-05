@@ -434,10 +434,10 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "tests_feature_database_commerceschematest_commerceschematest",
       "community": 9,
       "community_name": "User",
-      "norm_label": "commerceschematest"
+      "norm_label": "commerceschematest",
+      "id": "tests_feature_database_commerceschematest_commerceschematest"
     },
     {
       "label": "ExampleTest",
@@ -857,10 +857,10 @@
       "source_location": "L35",
       "_callable": true,
       "_origin": "ast",
-      "id": "database_migrations_2026_09_05_000001_create_customer_data_tables_down",
       "community": 8,
       "community_name": "Illuminate\\Support\\Facades\\Schema",
-      "norm_label": "down()"
+      "norm_label": "down()",
+      "id": "database_migrations_2026_09_05_000001_create_customer_data_tables_down"
     },
     {
       "label": "up()",
@@ -869,10 +869,10 @@
       "source_location": "L9",
       "_callable": true,
       "_origin": "ast",
-      "id": "database_migrations_2026_09_05_000001_create_customer_data_tables_up",
       "community": 8,
       "community_name": "Illuminate\\Support\\Facades\\Schema",
-      "norm_label": "up()"
+      "norm_label": "up()",
+      "id": "database_migrations_2026_09_05_000001_create_customer_data_tables_up"
     },
     {
       "label": "down()",
@@ -881,10 +881,10 @@
       "source_location": "L61",
       "_callable": true,
       "_origin": "ast",
-      "id": "database_migrations_2026_09_05_000002_create_catalog_tables_down",
       "community": 8,
       "community_name": "Illuminate\\Support\\Facades\\Schema",
-      "norm_label": "down()"
+      "norm_label": "down()",
+      "id": "database_migrations_2026_09_05_000002_create_catalog_tables_down"
     },
     {
       "label": "up()",
@@ -893,10 +893,10 @@
       "source_location": "L9",
       "_callable": true,
       "_origin": "ast",
-      "id": "database_migrations_2026_09_05_000002_create_catalog_tables_up",
       "community": 8,
       "community_name": "Illuminate\\Support\\Facades\\Schema",
-      "norm_label": "up()"
+      "norm_label": "up()",
+      "id": "database_migrations_2026_09_05_000002_create_catalog_tables_up"
     },
     {
       "label": "down()",
@@ -905,10 +905,10 @@
       "source_location": "L39",
       "_callable": true,
       "_origin": "ast",
-      "id": "database_migrations_2026_09_05_000003_create_inventory_tables_down",
       "community": 8,
       "community_name": "Illuminate\\Support\\Facades\\Schema",
-      "norm_label": "down()"
+      "norm_label": "down()",
+      "id": "database_migrations_2026_09_05_000003_create_inventory_tables_down"
     },
     {
       "label": "up()",
@@ -917,10 +917,10 @@
       "source_location": "L9",
       "_callable": true,
       "_origin": "ast",
-      "id": "database_migrations_2026_09_05_000003_create_inventory_tables_up",
       "community": 8,
       "community_name": "Illuminate\\Support\\Facades\\Schema",
-      "norm_label": "up()"
+      "norm_label": "up()",
+      "id": "database_migrations_2026_09_05_000003_create_inventory_tables_up"
     },
     {
       "label": "down()",
@@ -929,10 +929,10 @@
       "source_location": "L56",
       "_callable": true,
       "_origin": "ast",
-      "id": "database_migrations_2026_09_05_000004_create_order_tables_down",
       "community": 8,
       "community_name": "Illuminate\\Support\\Facades\\Schema",
-      "norm_label": "down()"
+      "norm_label": "down()",
+      "id": "database_migrations_2026_09_05_000004_create_order_tables_down"
     },
     {
       "label": "up()",
@@ -941,10 +941,10 @@
       "source_location": "L9",
       "_callable": true,
       "_origin": "ast",
-      "id": "database_migrations_2026_09_05_000004_create_order_tables_up",
       "community": 8,
       "community_name": "Illuminate\\Support\\Facades\\Schema",
-      "norm_label": "up()"
+      "norm_label": "up()",
+      "id": "database_migrations_2026_09_05_000004_create_order_tables_up"
     },
     {
       "label": "down()",
@@ -953,10 +953,10 @@
       "source_location": "L41",
       "_callable": true,
       "_origin": "ast",
-      "id": "database_migrations_2026_09_05_000005_create_payment_and_shipment_tables_down",
       "community": 8,
       "community_name": "Illuminate\\Support\\Facades\\Schema",
-      "norm_label": "down()"
+      "norm_label": "down()",
+      "id": "database_migrations_2026_09_05_000005_create_payment_and_shipment_tables_down"
     },
     {
       "label": "up()",
@@ -965,10 +965,10 @@
       "source_location": "L9",
       "_callable": true,
       "_origin": "ast",
-      "id": "database_migrations_2026_09_05_000005_create_payment_and_shipment_tables_up",
       "community": 8,
       "community_name": "Illuminate\\Support\\Facades\\Schema",
-      "norm_label": "up()"
+      "norm_label": "up()",
+      "id": "database_migrations_2026_09_05_000005_create_payment_and_shipment_tables_up"
     },
     {
       "label": "isStaff()",
@@ -1313,10 +1313,10 @@
       "source_location": "L13",
       "_callable": true,
       "_origin": "ast",
-      "id": "tests_feature_database_commerceschematest_commerceschematest_test_mvp_commerce_tables_and_critical_columns_exist",
       "community": 9,
       "community_name": "User",
-      "norm_label": ".test_mvp_commerce_tables_and_critical_columns_exist()"
+      "norm_label": ".test_mvp_commerce_tables_and_critical_columns_exist()",
+      "id": "tests_feature_database_commerceschematest_commerceschematest_test_mvp_commerce_tables_and_critical_columns_exist"
     },
     {
       "label": ".test_the_application_returns_a_successful_response()",
@@ -3306,7 +3306,7 @@
       "label": "Application structure",
       "file_type": "document",
       "source_file": "AGENTS.md",
-      "source_location": "L48",
+      "source_location": "L52",
       "_origin": "ast",
       "id": "agents_application_structure",
       "community": 109,
@@ -3317,7 +3317,7 @@
       "label": "Enforcement",
       "file_type": "document",
       "source_file": "AGENTS.md",
-      "source_location": "L36",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "agents_enforcement",
       "community": 109,
@@ -3328,7 +3328,7 @@
       "label": "graphify",
       "file_type": "document",
       "source_file": "AGENTS.md",
-      "source_location": "L73",
+      "source_location": "L77",
       "_origin": "ast",
       "id": "agents_graphify",
       "community": 109,
@@ -3350,7 +3350,7 @@
       "label": "Required reading",
       "file_type": "document",
       "source_file": "AGENTS.md",
-      "source_location": "L18",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "agents_required_reading",
       "community": 109,
@@ -6110,10 +6110,10 @@
       "source_file": "execution-docs/architecture/DATABASE_VISION.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "execution_docs_architecture_database_vision",
       "community": 4,
       "community_name": "Execution Docs",
-      "norm_label": "architecture/database_vision.md"
+      "norm_label": "architecture/database_vision.md",
+      "id": "execution_docs_architecture_database_vision"
     },
     {
       "label": "Database Vision",
@@ -6121,10 +6121,10 @@
       "source_file": "execution-docs/architecture/DATABASE_VISION.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "execution_docs_architecture_database_vision_database_vision",
       "community": 4,
       "community_name": "Execution Docs",
-      "norm_label": "database vision"
+      "norm_label": "database vision",
+      "id": "execution_docs_architecture_database_vision_database_vision"
     },
     {
       "label": "architecture/TECH_STACK_DECISIONS.md",
@@ -8508,10 +8508,10 @@
       "source_file": "database/migrations/2026_09_05_000001_create_customer_data_tables.php",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "database_migrations_2026_09_05_000001_create_customer_data_tables",
       "community": 8,
       "community_name": "Illuminate\\Support\\Facades\\Schema",
-      "norm_label": "2026_09_05_000001_create_customer_data_tables.php"
+      "norm_label": "2026_09_05_000001_create_customer_data_tables.php",
+      "id": "database_migrations_2026_09_05_000001_create_customer_data_tables"
     },
     {
       "label": "2026_09_05_000002_create_catalog_tables.php",
@@ -8519,10 +8519,10 @@
       "source_file": "database/migrations/2026_09_05_000002_create_catalog_tables.php",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "database_migrations_2026_09_05_000002_create_catalog_tables",
       "community": 8,
       "community_name": "Illuminate\\Support\\Facades\\Schema",
-      "norm_label": "2026_09_05_000002_create_catalog_tables.php"
+      "norm_label": "2026_09_05_000002_create_catalog_tables.php",
+      "id": "database_migrations_2026_09_05_000002_create_catalog_tables"
     },
     {
       "label": "2026_09_05_000003_create_inventory_tables.php",
@@ -8530,10 +8530,10 @@
       "source_file": "database/migrations/2026_09_05_000003_create_inventory_tables.php",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "database_migrations_2026_09_05_000003_create_inventory_tables",
       "community": 8,
       "community_name": "Illuminate\\Support\\Facades\\Schema",
-      "norm_label": "2026_09_05_000003_create_inventory_tables.php"
+      "norm_label": "2026_09_05_000003_create_inventory_tables.php",
+      "id": "database_migrations_2026_09_05_000003_create_inventory_tables"
     },
     {
       "label": "2026_09_05_000004_create_order_tables.php",
@@ -8541,10 +8541,10 @@
       "source_file": "database/migrations/2026_09_05_000004_create_order_tables.php",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "database_migrations_2026_09_05_000004_create_order_tables",
       "community": 8,
       "community_name": "Illuminate\\Support\\Facades\\Schema",
-      "norm_label": "2026_09_05_000004_create_order_tables.php"
+      "norm_label": "2026_09_05_000004_create_order_tables.php",
+      "id": "database_migrations_2026_09_05_000004_create_order_tables"
     },
     {
       "label": "2026_09_05_000005_create_payment_and_shipment_tables.php",
@@ -8552,10 +8552,10 @@
       "source_file": "database/migrations/2026_09_05_000005_create_payment_and_shipment_tables.php",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "database_migrations_2026_09_05_000005_create_payment_and_shipment_tables",
       "community": 8,
       "community_name": "Illuminate\\Support\\Facades\\Schema",
-      "norm_label": "2026_09_05_000005_create_payment_and_shipment_tables.php"
+      "norm_label": "2026_09_05_000005_create_payment_and_shipment_tables.php",
+      "id": "database_migrations_2026_09_05_000005_create_payment_and_shipment_tables"
     },
     {
       "label": "Illuminate\\Database\\Migrations\\Migration",
@@ -8563,10 +8563,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "illuminate_database_migrations_migration",
       "community": 8,
       "community_name": "Illuminate\\Support\\Facades\\Schema",
-      "norm_label": "illuminate\\database\\migrations\\migration"
+      "norm_label": "illuminate\\database\\migrations\\migration",
+      "id": "illuminate_database_migrations_migration"
     },
     {
       "label": "Illuminate\\Database\\Schema\\Blueprint",
@@ -8574,10 +8574,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "illuminate_database_schema_blueprint",
       "community": 8,
       "community_name": "Illuminate\\Support\\Facades\\Schema",
-      "norm_label": "illuminate\\database\\schema\\blueprint"
+      "norm_label": "illuminate\\database\\schema\\blueprint",
+      "id": "illuminate_database_schema_blueprint"
     },
     {
       "label": "Illuminate\\Support\\Facades\\Schema",
@@ -8585,10 +8585,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "illuminate_support_facades_schema",
       "community": 8,
       "community_name": "Illuminate\\Support\\Facades\\Schema",
-      "norm_label": "illuminate\\support\\facades\\schema"
+      "norm_label": "illuminate\\support\\facades\\schema",
+      "id": "illuminate_support_facades_schema"
     },
     {
       "label": "header.blade.php",
@@ -10840,10 +10840,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "illuminate_foundation_testing_refreshdatabase",
       "community": 9,
       "community_name": "User",
-      "norm_label": "illuminate\\foundation\\testing\\refreshdatabase"
+      "norm_label": "illuminate\\foundation\\testing\\refreshdatabase",
+      "id": "illuminate_foundation_testing_refreshdatabase"
     },
     {
       "label": "Illuminate\\Foundation\\Testing\\TestCase",
@@ -10972,10 +10972,10 @@
       "source_file": "tests/Feature/Database/CommerceSchemaTest.php",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "tests_feature_database_commerceschematest",
       "community": 9,
       "community_name": "User",
-      "norm_label": "commerceschematest.php"
+      "norm_label": "commerceschematest.php",
+      "id": "tests_feature_database_commerceschematest"
     },
     {
       "label": "Feature/ExampleTest.php",
@@ -11005,10 +11005,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "tests_testcase",
       "community": 9,
       "community_name": "User",
-      "norm_label": "tests\\testcase"
+      "norm_label": "tests\\testcase",
+      "id": "tests_testcase"
     },
     {
       "label": "WALLET_SYSTEM.md",
@@ -15007,9 +15007,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000001_create_customer_data_tables",
-      "target": "illuminate_database_migrations_migration",
-      "confidence_score": 1.0
+      "target": "illuminate_database_migrations_migration"
     },
     {
       "relation": "imports",
@@ -15019,9 +15019,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000001_create_customer_data_tables",
-      "target": "illuminate_database_schema_blueprint",
-      "confidence_score": 1.0
+      "target": "illuminate_database_schema_blueprint"
     },
     {
       "relation": "imports",
@@ -15031,9 +15031,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000001_create_customer_data_tables",
-      "target": "illuminate_support_facades_schema",
-      "confidence_score": 1.0
+      "target": "illuminate_support_facades_schema"
     },
     {
       "relation": "imports",
@@ -15043,9 +15043,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000002_create_catalog_tables",
-      "target": "illuminate_database_migrations_migration",
-      "confidence_score": 1.0
+      "target": "illuminate_database_migrations_migration"
     },
     {
       "relation": "imports",
@@ -15055,9 +15055,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000002_create_catalog_tables",
-      "target": "illuminate_database_schema_blueprint",
-      "confidence_score": 1.0
+      "target": "illuminate_database_schema_blueprint"
     },
     {
       "relation": "imports",
@@ -15067,9 +15067,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000002_create_catalog_tables",
-      "target": "illuminate_support_facades_schema",
-      "confidence_score": 1.0
+      "target": "illuminate_support_facades_schema"
     },
     {
       "relation": "imports",
@@ -15079,9 +15079,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000003_create_inventory_tables",
-      "target": "illuminate_database_migrations_migration",
-      "confidence_score": 1.0
+      "target": "illuminate_database_migrations_migration"
     },
     {
       "relation": "imports",
@@ -15091,9 +15091,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000003_create_inventory_tables",
-      "target": "illuminate_database_schema_blueprint",
-      "confidence_score": 1.0
+      "target": "illuminate_database_schema_blueprint"
     },
     {
       "relation": "imports",
@@ -15103,9 +15103,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000003_create_inventory_tables",
-      "target": "illuminate_support_facades_schema",
-      "confidence_score": 1.0
+      "target": "illuminate_support_facades_schema"
     },
     {
       "relation": "imports",
@@ -15115,9 +15115,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000004_create_order_tables",
-      "target": "illuminate_database_migrations_migration",
-      "confidence_score": 1.0
+      "target": "illuminate_database_migrations_migration"
     },
     {
       "relation": "imports",
@@ -15127,9 +15127,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000004_create_order_tables",
-      "target": "illuminate_database_schema_blueprint",
-      "confidence_score": 1.0
+      "target": "illuminate_database_schema_blueprint"
     },
     {
       "relation": "imports",
@@ -15139,9 +15139,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000004_create_order_tables",
-      "target": "illuminate_support_facades_schema",
-      "confidence_score": 1.0
+      "target": "illuminate_support_facades_schema"
     },
     {
       "relation": "imports",
@@ -15151,9 +15151,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000005_create_payment_and_shipment_tables",
-      "target": "illuminate_database_migrations_migration",
-      "confidence_score": 1.0
+      "target": "illuminate_database_migrations_migration"
     },
     {
       "relation": "imports",
@@ -15163,9 +15163,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000005_create_payment_and_shipment_tables",
-      "target": "illuminate_database_schema_blueprint",
-      "confidence_score": 1.0
+      "target": "illuminate_database_schema_blueprint"
     },
     {
       "relation": "imports",
@@ -15175,9 +15175,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000005_create_payment_and_shipment_tables",
-      "target": "illuminate_support_facades_schema",
-      "confidence_score": 1.0
+      "target": "illuminate_support_facades_schema"
     },
     {
       "relation": "imports",
@@ -15715,9 +15715,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tests_feature_database_commerceschematest",
-      "target": "illuminate_foundation_testing_refreshdatabase",
-      "confidence_score": 1.0
+      "target": "illuminate_foundation_testing_refreshdatabase"
     },
     {
       "relation": "imports",
@@ -15727,9 +15727,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tests_feature_database_commerceschematest",
-      "target": "illuminate_support_facades_schema",
-      "confidence_score": 1.0
+      "target": "illuminate_support_facades_schema"
     },
     {
       "relation": "imports",
@@ -15739,9 +15739,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tests_feature_database_commerceschematest",
-      "target": "tests_testcase",
-      "confidence_score": 1.0
+      "target": "tests_testcase"
     },
     {
       "relation": "imports",
@@ -16166,7 +16166,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "AGENTS.md",
-      "source_location": "L18",
+      "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
       "source": "agents_agent_instructions",
@@ -16177,22 +16177,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "AGENTS.md",
-      "source_location": "L36",
+      "source_location": "L40",
       "weight": 1.0,
       "_origin": "ast",
       "source": "agents_agent_instructions",
       "target": "agents_enforcement",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "AGENTS.md",
-      "source_location": "L48",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "agents_agent_instructions",
-      "target": "agents_application_structure",
       "confidence_score": 1.0
     },
     {
@@ -16210,7 +16199,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "AGENTS.md",
-      "source_location": "L73",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "agents_agent_instructions",
+      "target": "agents_application_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L77",
       "weight": 1.0,
       "_origin": "ast",
       "source": "agents_agent_instructions",
@@ -17038,9 +17038,9 @@
       "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000001_create_customer_data_tables",
-      "target": "database_migrations_2026_09_05_000001_create_customer_data_tables_down",
-      "confidence_score": 1.0
+      "target": "database_migrations_2026_09_05_000001_create_customer_data_tables_down"
     },
     {
       "relation": "contains",
@@ -17049,9 +17049,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000001_create_customer_data_tables",
-      "target": "database_migrations_2026_09_05_000001_create_customer_data_tables_up",
-      "confidence_score": 1.0
+      "target": "database_migrations_2026_09_05_000001_create_customer_data_tables_up"
     },
     {
       "relation": "contains",
@@ -17060,9 +17060,9 @@
       "source_location": "L61",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000002_create_catalog_tables",
-      "target": "database_migrations_2026_09_05_000002_create_catalog_tables_down",
-      "confidence_score": 1.0
+      "target": "database_migrations_2026_09_05_000002_create_catalog_tables_down"
     },
     {
       "relation": "contains",
@@ -17071,9 +17071,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000002_create_catalog_tables",
-      "target": "database_migrations_2026_09_05_000002_create_catalog_tables_up",
-      "confidence_score": 1.0
+      "target": "database_migrations_2026_09_05_000002_create_catalog_tables_up"
     },
     {
       "relation": "contains",
@@ -17082,9 +17082,9 @@
       "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000003_create_inventory_tables",
-      "target": "database_migrations_2026_09_05_000003_create_inventory_tables_down",
-      "confidence_score": 1.0
+      "target": "database_migrations_2026_09_05_000003_create_inventory_tables_down"
     },
     {
       "relation": "contains",
@@ -17093,9 +17093,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000003_create_inventory_tables",
-      "target": "database_migrations_2026_09_05_000003_create_inventory_tables_up",
-      "confidence_score": 1.0
+      "target": "database_migrations_2026_09_05_000003_create_inventory_tables_up"
     },
     {
       "relation": "contains",
@@ -17104,9 +17104,9 @@
       "source_location": "L56",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000004_create_order_tables",
-      "target": "database_migrations_2026_09_05_000004_create_order_tables_down",
-      "confidence_score": 1.0
+      "target": "database_migrations_2026_09_05_000004_create_order_tables_down"
     },
     {
       "relation": "contains",
@@ -17115,9 +17115,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000004_create_order_tables",
-      "target": "database_migrations_2026_09_05_000004_create_order_tables_up",
-      "confidence_score": 1.0
+      "target": "database_migrations_2026_09_05_000004_create_order_tables_up"
     },
     {
       "relation": "contains",
@@ -17126,9 +17126,9 @@
       "source_location": "L41",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000005_create_payment_and_shipment_tables",
-      "target": "database_migrations_2026_09_05_000005_create_payment_and_shipment_tables_down",
-      "confidence_score": 1.0
+      "target": "database_migrations_2026_09_05_000005_create_payment_and_shipment_tables_down"
     },
     {
       "relation": "contains",
@@ -17137,9 +17137,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_09_05_000005_create_payment_and_shipment_tables",
-      "target": "database_migrations_2026_09_05_000005_create_payment_and_shipment_tables_up",
-      "confidence_score": 1.0
+      "target": "database_migrations_2026_09_05_000005_create_payment_and_shipment_tables_up"
     },
     {
       "relation": "contains",
@@ -17203,9 +17203,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "execution_docs_architecture_database_vision",
-      "target": "execution_docs_architecture_database_vision_database_vision",
-      "confidence_score": 1.0
+      "target": "execution_docs_architecture_database_vision_database_vision"
     },
     {
       "relation": "contains",
@@ -25310,9 +25310,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tests_feature_database_commerceschematest",
-      "target": "tests_feature_database_commerceschematest_commerceschematest",
-      "confidence_score": 1.0
+      "target": "tests_feature_database_commerceschematest_commerceschematest"
     },
     {
       "relation": "contains",
@@ -25629,9 +25629,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tests_feature_database_commerceschematest_commerceschematest",
-      "target": "tests_testcase",
-      "confidence_score": 1.0
+      "target": "tests_testcase"
     },
     {
       "relation": "inherits",
@@ -26201,9 +26201,9 @@
       "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tests_feature_database_commerceschematest_commerceschematest",
-      "target": "tests_feature_database_commerceschematest_commerceschematest_test_mvp_commerce_tables_and_critical_columns_exist",
-      "confidence_score": 1.0
+      "target": "tests_feature_database_commerceschematest_commerceschematest_test_mvp_commerce_tables_and_critical_columns_exist"
     },
     {
       "relation": "method",
@@ -26311,9 +26311,9 @@
       "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tests_feature_database_commerceschematest_commerceschematest",
-      "target": "illuminate_foundation_testing_refreshdatabase",
-      "confidence_score": 1.0
+      "target": "illuminate_foundation_testing_refreshdatabase"
     },
     {
       "relation": "references_constant",
@@ -28983,5 +28983,5 @@
       "source_file": "project-wiki/systems/PROFIT_CALCULATION_SYSTEM.md"
     }
   ],
-  "built_at_commit": "40a66668bfd810cbc405e7f64263b46c29ba5ac7"
+  "built_at_commit": "a0b3f870a3bc7a627da4868a7a71fc3aac2e47ba"
 }

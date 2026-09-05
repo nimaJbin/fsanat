@@ -1,7 +1,7 @@
 # Graph Report - fsanat  (2026-09-05)
 
 ## Corpus Check
-- 192 files · ~68,976 words
+- 192 files · ~69,017 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `40a66668`
+- Built from commit: `a0b3f870`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -390,10 +390,10 @@ Nodes (3): Stock Lifecycle, Order Lifecycle, Valid Payment State
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Extensible Product Model` connect `Ticketing System` to `Product System`?**
-  _High betweenness centrality (0.021) - this node is a cross-community bridge._
-- **Why does `معرفی پروژه` connect `معرفی پروژه` to `Project Vision`, `project-wiki/architecture/ARCHITECTURE.md`, `Admin Panel Structure`, `Decision Log`, `project-wiki/core/PROJECT_RULES.md`, `Database Vision`, `System Glossary`, `Product Scope`, `Tech Stack Decisions`?**
   _High betweenness centrality (0.016) - this node is a cross-community bridge._
-- **Why does `Product System` connect `Product System` to `Ticketing System`?**
+- **Why does `Auditable Order Lifecycle` connect `Ticketing System` to `Order Workflow`?**
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+- **Why does `معرفی پروژه` connect `معرفی پروژه` to `Project Vision`, `project-wiki/architecture/ARCHITECTURE.md`, `Admin Panel Structure`, `Decision Log`, `project-wiki/core/PROJECT_RULES.md`, `Database Vision`, `System Glossary`, `Product Scope`, `Tech Stack Decisions`?**
   _High betweenness centrality (0.015) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `User` (e.g. with `.test_customer_receives_the_persian_forbidden_page()` and `.test_dashboard_marks_all_preview_information_honestly()`) actually correct?**
   _`User` has 14 INFERRED edges - model-reasoned connections that need verification._
