@@ -14,6 +14,10 @@ These rules apply to the entire repository.
 - Optimize for a fast, reliable launch. Add schema, abstractions, indexes, and
   infrastructure only when they support an identified MVP flow or prevent a
   known migration dead end.
+- After each completed and verified change set, create a focused commit with a
+  meaningful message on `master` and push it to `origin/master`. Never include
+  unrelated or temporary files, and report any verification or push failure
+  explicitly instead of claiming completion.
 
 ## Required reading
 
