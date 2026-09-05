@@ -2,6 +2,19 @@
 
 These rules apply to the entire repository.
 
+## Product delivery constraints
+
+- Never generate, synthesize, download, or add any image, video, audio, or other
+  media asset without the user's explicit permission. The default responsibility
+  is code and documentation development only. Use an existing approved asset or
+  a code-rendered/text fallback when a visual placeholder is needed.
+- Build every area as a lean, working MVP unless the user explicitly expands the
+  scope. Prefer the smallest end-to-end implementation that works now while
+  keeping clear extension points; do not pre-build speculative features.
+- Optimize for a fast, reliable launch. Add schema, abstractions, indexes, and
+  infrastructure only when they support an identified MVP flow or prevent a
+  known migration dead end.
+
 ## Required reading
 
 Before changing application code, read the minimum relevant path defined in

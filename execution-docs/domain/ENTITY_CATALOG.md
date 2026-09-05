@@ -1,8 +1,8 @@
 # Entity Catalog
 
 Document ID: DOM-ENTITY-CATALOG
-Status: Draft
-Version: 0.1
+Status: Accepted
+Version: 1.0
 Source of Truth: execution-docs
 Related Wiki Sources: project-wiki/core/DATABASE_VISION.md, project-wiki/systems
 Dependencies: ../architecture/DATABASE_VISION.md
@@ -14,12 +14,11 @@ Initial entities:
 
 | Entity | Owning system | Status |
 |---|---|---|
-| User | Auth, Customer | Draft |
-| Product | Product | Draft |
-| Category | Category | Draft |
-| Inventory Item | Inventory | Draft |
-| Order | Order | Draft |
-| Payment | Payment | Draft |
-| Shipment | Shipping | Draft |
+| User, Customer Profile, Address | Auth, Customer | MVP |
+| Brand, Product, Category | Catalog | MVP |
+| Inventory, Inventory Movement | Inventory | MVP |
+| Order, Order Item | Order | MVP |
+| Payment | Payment | MVP |
+| Shipment | Shipping | MVP |
 
-Open migration work: review wiki system documents and add only confirmed entities.
+Deferred extension entities: product media/attributes, warehouses/reservations, refunds, wallets, imports, tickets and generalized audit logs. Add them only with a working use case.
