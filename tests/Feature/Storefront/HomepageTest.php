@@ -20,10 +20,14 @@ class HomepageTest extends TestCase
             ->assertSee('dir="rtl"', false)
             ->assertSee('انتخاب دقیق‌تر برای نیازهای صنعتی')
             ->assertSee('دسته‌بندی‌های اصلی')
+            ->assertSee('پیشنهادهای ویژه')
             ->assertSee('محصولات منتخب')
             ->assertSee('محصولات جدید')
+            ->assertSee('پرفروش‌ترین تجهیزات')
+            ->assertSee('کالاهای موجود و آماده ارسال')
             ->assertSee('برندهای کاتالوگ')
-            ->assertSee('اطلاعات تماس')
+            ->assertSee('راهنمای خرید و مطالب تخصصی')
+            ->assertSee('تماس و ساعات پاسخ‌گویی')
             ->assertSee('هنوز محصول فعالی ثبت نشده است');
     }
 
@@ -62,7 +66,7 @@ class HomepageTest extends TestCase
             ->assertSee('موجود در انبار')
             ->assertSee('دسته واقعی')
             ->assertSee('برند واقعی')
-            ->assertSee('شماره تماس، نشانی و ساعات پاسخ‌گویی هنوز تنظیم نشده‌اند')
+            ->assertSee('نشانی فروشگاه (نمونهٔ دمو — با اطلاعات واقعی جایگزین شود)')
             ->assertDontSee('محصول صنعتی نمونه');
     }
 }

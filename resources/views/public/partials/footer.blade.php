@@ -1,11 +1,6 @@
-<footer class="storefront-footer" id="about-store">
-    <div class="container-xl">
-        <div class="row g-4">
-            <div class="col-12 col-lg-5"><div class="fs-wordmark storefront-footer__brand">فروشگاه صنعت جوان</div><p>زیرساخت یک فروشگاه تخصصی برای ارائه شفاف و منظم قطعات و تجهیزات صنعتی. اطلاعات تجاری و تماس پس از تأیید مالک فروشگاه تکمیل می‌شود.</p></div>
-            <div class="col-6 col-lg-2"><h2>فروشگاه</h2><ul><li><a href="#categories">دسته‌بندی‌ها</a></li><li><a href="#featured-products">محصولات منتخب</a></li><li><a href="#new-products">محصولات جدید</a></li></ul></div>
-            <div class="col-6 col-lg-2"><h2>راهنما</h2><ul><li><span>راهنمای خرید — به‌زودی</span></li><li><span>شرایط ارسال — نیازمند تنظیم</span></li><li><span>قوانین فروش — نیازمند تنظیم</span></li></ul></div>
-            <div class="col-12 col-lg-3"><h2>اطلاعات تماس</h2><p class="storefront-footer__placeholder">شماره تماس، نشانی و ساعات پاسخ‌گویی هنوز تنظیم نشده‌اند.</p></div>
-        </div>
-        <div class="storefront-footer__bottom"><span>© {{ $home['copyright_year'] }} فروشگاه صنعت جوان</span><span>نسخه پایه فروشگاه</span></div>
-    </div>
-</footer>
+<footer class="storefront-footer" id="support"><div class="container-xl storefront-footer__grid">
+    <section><h2>فروشگاه صنعت جوان</h2><p>تأمین قطعات، ابزار و تجهیزات صنعتی با مشخصات فنی شفاف و وضعیت موجودی مشخص؛ برای کارگاه‌ها، خطوط تولید و واحدهای تعمیر و نگهداری.</p></section>
+    <section><h2>دسترسی سریع</h2><ul><li><a href="#categories">دسته‌بندی محصولات</a></li><li><a href="#featured">محصولات منتخب</a></li><li><a href="#offers">پیشنهادهای ویژه</a></li><li><a href="#brands">برندهای کاتالوگ</a></li><li><a href="#articles">مطالب تخصصی</a></li></ul></section>
+    <section><h2>خدمات مشتریان</h2><ul><li>پیگیری سفارش</li><li>شرایط ارسال</li><li>رویهٔ بازگشت کالا</li><li>سؤالات متداول</li><li><a href="#advice">درخواست مشاوره</a></li></ul></section>
+    <section><h2>تماس و ساعات پاسخ‌گویی</h2><ul class="storefront-contact"><li><i class="ti ti-phone"></i>۰۲۱-۰۰۰۰ ۰۰۰۰</li><li><i class="ti ti-mail"></i>info@example.com</li><li><i class="ti ti-map-pin"></i>نشانی فروشگاه (نمونهٔ دمو — با اطلاعات واقعی جایگزین شود)</li><li><i class="ti ti-clock"></i>شنبه تا چهارشنبه ۹ تا ۱۷ — پنجشنبه ۹ تا ۱۳</li><li><i class="ti ti-headset"></i>پاسخ‌گویی با شمارهٔ پیگیری</li></ul></section>
+</div><div class="container-xl storefront-footer__bottom"><p>© {{ $home['copyright_year'] }} فروشگاه صنعت جوان — تمام حقوق محفوظ است.</p><nav aria-label="قوانین"><a href="#support">قوانین فروشگاه</a><a href="#support">حریم خصوصی</a><a href="#support">شرایط بازگشت کالا</a></nav></div></footer>

@@ -1,31 +1,7 @@
-<div class="storefront-announcement" role="note">کاتالوگ محصولات فعال است؛ جست‌وجو و خرید آنلاین در مرحله بعد اضافه می‌شود.</div>
-<header class="storefront-header">
-    <div class="container-xl storefront-header__main">
-        <button class="btn btn-icon btn-ghost-secondary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#storefront-menu" aria-controls="storefront-menu" aria-label="بازکردن منوی سایت">
-            <i class="ti ti-menu-2" aria-hidden="true"></i>
-        </button>
-        <a class="storefront-brand fs-wordmark" href="{{ route('home') }}" aria-label="فروشگاه صنعت جوان؛ صفحه اصلی">
-            <span class="storefront-brand__mark" aria-hidden="true">ص</span><span>صنعت جوان</span>
-        </a>
-        <form class="storefront-search d-none d-md-flex" role="search" action="{{ route('home') }}" method="GET">
-            <label class="visually-hidden" for="storefront-search">جست‌وجوی محصولات</label>
-            <i class="ti ti-search" aria-hidden="true"></i>
-            <input id="storefront-search" name="q" type="search" placeholder="جست‌وجوی محصول، برند یا کد کالا" disabled aria-describedby="search-preview-hint">
-            <span class="visually-hidden" id="search-preview-hint">جست‌وجو در مرحله بعد فعال می‌شود.</span>
-        </form>
-        <div class="storefront-header__actions">
-            <button class="btn btn-icon btn-ghost-secondary" type="button" disabled aria-label="حساب کاربری؛ به‌زودی"><i class="ti ti-user" aria-hidden="true"></i></button>
-            <button class="btn btn-icon btn-ghost-secondary" type="button" disabled aria-label="سبد خرید؛ به‌زودی"><i class="ti ti-shopping-bag" aria-hidden="true"></i></button>
-        </div>
-    </div>
-    <nav class="storefront-nav d-none d-lg-block" aria-label="دسترسی اصلی فروشگاه">
-        <div class="container-xl">
-            <ul><li><a href="#categories">دسته‌بندی‌ها</a></li><li><a href="#featured-products">محصولات منتخب</a></li><li><a href="#new-products">محصولات جدید</a></li><li><a href="#about-store">درباره فروشگاه</a></li></ul>
-        </div>
-    </nav>
-</header>
-
-<x-ui.drawer id="storefront-menu" title="منوی فروشگاه">
-    <nav aria-label="منوی موبایل فروشگاه"><ul class="storefront-mobile-nav"><li><a href="#categories" data-bs-dismiss="offcanvas">دسته‌بندی‌ها</a></li><li><a href="#featured-products" data-bs-dismiss="offcanvas">محصولات منتخب</a></li><li><a href="#new-products" data-bs-dismiss="offcanvas">محصولات جدید</a></li><li><a href="#about-store" data-bs-dismiss="offcanvas">درباره فروشگاه</a></li></ul></nav>
-    <div class="storefront-mobile-search"><i class="ti ti-search" aria-hidden="true"></i><span>جست‌وجو در مرحله بعد فعال می‌شود.</span></div>
-</x-ui.drawer>
+<div class="storefront-topbar"><div class="container-xl"><p>ارسال سفارش‌های ثبت‌شده در سریع‌ترین زمان ممکن</p><nav aria-label="لینک‌های سریع"><a href="#articles">راهنمای خرید</a><a href="#support">تماس با پشتیبانی</a></nav></div></div>
+<header class="storefront-header"><div class="container-xl storefront-header__main">
+    <div class="storefront-header__identity"><button class="storefront-icon-button storefront-menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#storefront-menu" aria-controls="storefront-menu" aria-label="باز کردن منوی دسته‌بندی"><i class="ti ti-menu-2" aria-hidden="true"></i></button><a class="storefront-brand" href="#top"><span class="storefront-brand__mark">ص ج</span><strong>فروشگاه صنعت جوان</strong></a></div>
+    <form class="storefront-search" role="search" action="{{ route('home') }}" method="GET"><i class="ti ti-search" aria-hidden="true"></i><label class="visually-hidden" for="storefront-search">جست‌وجوی محصول، برند یا کد کالا</label><input id="storefront-search" name="q" type="search" placeholder="جست‌وجوی محصول، برند یا کد کالا" disabled aria-describedby="search-hint"><span class="visually-hidden" id="search-hint">جست‌وجو به‌زودی فعال می‌شود.</span></form>
+    <div class="storefront-header__actions"><button class="storefront-category-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#storefront-menu"><i class="ti ti-category-2" aria-hidden="true"></i>دسته‌بندی محصولات</button><a class="storefront-icon-button storefront-action--desktop" href="#support" aria-label="حساب کاربری"><i class="ti ti-user"></i></a><a class="storefront-icon-button storefront-action--desktop" href="#featured" aria-label="علاقه‌مندی‌ها"><i class="ti ti-heart"></i></a><a class="storefront-icon-button storefront-cart" href="#support" aria-label="سبد خرید"><i class="ti ti-shopping-cart"></i><span>۰</span></a><a class="storefront-support-button" href="#support"><i class="ti ti-phone"></i>پشتیبانی ۰۲۱-۰۰۰۰ ۰۰۰۰</a></div>
+</div></header>
+<x-ui.drawer id="storefront-menu" title="دسته‌بندی محصولات"><nav aria-label="منوی موبایل فروشگاه"><ul class="storefront-mobile-nav"><li><a href="#categories" data-bs-dismiss="offcanvas">دسته‌بندی محصولات</a></li><li><a href="#featured" data-bs-dismiss="offcanvas">محصولات منتخب</a></li><li><a href="#offers" data-bs-dismiss="offcanvas">پیشنهادهای ویژه</a></li><li><a href="#brands" data-bs-dismiss="offcanvas">برندهای کاتالوگ</a></li><li><a href="#articles" data-bs-dismiss="offcanvas">مطالب تخصصی</a></li></ul></nav></x-ui.drawer>

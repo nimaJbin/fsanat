@@ -1,10 +1,2 @@
 @props(['product'])
-<article {{ $attributes->class(['storefront-product-card']) }}>
-    <div class="storefront-product-card__media" aria-hidden="true"><i class="ti {{ $product['icon'] }}"></i><span>SKU: {{ $product['sku'] }}</span></div>
-    <div class="storefront-product-card__body">
-        <span class="storefront-product-card__eyebrow">{{ $product['eyebrow'] }}</span>
-        <h3>{{ $product['name'] }}</h3>
-        <p class="storefront-product-card__stock">{{ $product['stock'] }}</p>
-        <div class="storefront-product-card__footer"><strong>{{ $product['price'] }}</strong></div>
-    </div>
-</article>
+<article {{ $attributes->class(['storefront-product-card']) }}><div class="storefront-product-card__media"><i class="ti {{ $product['icon'] }}" aria-hidden="true"></i><span>تصویر محصول هنوز ثبت نشده است</span></div><div class="storefront-product-card__body"><span class="storefront-product-card__eyebrow">{{ $product['eyebrow'] }}</span><h3>{{ $product['name'] }}</h3><span class="storefront-product-card__sku" dir="ltr">SKU: {{ $product['sku'] }}</span><span class="storefront-product-card__stock storefront-product-card__stock--{{ $product['available'] ? 'available' : 'unavailable' }}">{{ $product['stock'] }}</span><div class="storefront-product-card__footer"><strong>{{ $product['price'] }}</strong><span>{{ $product['available'] ? 'مشاهده محصول' : 'ناموجود' }}</span></div></div></article>

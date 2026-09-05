@@ -1,6 +1,2 @@
 @props(['name', 'description', 'icon'])
-<article {{ $attributes->class(['storefront-category-card']) }}>
-    <span class="storefront-category-card__icon" aria-hidden="true"><i class="ti {{ $icon }}"></i></span>
-    <div><h3>{{ $name }}</h3><p>{{ $description }}</p></div>
-    <span class="storefront-category-card__status">فعال</span>
-</article>
+<a href="#featured" {{ $attributes->class(['storefront-category-card']) }}><span class="storefront-category-card__icon" aria-hidden="true"><i class="ti {{ $icon }}"></i></span><span><strong>{{ $name }}</strong><small>{{ $description }}</small></span><i class="ti ti-chevron-left" aria-hidden="true"></i></a>
