@@ -1,16 +1,16 @@
 # Graph Report - fsanat  (2026-09-05)
 
 ## Corpus Check
-- 192 files · ~69,017 words
+- 210 files · ~70,032 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1212 nodes · 1344 edges · 119 communities (104 shown, 15 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 26 edges (avg confidence: 0.85)
+- 1283 nodes · 1450 edges · 129 communities (111 shown, 18 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 13 edges (avg confidence: 0.9)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a0b3f870`
+- Built from commit: `18cdab52`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -26,7 +26,7 @@
 - Illuminate\Support\Facades\Schema
 - User
 - Admin Panel System
-- Notification System
+- Shipping System
 - Product Scope
 - Phase Implementation Log
 - UserFactory.php
@@ -65,7 +65,7 @@
 - Inventory System
 - Profit Calculation System
 - Wallet System
-- System Glossary
+- Illuminate\Database\Eloquent\Model
 - Product Scope
 - Tech Stack Decisions
 - Roadmap
@@ -92,15 +92,24 @@
 - post-create-project-cmd
 - autoload-dev
 - Order Lifecycle
+- Category And Taxonomy System
+- Notification System
+- ComponentRenderTest
+- TestCase
+- AdminUserSeeder.php
+- AdminShellTest
+- User.php
+- HomepageTest
+- Page Catalog
 
 ## God Nodes (most connected - your core abstractions)
-1. `User` - 30 edges
+1. `User` - 34 edges
 2. `Admin Panel Structure` - 28 edges
 3. `Migration Report` - 24 edges
 4. `Product System` - 24 edges
-5. `Order Workflow` - 23 edges
-6. `Reporting System` - 23 edges
-7. `Database Vision` - 23 edges
+5. `Database Vision` - 23 edges
+6. `Order Workflow` - 23 edges
+7. `Reporting System` - 23 edges
 8. `Order System` - 22 edges
 9. `Ticketing System` - 22 edges
 10. `Import Pipeline System` - 22 edges
@@ -114,8 +123,8 @@
   AGENTS.md → execution-docs/README.md
 - `Agent Instructions` --references--> `README`  [EXTRACTED]
   AGENTS.md → README.md
-- `Migration Report` --references--> `README`  [EXTRACTED]
-  execution-docs/MIGRATION_REPORT.md → README.md
+- `Document Graph` --references--> `README`  [EXTRACTED]
+  execution-docs/DOCUMENT_GRAPH.md → README.md
 
 ## Import Cycles
 - None detected.
@@ -131,7 +140,7 @@
 - **Event-Driven Background Operations** — execution_docs_development_event_catalog_commerce_domain_events, execution_docs_development_queue_catalog_background_work_contract, execution_docs_development_automation_catalog_workflow_automation_candidates [INFERRED 0.85]
 - **Financial Traceability** — project_wiki_systems_order_workflow_auditable_order_lifecycle, project_wiki_systems_profit_calculation_system_website_profit_calculation, project_wiki_systems_wallet_system_ledger_based_wallet, project_wiki_systems_reporting_system_traceable_operational_reporting [INFERRED 0.85]
 
-## Communities (119 total, 15 thin omitted)
+## Communities (129 total, 18 thin omitted)
 
 ### Community 0 - "composer.json"
 Cohesion: 0.18
@@ -142,8 +151,8 @@ Cohesion: 0.05
 Nodes (30): LoginAdmin, LogoutAdmin, UpdateAdminPassword, AdminAuthenticatedSessionController, DashboardController, PasswordController, Controller, HomeController (+22 more)
 
 ### Community 2 - "Ticketing System"
-Cohesion: 0.05
-Nodes (50): Stability Before Expansion, Permission-Aware Access Control, 10. Import Pipeline Compatibility, 11. Reporting Relation, 12. Dynamic Freeze Relation, 13. Future AI Relation, 14. Out of Scope, 15. Open Decisions (+42 more)
+Cohesion: 0.09
+Nodes (21): 10. Order Workflow Relation, 11. Wallet Relation, 12. Notification Relation, 13. Operational Logging, 14. Auditability, 15. Future Automation, 16. Future Subscription Relation, 17. Performance Philosophy (+13 more)
 
 ### Community 3 - "Field Matrix"
 Cohesion: 0.07
@@ -158,8 +167,8 @@ Cohesion: 0.08
 Nodes (23): axios, bootstrap, concurrently, laravel-vite-plugin, dependencies, bootstrap, @tabler/core, @tabler/icons-webfont (+15 more)
 
 ### Community 6 - "معرفی پروژه"
-Cohesion: 0.13
-Nodes (9): Form Catalog, Page Catalog, معرفی پروژه, Architecture Documentation, Changelog Documentation, Core Documentation, Documentation Rules, Fsanat Documentation (+1 more)
+Cohesion: 0.17
+Nodes (8): معرفی پروژه, Architecture Documentation, Changelog Documentation, زبان مستندات, Core Documentation, Documentation Rules, Fsanat Documentation, Structure
 
 ### Community 7 - "scripts"
 Cohesion: 0.18
@@ -170,16 +179,16 @@ Cohesion: 0.09
 Nodes (3): Illuminate\Database\Migrations\Migration, Illuminate\Database\Schema\Blueprint, Illuminate\Support\Facades\Schema
 
 ### Community 9 - "User"
-Cohesion: 0.05
-Nodes (23): User, AdminUserSeeder, DatabaseSeeder, Illuminate\Database\Eloquent\Factories\HasFactory, Illuminate\Database\Seeder, Illuminate\Foundation\Auth\User, Illuminate\Foundation\Testing\RefreshDatabase, Illuminate\Foundation\Testing\TestCase (+15 more)
+Cohesion: 0.19
+Nodes (3): User, Illuminate\Foundation\Auth\User, AuthenticationTest
 
 ### Community 10 - "Admin Panel System"
 Cohesion: 0.07
 Nodes (27): 10. Events, 11. Permissions, 12. Edge Cases, 13. Future Considerations, 1. Purpose, 2. Business Goal, 3. Actors, 4. User Stories (+19 more)
 
-### Community 11 - "Notification System"
-Cohesion: 0.06
-Nodes (30): Order Fulfillment Scenario Group, 10. Events, 11. Permissions, 12. Edge Cases, 13. Future Considerations, 1. Purpose, 2. Business Goal, 3. Actors (+22 more)
+### Community 11 - "Shipping System"
+Cohesion: 0.12
+Nodes (15): Order Fulfillment Scenario Group, 10. Events, 11. Permissions, 12. Edge Cases, 13. Future Considerations, 1. Purpose, 2. Business Goal, 3. Actors (+7 more)
 
 ### Community 12 - "Product Scope"
 Cohesion: 0.14
@@ -250,8 +259,8 @@ Cohesion: 0.10
 Nodes (20): 10. Customer Rules, 11. Wallet & Credit Rules, 12. Ticketing & Support Rules, 13. Product Import Rules, 14. Digital Product Rules, 15. Scope Operation Rules, 16. Documentation Rules, 17. Future Business Expansion (+12 more)
 
 ### Community 85 - "Database Vision"
-Cohesion: 0.10
-Nodes (20): 10. Wallet Entities, 11. Ticketing Entities, 12. Import Pipeline Entities, 13. Reporting & Audit Entities, 14. Naming Conventions, 15. Relationship Philosophy, 16. Financial Consistency Rules, 17. Scalability Direction (+12 more)
+Cohesion: 0.05
+Nodes (38): 10. Wallet Entities, 11. Ticketing Entities, 12. Import Pipeline Entities, 13. Reporting & Audit Entities, 14. Naming Conventions, 15. Relationship Philosophy, 16. Financial Consistency Rules, 17. Scalability Direction (+30 more)
 
 ### Community 86 - "4. Initial Project Decisions"
 Cohesion: 0.10
@@ -273,9 +282,9 @@ Nodes (20): 10. Manual Cost Registration, 11. Wallet Relation, 12. Reporting Phi
 Cohesion: 0.10
 Nodes (19): 10. Permission & Security Relation, 11. Auditability, 12. Reporting Relation, 13. Future Subscription Relation, 14. Future AI Relation, 15. Performance Philosophy, 16. Out of Scope, 17. Open Decisions (+11 more)
 
-### Community 91 - "System Glossary"
-Cohesion: 0.11
-Nodes (18): 10. Documentation Terms, 11. Architecture Terms, 12. AI & Development Terms, 13. Naming Conventions, 14. Reserved Terms, 15. Deprecated / Avoided Terms, 16. Future Terminology, 17. Changelog (+10 more)
+### Community 91 - "Illuminate\Database\Eloquent\Model"
+Cohesion: 0.05
+Nodes (16): Address, Brand, Category, CustomerProfile, Inventory, InventoryMovement, Order, OrderItem (+8 more)
 
 ### Community 92 - "Product Scope"
 Cohesion: 0.11
@@ -290,12 +299,12 @@ Cohesion: 0.11
 Nodes (17): 10. Technical Roadmap, 11. Documentation Roadmap, 12. Operational Roadmap, 13. Open Research Areas, 14. Out of Scope, 15. Open Decisions, 16. Changelog, 1. Purpose (+9 more)
 
 ### Community 95 - "Payment System"
-Cohesion: 0.12
-Nodes (15): Customer Checkout Scenario Group, 10. Events, 11. Permissions, 12. Edge Cases, 13. Future Considerations, 1. Purpose, 2. Business Goal, 3. Actors (+7 more)
+Cohesion: 0.13
+Nodes (14): 10. Events, 11. Permissions, 12. Edge Cases, 13. Future Considerations, 1. Purpose, 2. Business Goal, 3. Actors, 4. User Stories (+6 more)
 
 ### Community 96 - "Auth And Permission System"
 Cohesion: 0.12
-Nodes (15): 10. Audit & Activity Logging, 11. Future Subscription Access, 12. Future Security Expansion, 13. Open Decisions, 14. Changelog, 1. Purpose, 2. Authentication Philosophy, 3. Authorization Philosophy (+7 more)
+Nodes (27): Stability Before Expansion, 10. Audit & Activity Logging, 11. Future Subscription Access, 12. Future Security Expansion, 13. Open Decisions, 14. Changelog, 1. Purpose, 2. Authentication Philosophy (+19 more)
 
 ### Community 97 - "System Name"
 Cohesion: 0.13
@@ -314,8 +323,8 @@ Cohesion: 0.13
 Nodes (14): 10. Events, 11. Permissions, 12. Edge Cases, 13. Future Considerations, 1. Purpose, 2. Business Goal, 3. Actors, 4. User Stories (+6 more)
 
 ### Community 101 - "Product System"
-Cohesion: 0.13
-Nodes (14): 10. Events, 11. Permissions, 12. Edge Cases, 13. Future Considerations, 1. Purpose, 2. Business Goal, 3. Actors, 4. User Stories (+6 more)
+Cohesion: 0.12
+Nodes (15): Customer Checkout Scenario Group, 10. Events, 11. Permissions, 12. Edge Cases, 13. Future Considerations, 1. Purpose, 2. Business Goal, 3. Actors (+7 more)
 
 ### Community 102 - "Migration Report"
 Cohesion: 0.15
@@ -338,8 +347,8 @@ Cohesion: 0.22
 Nodes (8): 1. Purpose, 2. Decision Logging Rules, 3. Decision Status Types, 5. Future Decision Guidelines, 6. Open Decisions, 7. Deprecated Decisions, 8. Changelog, Decision Log
 
 ### Community 107 - "project-wiki/core/PROJECT_RULES.md"
-Cohesion: 0.22
-Nodes (8): Changelog, Owner Draft Rules, زبان مستندات, قوانین تغییر مستندات, قوانین مدیریت تغییر, قوانین معماری, قوانین منطق مالی, قوانین کدنویسی
+Cohesion: 0.25
+Nodes (7): Changelog, Owner Draft Rules, قوانین تغییر مستندات, قوانین مدیریت تغییر, قوانین معماری, قوانین منطق مالی, قوانین کدنویسی
 
 ### Community 108 - "require-dev"
 Cohesion: 0.25
@@ -381,25 +390,49 @@ Nodes (3): autoload-dev, psr-4, Tests\\
 Cohesion: 0.67
 Nodes (3): Stock Lifecycle, Order Lifecycle, Valid Payment State
 
+### Community 119 - "Category And Taxonomy System"
+Cohesion: 0.11
+Nodes (17): 10. Import Pipeline Compatibility, 11. Reporting Relation, 12. Dynamic Freeze Relation, 13. Future AI Relation, 14. Out of Scope, 15. Open Decisions, 16. Changelog, 1. Purpose (+9 more)
+
+### Community 120 - "Notification System"
+Cohesion: 0.12
+Nodes (15): 10. Events, 11. Permissions, 12. Edge Cases, 13. Future Considerations, 1. Purpose, 2. Business Goal, 3. Actors, 4. User Stories (+7 more)
+
+### Community 121 - "ComponentRenderTest"
+Cohesion: 0.17
+Nodes (6): AppServiceProvider, Illuminate\Support\Facades\Blade, Illuminate\Support\Facades\View, Illuminate\Support\ServiceProvider, Illuminate\Support\ViewErrorBag, ComponentRenderTest
+
+### Community 122 - "TestCase"
+Cohesion: 0.23
+Nodes (6): Illuminate\Foundation\Testing\RefreshDatabase, Illuminate\Foundation\Testing\TestCase, Illuminate\Support\Facades\Hash, CommerceSchemaTest, ExampleTest, TestCase
+
+### Community 123 - "AdminUserSeeder.php"
+Cohesion: 0.38
+Nodes (3): AdminUserSeeder, DatabaseSeeder, Illuminate\Database\Seeder
+
+### Community 125 - "User.php"
+Cohesion: 0.33
+Nodes (3): Illuminate\Database\Eloquent\Factories\HasFactory, Illuminate\Database\Eloquent\Relations\HasOne, Illuminate\Notifications\Notifiable
+
 ## Knowledge Gaps
-- **706 isolated node(s):** `Product delivery constraints`, `Required reading`, `Enforcement`, `Application structure`, `graphify` (+701 more)
+- **706 isolated node(s):** `$schema`, `name`, `type`, `description`, `laravel` (+701 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Extensible Product Model` connect `Ticketing System` to `Product System`?**
-  _High betweenness centrality (0.016) - this node is a cross-community bridge._
-- **Why does `Auditable Order Lifecycle` connect `Ticketing System` to `Order Workflow`?**
-  _High betweenness centrality (0.015) - this node is a cross-community bridge._
-- **Why does `معرفی پروژه` connect `معرفی پروژه` to `Project Vision`, `project-wiki/architecture/ARCHITECTURE.md`, `Admin Panel Structure`, `Decision Log`, `project-wiki/core/PROJECT_RULES.md`, `Database Vision`, `System Glossary`, `Product Scope`, `Tech Stack Decisions`?**
-  _High betweenness centrality (0.015) - this node is a cross-community bridge._
-- **Are the 14 inferred relationships involving `User` (e.g. with `.test_customer_receives_the_persian_forbidden_page()` and `.test_dashboard_marks_all_preview_information_honestly()`) actually correct?**
-  _`User` has 14 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `Product delivery constraints`, `Required reading`, `Enforcement` to the rest of the system?**
+- **Why does `معرفی پروژه` connect `معرفی پروژه` to `Page Catalog`, `Project Vision`, `project-wiki/architecture/ARCHITECTURE.md`, `Admin Panel Structure`, `Decision Log`, `Database Vision`, `Product Scope`, `Tech Stack Decisions`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+- **Why does `User` connect `User` to `Illuminate\Http\Request`, `Illuminate\Database\Eloquent\Model`, `TestCase`, `AdminUserSeeder.php`, `AdminShellTest`, `User.php`, `UserRole.php`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+- **Why does `Order System` connect `Order System` to `Inventory System`, `Product System`, `Shipping System`, `Auth System`, `Order Lifecycle`, `Notification System`, `Payment System`?**
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
+- **What connects `$schema`, `name`, `type` to the rest of the system?**
   _706 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Illuminate\Http\Request` be split into smaller, more focused modules?**
-  _Cohesion score 0.05480769230769231 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.051587301587301584 - nodes in this community are weakly interconnected._
 - **Should `Ticketing System` be split into smaller, more focused modules?**
-  _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected._
+- **Should `Field Matrix` be split into smaller, more focused modules?**
+  _Cohesion score 0.06818181818181818 - nodes in this community are weakly interconnected._

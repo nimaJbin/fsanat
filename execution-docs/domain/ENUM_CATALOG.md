@@ -1,8 +1,8 @@
 # Enum Catalog
 
 Document ID: DOM-ENUM-CATALOG
-Status: Draft
-Version: 0.1
+Status: Accepted
+Version: 1.0
 Source of Truth: execution-docs
 Related Wiki Sources: project-wiki/systems
 Dependencies: FIELD_MATRIX.md
@@ -14,8 +14,12 @@ Initial candidates:
 
 | Enum | Values | Owner | Status |
 |---|---|---|---|
-| order_status | To define | Order System | Draft |
-| payment_status | To define | Payment System | Draft |
-| inventory_status | To define | Inventory System | Draft |
+| product_status | draft, active, inactive, frozen, unavailable | Catalog | MVP |
+| order_status | pending, processing, completed, canceled, expired | Order | MVP |
+| approval_status | not_required, pending, approved, rejected | Order | MVP |
+| order_payment_status | unpaid, pending, paid, failed, refunded | Order | MVP |
+| payment_status | pending, paid, failed, canceled, refunded | Payment | MVP |
+| shipment_status | pending, shipped, delivered, canceled | Shipping | MVP |
+| inventory_movement_type | receipt, adjustment, reservation, release, sale, return | Inventory | MVP |
 
-Rule: enums must be stable before implementation and covered by acceptance criteria where they drive workflow.
+Rule: PHP string-backed enums are the single source for controlled values. Database columns remain strings so later additive states do not require destructive enum-column migrations. Allowed transitions belong in Actions when each workflow is implemented.
